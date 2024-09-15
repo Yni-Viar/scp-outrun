@@ -6,10 +6,10 @@ uid="uid://bftxcag56ddmf"
 
 [deps]
 
-files=["res://Translations/loading_screen.en.translation"]
+files=["res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation"]
 
 source_file="res://Translations/loading_screen.csv"
-dest_files=["res://Translations/loading_screen.en.translation"]
+dest_files=["res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation"]
 
 [params]
 

@@ -1,5 +1,5 @@
 extends MultiplayerSynchronizer
-## Used for MIT-licensed tutorials
+## Used from MIT-licensed tutorials
 
 var direction: Vector2
 # Called when the node enters the scene tree for the first time.

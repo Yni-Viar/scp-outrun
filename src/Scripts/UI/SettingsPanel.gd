@@ -128,6 +128,7 @@ func graphic_device_check():
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.show()
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.show()
 	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
@@ -137,10 +138,12 @@ func graphic_device_check():
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = true
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.hide()
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.hide()
 
 
 func _on_fog_set_toggled(toggled_on):

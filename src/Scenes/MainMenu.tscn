@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_xwo58"]
 [ext_resource type="Texture2D" uid="uid://boboxmvoqy61t" path="res://Assets/Menu/MainMenuForeground.png" id="2_647vp"]
 [ext_resource type="Texture2D" uid="uid://bf4keik5l7nsf" path="res://icon_256.png" id="3_weqit"]
-[ext_resource type="FontFile" uid="uid://d2jfq3itdwpdu" path="res://Assets/Fonts/Tektur/Tektur-Bold.ttf" id="5_b7n5r"]
 [ext_resource type="Theme" uid="uid://4k2un7nm7xc6" path="res://UITheme.tres" id="5_gi3lh"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_ijnsp"]
 [ext_resource type="PackedScene" uid="uid://bjbe75eis8tu6" path="res://Scenes/Settings.tscn" id="6_0nqn5"]
 [ext_resource type="Script" path="res://Scripts/UI/DefaultPanel.gd" id="6_fme2w"]
 [ext_resource type="Texture2D" uid="uid://cplgika3kesri" path="res://UI/back_button.png" id="10_h2lxg"]
@@ -99,11 +99,9 @@ theme_override_constants/separation = 48
 
 [node name="Label" type="Label" parent="Title"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_b7n5r")
+theme_override_fonts/font = ExtResource("5_ijnsp")
 theme_override_font_sizes/font_size = 64
-text = "Team game
-template
-"
+text = "SCP: Outrun"
 
 [node name="Settings" type="Button" parent="Title"]
 layout_mode = 2

@@ -1,13 +1,13 @@
-keys,en
-PLAY,Play
-SETTINGS,Settings
-CREDITS,Credits
-IPADDR,IP Address (client)
-PORT,Port
-MAXCLIENTS,Max clients (server)
-HOST,Host
-CONNECT,Connect
-PRERELEASE_WARN,"WARNING! This game/platform is in ALPHA stage of development.\nThis means, that the game has some incomplete, not-working and unstable features."
-PLAYER_NICK,"Please, set you nickname!"
-EXIT,Exit
-MODS,Select mods (host only)
+keys,en,ru
+PLAY,Play,Играть
+SETTINGS,Settings,Настройки
+CREDITS,Credits,Титры
+IPADDR,IP Address (client),IP адрес (тклиент)
+PORT,Port,Порт
+MAXCLIENTS,Max clients (server),Макс. кол-во клиентов (Сервер)
+HOST,Host,Создать сервер
+CONNECT,Connect,Подключиться
+PRERELEASE_WARN,"WARNING! This game/platform is in ALPHA stage of development.\nThis means, that the game has some incomplete, not-working and unstable features.","ВНИМАНИЕ, игра находится в АЛЬФА-стадии разработки.\nЭто означает, что игра имеет незавершенные, нерабочие или нестабильные функции."
+PLAYER_NICK,"Please, set you nickname!",Введите ваш никнейм
+EXIT,Exit,Выйти
+MODS,Select mods (host only),Выбор модификаций (только сервер)

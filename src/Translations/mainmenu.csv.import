@@ -6,10 +6,10 @@ uid="uid://cksplhrfx76dg"
 
 [deps]
 
-files=["res://Translations/mainmenu.en.translation"]
+files=["res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation"]
 
 source_file="res://Translations/mainmenu.csv"
-dest_files=["res://Translations/mainmenu.en.translation"]
+dest_files=["res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation"]
 
 [params]
 

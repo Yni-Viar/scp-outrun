@@ -1,8 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://duvebkaj518ex"]
 
-[ext_resource type="Script" path="res://Scripts/Unnecessary/ButtonSystem/InteractableButton.gd" id="1_jjws8"]
+[ext_resource type="Script" path="res://Scripts/ButtonSystem/InteractableButton.gd" id="1_jjws8"]
 [ext_resource type="Texture2D" uid="uid://dba158kan7axa" path="res://Assets/Interact/ButtonPrefab/button_texture.png" id="2_38wyg"]
 [ext_resource type="AudioStream" uid="uid://c1fs5i36r3yx6" path="res://Sounds/Interact/button.ogg" id="3_fjopp"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unrqm"]
 resource_name = "Material.001"

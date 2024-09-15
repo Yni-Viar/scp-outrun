@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://cu440emlhve1m"]
+[gd_scene load_steps=20 format=3 uid="uid://cu440emlhve1m"]
 
 [ext_resource type="Script" path="res://FPSController/PlayerScript.gd" id="1_rticr"]
 [ext_resource type="Script" path="res://FPSController/Commands.gd" id="2_acwsa"]
 [ext_resource type="Script" path="res://FPSController/PlayerRecoil/Recoil.gd" id="2_hmiop"]
+[ext_resource type="Shader" path="res://Shaders/NormalEdgeDetectShader/edgedetect.gdshader" id="4_mmbap"]
 [ext_resource type="Script" path="res://FPSController/PlayerSync.gd" id="6_rhaos"]
 [ext_resource type="PackedScene" uid="uid://de8sgghqvldw3" path="res://InventorySystem/InventoryPanel.tscn" id="7_6u7fq"]
 [ext_resource type="Texture2D" uid="uid://cfcxmt02700jh" path="res://Assets/HUD/Touchscreen/click.png" id="8_cdimw"]
@@ -15,6 +16,10 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_3c6ve"]
 flip_faces = true
 orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ctckp"]
+render_priority = 0
+shader = ExtResource("4_mmbap")
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.371158
@@ -89,10 +94,12 @@ script = ExtResource("2_hmiop")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96861, -0.159767)
 cull_mask = 524287
 
-[node name="AddYourOwnShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
+[node name="Old939" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.229611)
 visible = false
 extra_cull_margin = 4096.0
 mesh = SubResource("PlaneMesh_3c6ve")
+surface_material_override/0 = SubResource("ShaderMaterial_ctckp")
 
 [node name="VisionRadius" type="RayCast3D" parent="PlayerHead/PlayerRecoil"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)

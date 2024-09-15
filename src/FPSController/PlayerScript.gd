@@ -11,10 +11,6 @@ class_name PlayerScript
 @onready var walk_sounds = $WalkSounds
 @onready var interact_sound = $InteractSound
 
-## Implement your own moderator/admin check
-@export var is_moderator: bool = false
-@export var is_admin: bool = false
-
 ## Player class manager properties
 @export var player_name: String
 @export var player_class_key: int
@@ -37,7 +33,7 @@ class_name PlayerScript
 ## -2 for spectators, and 0 and above for entities with special abilities.
 @export var unique_type_id: int = -2
 @export var can_move: bool = false
-@export var using_item: String = ""
+@export var using_item: bool = false
 @export var custom_camera: bool = false
 var gravity: float = 9.8
 
@@ -57,12 +53,9 @@ var is_walking: bool = false
 var observed_object = "" 
 
 func _enter_tree():
-	set_multiplayer_authority(name.to_int())
+	set_multiplayer_authority(str(name).to_int())
 
 func _ready():
-	if multiplayer.is_server():
-		is_admin = true
-		is_moderator = true
 	if is_multiplayer_authority():
 		#Settings
 		if FileAccess.file_exists("user://playername.txt"):
@@ -92,7 +85,7 @@ func _ready():
 ## A start for single player
 func on_single_start():
 	#if !custom_music:
-		
+	#	
 	pass
 ## A start for other player
 func on_other_start():
@@ -123,7 +116,7 @@ func is_local_authority() -> bool:
 	return $PlayerSync.get_multiplayer_authority() == multiplayer.get_unique_id()
 
 func _physics_process(delta):
-	if is_local_authority():
+	if is_multiplayer_authority():
 		
 		if is_on_floor():
 			gravity_vector = Vector3.ZERO
@@ -132,7 +125,7 @@ func _physics_process(delta):
 
 		if Input.is_action_just_pressed("move_jump") and is_on_floor():
 			gravity_vector = Vector3.UP * jump
-		var direction =  transform.basis * Vector3($PlayerSync.direction.x, 0, $PlayerSync.direction.y)
+		var direction = transform.basis * Vector3($PlayerSync.direction.x, 0, $PlayerSync.direction.y)
 		if can_move:
 			if Input.is_action_pressed("move_sprint"):
 				vel = vel.lerp(direction * speed * 2, acceleration * delta)
@@ -151,6 +144,9 @@ func _physics_process(delta):
 					collided_with.call("interact", self)
 				elif collided_with is InteractableRigidBody:
 					collided_with.call("interact", self)
+				elif collided_with is PlayerScript:
+					if collided_with.unique_type_id >= 0:
+						collided_with.call("interact")
 			elif Input.is_action_just_pressed("interact_alt"):
 				var collided_with = ray.get_collider()
 				if collided_with is InteractableNode:
@@ -186,6 +182,7 @@ func hold_item(item_id: int):
 			item_use.one_time_use = get_tree().root.get_node("Main/Game").game_data.items[item_id].one_time_use
 			item_use.index = item_id
 			$PlayerHead/PlayerRecoil/PlayerHand.add_child(item_use)
+		using_item = true
 	else:
 		var check = get_node("PlayerModel").get_child(0)
 		if check == null:
@@ -196,6 +193,7 @@ func hold_item(item_id: int):
 				node.queue_free()
 		for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
 			node.queue_free()
+		using_item = false
 
 ## Animation-based footstep system.
 func footstep_animate():
@@ -232,8 +230,8 @@ func apply_shader(res: String):
 	for node in get_node("PlayerHead/PlayerRecoil/PlayerCamera").get_children():
 		if node is MeshInstance3D:
 			node.visible = false
-	if get_node_or_null("PlayerHead/PlayerRecoil/PlayerCamera" + res) != null && !res.is_empty():
-		get_node("PlayerHead/PlayerRecoil/PlayerCamera" + res).visible = true
+	if get_node_or_null("PlayerHead/PlayerRecoil/PlayerCamera/" + res) != null && !res.is_empty():
+		get_node("PlayerHead/PlayerRecoil/PlayerCamera/" + res).visible = true
 ## Sets players view
 func camera_manager(default_camera: bool):
 	if default_camera:
@@ -256,3 +254,7 @@ func update_class_ui(color: int):
 	get_parent().get_node("PlayerUI/ClassInfo").text = player_class_name
 	get_parent().get_node("PlayerUI/ClassDescription").text = player_class_description
 	get_parent().get_node("PlayerUI/AnimationPlayer").play("forceclass")
+
+func interact():
+	rpc_id(name.to_int(), "health_manage", -(get_node("PlayerModel").get_child(0).how_many_deplete_after_interact), 0, "Recontained.")
+	await get_tree().create_timer(5.0).timeout

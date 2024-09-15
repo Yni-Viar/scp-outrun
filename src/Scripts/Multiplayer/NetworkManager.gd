@@ -24,7 +24,7 @@ var loading: bool = false
 ## Config
 var config_values: Array[String] = ["Port", "MaxPlayers", "MaxSpawnableObjects", "GameMode"]
 ## Config
-var config_defaults: Array = [7877, 20, 12, "Default"]
+var config_defaults: Array = [7777, 20, 12, "Default"]
 
 func _enter_tree():
 	set_data()
@@ -34,10 +34,9 @@ func _enter_tree():
 		#txt.save("user://modlist_" + Globals.data_compatibility + ".txt", "Default")
 
 # Called when the node enters the scene tree for the first time.
-#func _ready():
-	#if DisplayServer.get_name() == "headless":
-		#Host()
-	#pass
+func _ready():
+	if DisplayServer.get_name() == "headless":
+		host()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -121,6 +120,14 @@ func server_disconnected():
 	get_node("CanvasLayer/MainMenu/AudioStreamPlayer").playing = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
+func round_restart():
+	if multiplayer.is_server():
+		server_disconnected()
+		host()
+	else:
+		server_disconnected()
+		join()
+
 ## Gets player's IP-address. PLEASE, CHECK CONSOLE FOR UNAUTHORIZED ACCESS
 func get_peer(id: int):
 	print("SECURITY WARNING!!! SOMEONE GOT IP-ADDRESS")
@@ -151,6 +158,3 @@ func set_data():
 		max_players = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[1])
 		max_objects = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[2])
 		game_mode = config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[3]
-## Gets gamemode
-#func get_gamemode() -> String:
-	#return "res://Scenes/Game.tscn"

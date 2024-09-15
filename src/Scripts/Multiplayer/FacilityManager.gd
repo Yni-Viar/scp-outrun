@@ -17,14 +17,27 @@ var env: WorldEnvironment
 @export var max_spawnable_objects: int = 12
 ## Round start check.
 @export var is_round_started: bool
-## Player scene, that will become a player afterwards
-@export var player_prefab: PackedScene
 ## List of the players
 @export var players_list: Array[int] = []
-# Player tickets
-#@export var tickets: Array[int] = []
+var admin_list: AdminList
 ## Ambient file path, used by Music Changer function
 var current_ambient: String
+
+var all_scps: Array[int] = []
+var used_scps: Array[int] = []
+
+func _enter_tree() -> void:
+	var ini: IniParser = IniParser.new()
+	if !FileAccess.file_exists("user://bans.txt"):
+		var txt: TxtParser = TxtParser.new()
+		txt.save("user://bans.txt", "")
+	if multiplayer.get_unique_id() != 1:
+		rpc_id(1, "check_if_banned", multiplayer.get_unique_id())
+	else:
+		if !FileAccess.file_exists("user://granted.tres"):
+			var admin_list: AdminList = AdminList.new()
+			ResourceSaver.save(admin_list, "user://granted.tres")
+		admin_list = load("user://granted.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -47,6 +60,7 @@ func _ready():
 	on_start()
 	if multiplayer.is_server():
 		## Server methods
+		check_available_scps()
 		max_spawnable_objects = get_parent().max_objects
 		multiplayer.peer_connected.connect(add_player)
 		multiplayer.peer_disconnected.connect(remove_player)
@@ -57,35 +71,53 @@ func _ready():
 		
 		on_server_start()
 
+func check_available_scps():
+	var counter = 0
+	for player_class in game_data.classes:
+		if player_class.unique_type_id >= 0:
+			all_scps.append(counter)
+		counter += 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	on_update(delta)
 
 func on_start():
-	pass
+	$PlayerUI/PreRoundStartPanel.show()
 
 func on_server_start():
-	begin_game()
+	wait_for_beginning()
 
 func on_update(delta: float):
-	pass
+	if !is_round_started:
+		$PlayerUI/PreRoundStartPanel/PreRoundStart/Amount.text = str(players_list.size()) 
 
-## Unnecessary. Example implementation of round start. Adds the players in the list and set to human class.
+func wait_for_beginning():
+	await get_tree().create_timer(15.0).timeout
+	if !is_round_started:
+		begin_game()
+	#if get_parent().spawn_npcs:
+		#if rng.randi_range(0, 3) <= 2 && players_list.size() > 1:
+			#var key: int = rng.randi_range(0, game_data.npcs.size() - 1):
+				#get_node()
+
+## Implementation of round start.
 func begin_game():
 	var players: Array[Node] = get_tree().get_nodes_in_group("Players")
 	var i: int = 1
 	is_round_started = true
 	for player in players:
 		if player is PlayerScript:
-			rpc_id(player.name.to_int(), "set_player_class", str(player.name), 1, "Round start", false)
+			randomize_class(i, player)
 			i += 1
+	await get_tree().create_timer(720.0).timeout
+	end_game(0)
 
 ## Adds player to server.
 func add_player(id: int):
 	## Player scene, that will become a player afterwards
 	var player_scene: CharacterBody3D
-	player_scene = player_prefab.instantiate()
+	player_scene = load($MultiplayerSpawner.get_spawnable_scene(0)).instantiate()
 	player_scene.name = str(id)
 	add_child(player_scene, true)
 	players_list.append(player_scene.name.to_int())
@@ -98,13 +130,14 @@ func add_player(id: int):
 func remove_player(id: int):
 	if get_node_or_null(str(id)) != null:
 		get_node(str(id)).queue_free()
-		players_list.erase(str(id))
+		players_list.erase(id)
 		print("Player " + str(id) + " has left the server!")
 
 
 ## Sets player class for a specified player. (RpcId)
 @rpc("any_peer", "call_local")
 func set_player_class(player_name: String, name_of_class: int, reason: String, post_start: bool):
+	$PlayerUI/PreRoundStartPanel.hide()
 	if name_of_class < 0 || name_of_class >= game_data.classes.size():
 		print("For security reasons, you cannot change to class, that is unsupported by this server")
 	var class_data: BaseClass = game_data.classes[name_of_class]
@@ -148,6 +181,13 @@ func post_round_start(players, target):
 			rpc_id(target, "set_player_class", str(player), get_node(str(player)).player_class_key, "Previous player", true)
 	#rpc("clean_ragdolls")
 
+func randomize_class(counter: int, player: PlayerScript):
+	if counter == 2 || counter % 8 == 0:
+		var random_scp: int = all_scps[rng.randi_range(0, all_scps.size() - 1)]
+		rpc_id(player.name.to_int(), "set_player_class", str(player.name), random_scp, "Round start", false)
+	else:
+		rpc_id(player.name.to_int(), "set_player_class", str(player.name), 1, "Round start", false)
+
 ## Loads the models of a player.
 func load_models(player_name: String, class_id: int):
 	var player = get_node(player_name)
@@ -183,3 +223,45 @@ func set_background_music(to: String):
 		$BackgroundMusic.playing = true
 		$AnimationPlayer.play_backwards("music_change")
 		current_ambient = to
+
+## hides lobby after start
+@rpc("any_peer", "call_local")
+func hide_lobby():
+	$PlayerUI/PreRoundStartPanel.hide()
+
+## bans a player
+func ban(id: int):
+	get_parent().rpc_id(id, "kick")
+	rpc_id(1, "add_detention_note", get_parent().get_peer(id))
+
+@rpc("any_peer")
+func add_detention_note(ip: String):
+	var txt: TxtParser = TxtParser.new()
+	var s: String = txt.load("user://bans.txt")
+	s += "\n" + ip
+	txt.save("user://bans.txt", s)
+
+@rpc("any_peer")
+func grant_admin_privilegies(peer_id: int):
+	get_node(str(peer_id)).is_admin = true
+	print(str(peer_id) + "became admin")
+
+@rpc("any_peer")
+func grant_moderator_privilegies(peer_id: int):
+	get_node(str(peer_id)).is_moderator = true
+	print(str(peer_id) + "became moderator")
+
+@rpc("any_peer")
+func check_if_banned(id: int):
+	var txt: TxtParser = TxtParser.new()
+	if txt.open("user://bans.txt").contains(get_parent().get_peer(id)):
+		get_parent().rpc_id(id, "kick")
+
+@rpc("any_peer", "call_local")
+func end_game(reason: int):
+	match reason:
+		_:
+			$PlayerUI/GameEnd.text = tr("STALEMATE_ROUNDEND")
+			$PlayerUI/AnimationPlayer.play("roundend")
+	await get_tree().create_timer(12.0).timeout
+	get_parent().round_restart()

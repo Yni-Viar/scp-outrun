@@ -1,0 +1,4 @@
+extends BasePlayerScript
+class_name ScpCommonPlayerScript
+
+@export var how_many_deplete_after_interact: float

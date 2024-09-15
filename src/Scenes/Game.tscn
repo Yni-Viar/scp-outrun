@@ -1,22 +1,25 @@
-[gd_scene load_steps=27 format=3 uid="uid://mu7j26by23js"]
+[gd_scene load_steps=30 format=3 uid="uid://mu7j26by23js"]
 
 [ext_resource type="Script" path="res://Scripts/Multiplayer/FacilityManager.gd" id="1_crbgh"]
 [ext_resource type="Resource" uid="uid://dexygxjm8ki08" path="res://Scripts/GameData/GameData.tres" id="2_m6y5b"]
-[ext_resource type="PackedScene" uid="uid://cu440emlhve1m" path="res://FPSController/PlayerScene.tscn" id="3_lx2qp"]
-[ext_resource type="FontFile" uid="uid://opo2t8tyqcfa" path="res://Assets/Fonts/Stengazeta/Stengazeta-Regular_5.ttf" id="5_strxu"]
 [ext_resource type="Environment" uid="uid://cpjkvy5s2l8ae" path="res://DefaultGraphics.tres" id="5_u1dtw"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="6_y6gcv"]
 [ext_resource type="Texture2D" uid="uid://bmw4fxmnmwhov" path="res://Assets/HUD/arrow.png" id="7_bwdaw"]
 [ext_resource type="PackedScene" uid="uid://dxk8akb87bv4u" path="res://Assets/Models/startroom.tscn" id="8_1kvjl"]
 [ext_resource type="Script" path="res://Scripts/UI/PlayerUI.gd" id="8_7mmlb"]
-[ext_resource type="PackedScene" uid="uid://ct11xlg8m624b" path="res://Assets/Models/office.tscn" id="8_wxtuc"]
 [ext_resource type="Texture2D" uid="uid://di4n3rx3yssbr" path="res://Assets/HUD/healthbar_unfilled.png" id="9_0hc6d"]
 [ext_resource type="Texture2D" uid="uid://bvq1xok1sqfjb" path="res://Assets/HUD/healthbar_filled.png" id="10_itug4"]
 [ext_resource type="FontFile" uid="uid://d2jfq3itdwpdu" path="res://Assets/Fonts/Tektur/Tektur-Bold.ttf" id="11_1xteb"]
-[ext_resource type="Script" path="res://Scripts/Unnecessary/FPSCounter.gd" id="11_vy51m"]
+[ext_resource type="Script" path="res://Scripts/FPSCounter.gd" id="11_vy51m"]
 [ext_resource type="FontFile" uid="uid://cimfjaj14234d" path="res://Assets/Fonts/Tektur/Tektur-Medium.ttf" id="12_118v5"]
+[ext_resource type="Script" path="res://Scripts/AdminSystem/AdminConsole.gd" id="13_jxcf4"]
+[ext_resource type="Script" path="res://MapGen/MapGen.gd" id="14_2e1xu"]
+[ext_resource type="Script" path="res://Scripts/AdminSystem/AdminCommands.gd" id="15_0xt4j"]
 [ext_resource type="Texture2D" uid="uid://dj66rmlusn18r" path="res://Assets/HUD/healthbar.png" id="15_5ah0v"]
+[ext_resource type="Script" path="res://MapGen/MapGenRoomResource.gd" id="15_daey2"]
 [ext_resource type="Theme" uid="uid://4k2un7nm7xc6" path="res://UITheme.tres" id="15_g2wd3"]
-[ext_resource type="Script" path="res://Scripts/Unnecessary/GameoverPit.gd" id="19_4u3wc"]
+[ext_resource type="Resource" uid="uid://7prvjngodfs1" path="res://MapGen/lcz.tres" id="16_r0s7q"]
+[ext_resource type="Script" path="res://Scripts/GameoverPit.gd" id="19_4u3wc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4g4w"]
 bg_color = Color(0, 0, 0, 1)
@@ -60,21 +63,10 @@ resource_name = "roundend"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("GameEnd:position:x")
+tracks/0/path = NodePath("GameEnd:position:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(),
-"points": PackedFloat32Array(),
-"times": PackedFloat32Array()
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GameEnd:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(-328, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
@@ -92,6 +84,10 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="Animation" id="Animation_aegjm"]
 resource_name = "music_change"
@@ -119,6 +115,9 @@ properties/0/replication_mode = 2
 properties/1/path = NodePath(".:is_round_started")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+properties/2/path = NodePath("FacilityGenerator:rng_seed")
+properties/2/spawn = true
+properties/2/replication_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7svji"]
 size = Vector3(2508.41, 33.7658, 1977.69)
@@ -126,8 +125,7 @@ size = Vector3(2508.41, 33.7658, 1977.69)
 [node name="Game" type="Node3D"]
 script = ExtResource("1_crbgh")
 game_data = ExtResource("2_m6y5b")
-music_to_play = Array[String](["res://Sounds/Music/Zen.ogg"])
-player_prefab = ExtResource("3_lx2qp")
+music_to_play = Array[String](["res://Sounds/Music/lcz_ambient.wav"])
 
 [node name="PlayerUI" type="Control" parent="."]
 layout_mode = 3
@@ -185,20 +183,20 @@ grow_vertical = 2
 
 [node name="Welcome" type="Label" parent="PlayerUI/PreRoundStartPanel/PreRoundStart"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
 text = "The round is starting soon..."
 horizontal_alignment = 1
 
 [node name="Amount" type="Label" parent="PlayerUI/PreRoundStartPanel/PreRoundStart"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 
 [node name="Welcome2" type="Label" parent="PlayerUI/PreRoundStartPanel/PreRoundStart"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 24
 text = "players connected."
 horizontal_alignment = 1
@@ -212,7 +210,7 @@ offset_left = -960.0
 offset_top = -128.0
 offset_right = 704.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -308,6 +306,7 @@ offset_bottom = 156.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3wvqa")
+script = ExtResource("13_jxcf4")
 
 [node name="Label" type="Label" parent="PlayerUI/AdminConsole"]
 layout_mode = 1
@@ -319,7 +318,7 @@ offset_top = 20.0
 offset_right = 80.0
 offset_bottom = 56.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
 text = "Admin panel"
 horizontal_alignment = 1
@@ -338,40 +337,57 @@ offset_right = 104.5
 offset_bottom = 18.12
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 16
-text = "Please, enter the password!"
+text = "ABOUT_ADMIN"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Password" type="LineEdit" parent="PlayerUI/AdminConsole"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.0
-offset_top = -12.0
-offset_right = 216.0
-offset_bottom = 28.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("15_g2wd3")
 
 [node name="ContinueBtn" type="Button" parent="PlayerUI/AdminConsole"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.79
-anchor_right = 0.5
-anchor_bottom = 0.79
-offset_left = -128.0
-offset_top = -14.94
-offset_right = 128.0
-offset_bottom = 36.06
+anchor_left = 0.221
+anchor_top = 0.804
+anchor_right = 0.221
+anchor_bottom = 0.804
+offset_left = -128.048
+offset_top = -23.944
+offset_right = 127.952
+offset_bottom = 24.056
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("15_g2wd3")
-text = "OK"
+text = "ENTER_ADMIN_PANEL"
+
+[node name="SendInviteBtn" type="Button" parent="PlayerUI/AdminConsole"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.779
+anchor_top = 0.801
+anchor_right = 0.779
+anchor_bottom = 0.801
+offset_left = -127.952
+offset_top = -23.086
+offset_right = 128.048
+offset_bottom = 24.914
+text = "SEND_INVITE"
+
+[node name="Label3" type="Label" parent="PlayerUI/AdminConsole"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -23.0
+offset_right = 320.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "NOT_ADMIN"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PlayerListPanel" type="Panel" parent="PlayerUI"]
 visible = false
@@ -413,7 +429,7 @@ offset_top = 20.0
 offset_right = 80.0
 offset_bottom = 56.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("5_strxu")
+theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
 text = "Player list"
 horizontal_alignment = 1
@@ -452,9 +468,33 @@ theme = ExtResource("15_g2wd3")
 theme_override_font_sizes/font_size = 24
 text = "EXIT"
 
+[node name="UnreadInvites" type="Label" parent="PlayerUI/PauseMenu/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -56.0
+offset_right = 220.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "UNREAD_INVITES_INFORMATION"
+
+[node name="AdminCommands" type="Node" parent="."]
+script = ExtResource("15_0xt4j")
+
 [node name="Items" type="Node" parent="."]
 
 [node name="MapObjects" type="Node" parent="."]
+
+[node name="FacilityGenerator" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 129.962, 0)
+script = ExtResource("14_2e1xu")
+rooms = Array[ExtResource("15_daey2")]([ExtResource("16_r0s7q")])
+room_amount = 0.5
 
 [node name="Ragdolls" type="Node3D" parent="."]
 
@@ -482,20 +522,18 @@ replication_config = SubResource("SceneReplicationConfig_pw38j")
 
 [node name="StartRoom" parent="." instance=ExtResource("8_1kvjl")]
 
-[node name="Office" parent="." instance=ExtResource("8_wxtuc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.0365, 0)
-
 [node name="Gameover" type="Area3D" parent="."]
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("19_4u3wc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gameover"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -678.565, 54.1343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1222.36, 0)
 shape = SubResource("BoxShape3D_7svji")
 
 [node name="Label3D" type="Label3D" parent="."]
 
 [connection signal="pressed" from="PlayerUI/AdminConsole/ContinueBtn" to="PlayerUI/AdminConsole" method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="PlayerUI/AdminConsole/SendInviteBtn" to="PlayerUI/AdminConsole" method="_on_send_invite_btn_pressed"]
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_pressed"]
 [connection signal="body_entered" from="Gameover" to="Gameover" method="_on_body_entered"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://FPSController/PlayerClassResources/BaseClass.gd" id="1_wx0qn"]
 
+
 [resource]
 script = ExtResource("1_wx0qn")
 player_class_name = "Spectator"
