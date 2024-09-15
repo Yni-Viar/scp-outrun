@@ -7,7 +7,8 @@ var special_screen: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Settings.touchscreen:
+	if Settings.touchscreen || OS.is_debug_build():
+		special_screen = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		set_process(false)
 

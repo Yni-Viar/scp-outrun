@@ -7,7 +7,7 @@ script = ExtResource("1_1xcyw")
 player_class_name = "SCP - 173"
 player_class_description = "Open exits before MTF do.
 Aaand you can crunch their necks..,."
-spawn_points = Array[String](["Main/Game/FacilityGenerator/lc_cont1_testroom"])
+spawn_points = Array[String](["Main/Game/FacilityGenerator/LC_cont1_testroom/entityspawn/"])
 player_model_source = "res://FPSController/PlayerClassPrefab/scp173.tscn"
 player_ragdoll_source = ""
 speed = 12.0

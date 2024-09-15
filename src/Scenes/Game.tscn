@@ -494,6 +494,7 @@ script = ExtResource("15_0xt4j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 129.962, 0)
 script = ExtResource("14_2e1xu")
 rooms = Array[ExtResource("15_daey2")]([ExtResource("16_r0s7q")])
+size = 12
 room_amount = 0.5
 
 [node name="Ragdolls" type="Node3D" parent="."]

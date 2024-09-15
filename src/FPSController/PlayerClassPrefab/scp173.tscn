@@ -5335,6 +5335,7 @@ shape = SubResource("CylinderShape3D_t8ew0")
 replication_config = SubResource("SceneReplicationConfig_ftrxn")
 
 [node name="AbilityUI" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

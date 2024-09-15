@@ -79,8 +79,6 @@ func _ready():
 		on_other_start()
 	ray.add_exception(self)
 	watch_ray.add_exception(self)
-	if !Settings.touchscreen || !OS.is_debug_build():
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	on_start()
 ## A start for single player
 func on_single_start():
