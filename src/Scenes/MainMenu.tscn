@@ -153,7 +153,9 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]KNOWN ISSUES:[/b]
+text = "[b]v.0.0.2 (Alpha)[/b]
+- Added occlusion culling, fixed bug, where human classes could \"see\" SCP-173 through wall.
+[b]KNOWN ISSUES:[/b]
 - There may be freezes. Try to restart the game to fix this.
 - Connecting to ongoing game may be unstable.
 - Hold item animation on player model is missing.

@@ -5036,7 +5036,7 @@ how_many_deplete_after_interact = 150.0
 armature_name = "SCP173_Rig"
 
 [node name="SCP173_Rig" type="Node3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, -1.46242, 0)
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, -1.31204, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="SCP173_Rig"]
 bones/0/name = "Root"
@@ -5307,6 +5307,7 @@ bones/37/rotation = Quaternion(0.500489, -0.781321, -0.103227, 0.35832)
 bones/37/scale = Vector3(1, 1, 1)
 
 [node name="scp173_MESH" type="MeshInstance3D" parent="SCP173_Rig/Skeleton3D"]
+extra_cull_margin = 4.0
 mesh = SubResource("ArrayMesh_c3skd")
 skin = SubResource("Skin_pvn7p")
 surface_material_override/0 = SubResource("ShaderMaterial_g2wlp")
@@ -5320,8 +5321,9 @@ libraries = {
 max_distance = 17.15
 
 [node name="DontLookAtMe" type="VisibleOnScreenNotifier3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.144103, 0.0960684)
-aabb = AABB(-0.52037, -1.44103, -0.52037, 1.04074, 2.88205, 1.04074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15587, 0.0960684)
+layers = 2
+aabb = AABB(-0.52037, -1.43061, -0.52037, 1.04074, 2.8612, 1.04074)
 
 [node name="StareArea" type="Area3D" parent="."]
 collision_layer = 3

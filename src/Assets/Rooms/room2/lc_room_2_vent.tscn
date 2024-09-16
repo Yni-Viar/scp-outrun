@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://ceoiuvmloj4gw"]
+[gd_scene load_steps=45 format=4 uid="uid://ceoiuvmloj4gw"]
 
 [ext_resource type="Texture2D" uid="uid://dlwwff452dl1b" path="res://Assets/RoomAssets/LCZ3/OfficeCeiling001_2K_Color.png" id="1_0wrpe"]
 [ext_resource type="Texture2D" uid="uid://bf1pq5w0py0r" path="res://Assets/RoomAssets/LCZ3/OfficeCeiling001_2K_Metalness-OfficeCeiling001_2K_Roughness.png" id="2_1aw78"]
@@ -719,10 +719,14 @@ shadow_mesh = SubResource("ArrayMesh_p78u2")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xkunl"]
 data = PackedVector3Array(3.2658, -0.1064, -7.8514, 3.0861, 6.6102, -7.9135, 3.2658, 6.6102, -7.8514, 3.2658, -0.1064, -7.8514, 3.0861, -0.1064, -7.9135, 3.0861, 6.6102, -7.9135, 3.0861, -0.1064, -6.496, 3.2658, 6.6102, -6.5714, 3.0861, 6.6102, -6.496, 3.0861, -0.1064, -6.496, 3.2658, -0.1064, -6.5714, 3.2658, 6.6102, -6.5714, 3.2658, -0.1064, -6.5714, 3.2658, 6.6102, -7.8514, 3.2658, 6.6102, -6.5714, 3.2658, -0.1064, -6.5714, 3.2658, -0.1064, -7.8514, 3.2658, 6.6102, -7.8514, 3.0861, -0.1064, -7.9135, 3.0861, 6.6102, -10.0469, 3.0861, 6.6102, -7.9135, 3.0861, -0.1064, -7.9135, 3.0861, -0.1064, -10.0469, 3.0861, 6.6102, -10.0469, 3.0861, -0.1064, -3.9893, 3.0861, 6.6102, -6.496, 3.0861, 6.6102, -3.9893, 3.0861, -0.1064, -3.9893, 3.0861, -0.1064, -6.496, 3.0861, 6.6102, -6.496, 3.0861, -0.1064, -3.9893, 3.0861, 6.6102, -2.7871, 3.0861, -0.1064, -2.7871, 3.0861, -0.1064, -3.9893, 3.0861, 6.6102, -3.9893, 3.0861, 6.6102, -2.7871, 3.2658, -0.1064, -0.5916, 3.0861, 6.6102, -0.6537, 3.2658, 6.6102, -0.5916, 3.2658, -0.1064, -0.5916, 3.0861, -0.1064, -0.6537, 3.0861, 6.6102, -0.6537, 3.0861, -0.1064, 0.7638, 3.2658, 6.6102, 0.6884, 3.0861, 6.6102, 0.7638, 3.0861, -0.1064, 0.7638, 3.2658, -0.1064, 0.6884, 3.2658, 6.6102, 0.6884, 3.2658, -0.1064, 0.6884, 3.2658, 6.6102, -0.5916, 3.2658, 6.6102, 0.6884, 3.2658, -0.1064, 0.6884, 3.2658, -0.1064, -0.5916, 3.2658, 6.6102, -0.5916, 3.0861, -0.1064, -0.6537, 3.0861, 6.6102, -2.7871, 3.0861, 6.6102, -0.6537, 3.0861, -0.1064, -0.6537, 3.0861, -0.1064, -2.7871, 3.0861, 6.6102, -2.7871, 3.0861, -0.1064, 3.2704, 3.0861, 6.6102, 0.7638, 3.0861, 6.6102, 3.2704, 3.0861, -0.1064, 3.2704, 3.0861, -0.1064, 0.7638, 3.0861, 6.6102, 0.7638, 3.0861, -0.1064, 3.2704, 3.0861, 6.6102, 4.0787, 3.0861, -0.1064, 4.0787, 3.0861, -0.1064, 3.2704, 3.0861, 6.6102, 3.2704, 3.0861, 6.6102, 4.0787, 3.2658, -0.1064, 6.2742, 3.0861, 6.6102, 6.2121, 3.2658, 6.6102, 6.2742, 3.2658, -0.1064, 6.2742, 3.0861, -0.1064, 6.2121, 3.0861, 6.6102, 6.2121, 3.0861, -0.1064, 7.6296, 3.2658, 6.6102, 7.5542, 3.0861, 6.6102, 7.6296, 3.0861, -0.1064, 7.6296, 3.2658, -0.1064, 7.5542, 3.2658, 6.6102, 7.5542, 3.2658, -0.1064, 7.5542, 3.2658, 6.6102, 6.2742, 3.2658, 6.6102, 7.5542, 3.2658, -0.1064, 7.5542, 3.2658, -0.1064, 6.2742, 3.2658, 6.6102, 6.2742, 3.0861, -0.1064, 6.212, 3.0861, 6.6102, 4.0787, 3.0861, 6.6102, 6.212, 3.0861, -0.1064, 6.212, 3.0861, -0.1064, 4.0787, 3.0861, 6.6102, 4.0787, 3.0861, -0.1064, 10.1362, 3.0861, 6.6102, 7.6295, 3.0861, 6.6102, 10.1362, 3.0861, -0.1064, 10.1362, 3.0861, -0.1064, 7.6295, 3.0861, 6.6102, 7.6295)
 
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_xosn6"]
+size = Vector3(20.0324, 7.20481, 20.43)
+
 [node name="LC_room2_vent" type="StaticBody3D"]
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.394915, 0)
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_7tflr")
 skeleton = NodePath("")
@@ -733,6 +737,7 @@ shape = SubResource("ConcavePolygonShape3D_ccd46")
 
 [node name="DoorPath_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_ivmvf")
 skeleton = NodePath("")
@@ -742,6 +747,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 shape = SubResource("ConcavePolygonShape3D_c0xeq")
 
 [node name="Floor_001" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_2mydd")
 skeleton = NodePath("")
@@ -750,6 +756,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_0rute")
 
 [node name="DoorPath_001" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_vmki8")
 skeleton = NodePath("")
@@ -758,6 +765,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_gkj3i")
 
 [node name="LCZWallNeoCB2_001" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_p3ays")
 skeleton = NodePath("")
@@ -767,6 +775,7 @@ shape = SubResource("ConcavePolygonShape3D_n76d1")
 
 [node name="LCZWallNeoCB2_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_p2eil")
 skeleton = NodePath("")
@@ -783,3 +792,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.44023, 0)
 size = Vector3(20, 7.20328, 20)
 box_projection = true
 interior = true
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53633, 0)
+occluder = SubResource("BoxOccluder3D_xosn6")
+bake_mask = 4294967293

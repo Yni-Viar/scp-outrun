@@ -7,7 +7,7 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 @export var stare_counter: int = 0
 @export var invincibility: bool = false
 @export var blink_countdown: float  = 4.7
-@export var blind_countdown: float = 1000.0
+@export var blind_countdown: float = 30.0
 var blink_timer = blink_countdown
 var poses = [ "173_Pose1", "173_Pose2", "173_Pose3", "173_Pose4", "173_Pose5", "173_Pose6", "173_Pose7", "173_TPose" ]
 var ray: RayCast3D

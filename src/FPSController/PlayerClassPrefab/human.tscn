@@ -3765,7 +3765,6 @@ animation = &"Walking"
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_yrj3m"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_v375b"]
-graph_offset = Vector2(-606, 101)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_pl1bh")
 nodes/Animation/position = Vector2(-200, 360)
 nodes/idle/node = SubResource("AnimationNodeAnimation_fxrk5")
@@ -3787,7 +3786,6 @@ node_connections = [&"items_blend", 0, &"state_machine", &"items_blend", 1, &"An
 
 [node name="Charlotte" type="Node3D"]
 script = ExtResource("1_gflrw")
-enable_blinking = true
 enable_items = true
 armature_name = "Woman_body_rig"
 
@@ -4252,27 +4250,32 @@ bones/64/rotation = Quaternion(1.82074e-06, 2.52388e-06, 4.65661e-08, 1)
 bones/64/scale = Vector3(1, 1, 1)
 
 [node name="Woman_body" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_6ogt0")
 skin = SubResource("Skin_op1gq")
 
 [node name="Woman_cortu_t-bar" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_tktmn")
 skin = SubResource("Skin_op1gq")
 
 [node name="Woman_female_casualsuit01" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_d06sc")
 skin = SubResource("Skin_op1gq")
 
 [node name="Woman_low-poly" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_3dcqu")
 skin = SubResource("Skin_op1gq")
 
 [node name="Woman_short03" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_ido7v")
 skin = SubResource("Skin_op1gq")
 
 [node name="ItemAttachment" type="BoneAttachment3D" parent="Woman_body_rig/Skeleton3D"]
-transform = Transform3D(-0.950847, 0.167221, 0.26063, 0.293927, 0.222499, 0.92957, 0.0974534, 0.960485, -0.260713, -0.250429, 0.974565, 0.0542133)
+transform = Transform3D(-0.950847, 0.167221, 0.260629, 0.293927, 0.222499, 0.92957, 0.0974538, 0.960485, -0.260714, -0.250429, 0.974565, 0.0542134)
 bone_name = "mixamorig_RightHand"
 bone_idx = 44
 
