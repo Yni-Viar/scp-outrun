@@ -57,3 +57,7 @@ func _on_credits_back_pressed():
 func _on_mods_pressed():
 	var wnd = load("res://ModLoaderUI/mods_window.tscn").instantiate()
 	add_child(wnd)
+
+
+func _on_lore_pressed() -> void:
+	get_parent().get_node("Lore").show()

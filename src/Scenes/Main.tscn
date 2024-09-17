@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dudoqqr06mig7"]
+[gd_scene load_steps=6 format=3 uid="uid://dudoqqr06mig7"]
 
 [ext_resource type="Script" path="res://Scripts/Multiplayer/NetworkManager.gd" id="1_ftir1"]
 [ext_resource type="PackedScene" uid="uid://b6010fhhdn46b" path="res://Scenes/MainMenu.tscn" id="2_rsifw"]
 [ext_resource type="PackedScene" uid="uid://o6rnnciwmwvn" path="res://GDsh/InGameConsole.tscn" id="3_4c826"]
+[ext_resource type="PackedScene" uid="uid://delql14o5di6a" path="res://Scenes/Lore.tscn" id="3_4hysh"]
 [ext_resource type="PackedScene" uid="uid://cspahtxouvnr2" path="res://Scenes/LoadingScreen.tscn" id="5_vdvwj"]
 
 [node name="Main" type="Node"]
@@ -12,6 +13,9 @@ metadata/_edit_vertical_guides_ = []
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource("2_rsifw")]
+
+[node name="Lore" parent="CanvasLayer" instance=ExtResource("3_4hysh")]
+visible = false
 
 [node name="InGameConsole" parent="CanvasLayer" instance=ExtResource("3_4c826")]
 visible = false

@@ -103,6 +103,12 @@ theme_override_fonts/font = ExtResource("5_ijnsp")
 theme_override_font_sizes/font_size = 64
 text = "SCP: Outrun"
 
+[node name="Lore" type="Button" parent="Title"]
+layout_mode = 2
+theme = ExtResource("5_gi3lh")
+theme_override_font_sizes/font_size = 31
+text = "LORE"
+
 [node name="Settings" type="Button" parent="Title"]
 layout_mode = 2
 theme = ExtResource("5_gi3lh")
@@ -451,6 +457,7 @@ fit_content = true
 stream = ExtResource("11_ybgjd")
 bus = &"Music"
 
+[connection signal="pressed" from="Title/Lore" to="." method="_on_lore_pressed"]
 [connection signal="pressed" from="Title/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Title/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Title/Exit" to="." method="_on_exit_pressed"]
