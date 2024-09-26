@@ -1646,6 +1646,7 @@ libraries = {
 shape = SubResource("CapsuleShape3D_yqp8c")
 
 [node name="DontLookAtMe" type="VisibleOnScreenNotifier3D" parent="."]
+layers = 2
 aabb = AABB(-0.470956, -1.2683, -0.218247, 0.941911, 2.5366, 0.436494)
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

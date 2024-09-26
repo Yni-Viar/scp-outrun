@@ -1,4 +1,5 @@
 extends InteractableNode
+class_name InteractableButton
 ## Simple button.
 ## Made by Yni, licensed under CC0.
 

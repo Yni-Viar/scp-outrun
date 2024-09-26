@@ -159,8 +159,8 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.2 (Alpha)[/b]
-- Added occlusion culling, fixed bug, where human classes could \"see\" SCP-173 through wall.
+text = "[b]v.0.1.0 (Alpha)[/b]
+- Added main gameplay mechanics, SCP-173, SCP-650 NPC and MTF
 [b]KNOWN ISSUES:[/b]
 - There may be freezes. Try to restart the game to fix this.
 - Connecting to ongoing game may be unstable.
@@ -389,6 +389,22 @@ text = "[i]Debug console (License - The Unlicense)[/i]
 "
 fit_content = true
 
+[node name="CreditsCode5" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1234, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[i]MapObjectManager[/i]
+Contribution to SCP: Site Online by Xandromeda.
+Ported to GDScript by Yni.
+
+"
+fit_content = true
+
 [node name="CreditsCode10" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1234, 0)
 layout_mode = 2
@@ -457,6 +473,7 @@ fit_content = true
 stream = ExtResource("11_ybgjd")
 bus = &"Music"
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Title/Lore" to="." method="_on_lore_pressed"]
 [connection signal="pressed" from="Title/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Title/Credits" to="." method="_on_credits_pressed"]

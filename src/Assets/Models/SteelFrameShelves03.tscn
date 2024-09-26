@@ -199,6 +199,7 @@ shadow_mesh = SubResource("ArrayMesh_h4i4n")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="steel_frame_shelves_03" type="MeshInstance3D" parent="Mesh"]
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_utc1r")
 skeleton = NodePath("")
 
@@ -209,15 +210,18 @@ shape = SubResource("ConcavePolygonShape3D_2vc8u")
 
 [node name="steel_frame_shelves_03_drawer_01" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.514684, 0.58449, 0.330426)
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_qguxf")
 skeleton = NodePath("")
 
 [node name="steel_frame_shelves_03_drawer_02" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.514684, 0.468432, 0.330426)
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_34f04")
 skeleton = NodePath("")
 
 [node name="steel_frame_shelves_03_drawer_03" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.514684, 0.350966, 0.330426)
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_svsfp")
 skeleton = NodePath("")

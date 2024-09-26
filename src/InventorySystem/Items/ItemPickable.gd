@@ -3,8 +3,14 @@ class_name ItemPickable
 
 @export var item: Item
 
+func _ready() -> void:
+	if !freeze:
+		if get_node_or_null("Mesh") != null:
+			$Mesh.mesh.surface_get_material(0).next_pass = load("res://Shaders/Presets/ItemOutline.tres")
+
 func interact(player: Node3D):
-	rpc_id(1, "add_to_inventory")
+	if !freeze:
+		rpc_id(1, "add_to_inventory")
 
 @rpc("any_peer", "call_local")
 func add_to_inventory():

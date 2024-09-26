@@ -45,7 +45,8 @@ class_name BaseClass
 @export var enable_inventory: bool
 ## Enables movement
 @export var can_move: bool
-
+## Team
+@export var team_id: int
 
 
 # Make sure that every parameter has a default value.
@@ -56,7 +57,7 @@ p_spawn_points: Array[String] = [], p_player_model_source: String = "", p_player
 p_speed: float = 4.5, p_jump: float = 4.5, p_sprint_enabled: bool = false, p_move_sounds_enabled: bool = false,
 p_footstep_sounds: Array[String] = [], p_sprint_sounds: Array[String] = [], p_unique_type_id: int = 0,
 p_health: Array[float] = [100], p_custom_spawn: bool = false, p_custom_camera: bool = false, p_custom_shader: String = "",
-p_class_color: Color = Color.BLACK, p_enable_inventory: bool = false, p_can_move: bool = true):
+p_class_color: Color = Color.BLACK, p_enable_inventory: bool = false, p_can_move: bool = true, p_team_id: int = 0):
 	player_class_name = p_player_class_name
 	player_class_description = p_player_class_description
 	spawn_points = p_spawn_points
@@ -75,3 +76,4 @@ p_class_color: Color = Color.BLACK, p_enable_inventory: bool = false, p_can_move
 	class_color = p_class_color
 	enable_inventory = p_enable_inventory
 	can_move = p_can_move
+	team_id = p_team_id

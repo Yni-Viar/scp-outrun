@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://cvkh07t63b070"]
+[gd_scene load_steps=36 format=4 uid="uid://cvkh07t63b070"]
 
 [ext_resource type="Texture2D" uid="uid://cn13oipmxxfnd" path="res://Assets/RoomAssets/LCZ3/Tiles107_2K_Color.png" id="1_y7lfi"]
 [ext_resource type="Texture2D" uid="uid://c0l3kjnxcqmhn" path="res://Assets/RoomAssets/LCZ3/Tiles107_2K_Roughness.png" id="2_pk3lx"]
@@ -12,9 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://dlpjgofmpcx2" path="res://Assets/RoomAssets/LCZ3/SheetMetal001_2K-PNG_Metalness-SheetMetal001_2K-PNG_Roughness.png" id="10_mf7um"]
 [ext_resource type="Texture2D" uid="uid://fln7hv3h822m" path="res://Assets/RoomAssets/LCZ3/SheetMetal001_2K-PNG_NormalGL.png" id="11_oc62n"]
 [ext_resource type="PackedScene" uid="uid://dk6afsf7jh72a" path="res://Assets/Models/office_desk_with_drawers.tscn" id="12_6uk4g"]
-[ext_resource type="PackedScene" uid="uid://bsv4bn1kgu5pm" path="res://Assets/Models/laptop.tscn" id="13_pvkpa"]
 [ext_resource type="PackedScene" uid="uid://bvmbksyl1hdmd" path="res://Assets/Models/lamp_2_small.tscn" id="14_1x6tg"]
 [ext_resource type="PackedScene" uid="uid://2828a7yd1ya4" path="res://Assets/Models/armchair.tscn" id="15_6smlx"]
+[ext_resource type="PackedScene" uid="uid://dtiewo3uj60g0" path="res://Assets/Models/computer_2.tscn" id="15_jb81f"]
+[ext_resource type="PackedScene" uid="uid://dllklb0hh5g7y" path="res://Assets/Models/keyboard.tscn" id="16_bjyru"]
+[ext_resource type="PackedScene" uid="uid://btm3yh85og7mm" path="res://Assets/Models/monitor.tscn" id="17_btxcw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvhem"]
 resource_name = "Material.007"
@@ -309,9 +311,6 @@ interior = true
 [node name="office-desk-with-drawers2" parent="." instance=ExtResource("12_6uk4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8426, 0.222993, 2.85901)
 
-[node name="laptop" parent="." instance=ExtResource("13_pvkpa")]
-transform = Transform3D(0.0751495, 0, 0.290435, 0, 0.3, 0, -0.290435, 0, 0.0751495, 3.34948, 1.46312, 7.62633)
-
 [node name="Lamp2" parent="." instance=ExtResource("14_1x6tg")]
 transform = Transform3D(-0.707107, 6.18172e-08, 0.707107, -8.74228e-08, -1, 0, 0.707107, -6.18172e-08, 0.707107, 4.30375, 6.58197, 4.28949)
 
@@ -321,4 +320,23 @@ transform = Transform3D(-0.529875, 0, -0.848076, 0, 1, 0, 0.848076, 0, -0.529875
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53633, 0)
 occluder = SubResource("BoxOccluder3D_gmspy")
-bake_mask = 4294967293
+bake_mask = 4294967277
+bake_simplification_distance = 0.05
+
+[node name="Computer2" parent="." instance=ExtResource("15_jb81f")]
+transform = Transform3D(-0.000296756, 0, 1, 0, 1, 0, -1, 0, -0.000296756, 3.53136, 1.48071, 8.95843)
+
+[node name="ddskeyboard" parent="." instance=ExtResource("16_bjyru")]
+transform = Transform3D(-0.000296756, 0, 1, 0, 1, 0, -1, 0, -0.000296756, 3.72468, 1.48071, 8.53901)
+
+[node name="27-inch-monitor-with-movable-mount" parent="." instance=ExtResource("17_btxcw")]
+transform = Transform3D(-0.000296756, 0, 1, 0, 1, 0, -1, 0, -0.000296756, 2.75605, 1.48071, 7.50769)
+
+[node name="Computer3" parent="." instance=ExtResource("15_jb81f")]
+transform = Transform3D(1, 0, -0.000785351, 0, 1, 0, 0.000785351, 0, 1, 7.27353, 1.48071, 2.91023)
+
+[node name="ddskeyboard2" parent="." instance=ExtResource("16_bjyru")]
+transform = Transform3D(1, 0, -0.000785351, 0, 1, 0, 0.000785351, 0, 1, 7.69274, 1.48071, 3.104)
+
+[node name="27-inch-monitor-with-movable-mount2" parent="." instance=ExtResource("17_btxcw")]
+transform = Transform3D(1, 0, -0.000785351, 0, 1, 0, 0.000785351, 0, 1, 8.72511, 1.48071, 2.13649)

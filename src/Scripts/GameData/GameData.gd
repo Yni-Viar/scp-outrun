@@ -10,6 +10,7 @@ class_name GameData
 @export var map_objects: Array[PackedScene]
 ## Available NPCs (unused)
 @export var npcs: Array[PackedScene]
+@export var goals: Array[String]
 
 
 # Make sure that every parameter has a default value.

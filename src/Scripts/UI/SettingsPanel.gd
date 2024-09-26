@@ -79,22 +79,22 @@ func _on_ssr_set_toggled(toggled_on):
 
 func _on_music_set_drag_ended(value_changed):
 	if value_changed:
-		Settings.setting_res.music = $ScrollContainer/VBoxContainer/MusicSet.value
-		audio_Settings(1, Settings.music)
+		Settings.setting_res.music = $ScrollContainer/HBoxContainer/Page2/MusicSet.value
+		audio_Settings(1, Settings.setting_res.music)
 		#Settings.save_setting("music", Settings.music)
 
 
 func _on_sound_set_drag_ended(value_changed):
 	if value_changed:
-		Settings.setting_res.sound = $ScrollContainer/VBoxContainer/SoundSet.value
-		audio_Settings(0, Settings.sound)
+		Settings.setting_res.sound = $ScrollContainer/HBoxContainer/Page2/SoundSet.value
+		audio_Settings(0, Settings.setting_res.sound)
 		#Settings.save_setting("sound", Settings.sound)
 		$SoundTest.play()
 
 
 func _on_mouse_sens_set_drag_ended(value_changed):
 	if value_changed:
-		Settings.setting_res.mouse_sensitivity = $ScrollContainer/VBoxContainer/MouseSensSet.value
+		Settings.setting_res.mouse_sensitivity = $ScrollContainer/HBoxContainer/Page2/MouseSensSet.value
 		#Settings.save_setting("mouse_sensitivity", Settings.mouse_sensitivity)
 
 ## Sets the audio bus

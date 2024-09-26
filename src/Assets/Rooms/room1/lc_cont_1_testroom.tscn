@@ -607,13 +607,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.740
 shape = SubResource("ConcavePolygonShape3D_a5qxl")
 
 [node name="Lamp2" parent="." instance=ExtResource("13_0trw1")]
-transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 0, 6.58197, 5.34995)
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 0, 6.52836, 5.34995)
 
 [node name="Lamp4" parent="." instance=ExtResource("13_0trw1")]
-transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, -3.06592, 6.58197, -6.05686)
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, -3.06592, 6.52102, -6.05686)
 
 [node name="Lamp3" parent="." instance=ExtResource("13_0trw1")]
-transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 6.48595, 6.58197, -6.05686)
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, 6.48595, 6.50445, -6.05686)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.49643, 0)
@@ -627,4 +627,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44342, 2.12468, -3.60002)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53633, 0)
 occluder = SubResource("BoxOccluder3D_kla64")
-bake_mask = 4294967293
+bake_mask = 4294967277
+bake_simplification_distance = 0.05
+
+[node name="onwallspawn" type="Marker3D" parent="." groups=["powerbox"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13012, 2.85442, -9.73633)

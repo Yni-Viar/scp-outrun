@@ -796,4 +796,5 @@ interior = true
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53633, 0)
 occluder = SubResource("BoxOccluder3D_y1bqm")
-bake_mask = 4294967293
+bake_mask = 4294967277
+bake_simplification_distance = 0.05

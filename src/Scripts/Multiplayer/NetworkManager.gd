@@ -22,9 +22,9 @@ var scene_to_load: String = "res://Scenes/Game.tscn"
 ## need for loading screen
 var loading: bool = false
 ## Config
-var config_values: Array[String] = ["Port", "MaxPlayers", "MaxSpawnableObjects", "GameMode"]
+var config_values: Array[String] = ["Port", "MaxPlayers", "MaxSpawnableObjects", "GameMode", "SpawnNpc"]
 ## Config
-var config_defaults: Array = [7777, 20, 12, "Default"]
+var config_defaults: Array = [7777, 20, 12, "Default", true]
 
 func _enter_tree():
 	set_data()
@@ -117,7 +117,6 @@ func server_disconnected():
 	loading = false
 	print("You are disconnected from the server.")
 	get_tree().root.get_node("Main/CanvasLayer/MainMenu").show()
-	get_node("CanvasLayer/MainMenu/AudioStreamPlayer").playing = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func round_restart():
@@ -126,6 +125,7 @@ func round_restart():
 		host()
 	else:
 		server_disconnected()
+		await get_tree().create_timer(2.0).timeout
 		join()
 
 ## Gets player's IP-address. PLEASE, CHECK CONSOLE FOR UNAUTHORIZED ACCESS
@@ -147,14 +147,10 @@ func get_version(compatible_version: String):
 ## Sets server config.
 func set_data():
 	var config: IniParser = IniParser.new()
-	if FileAccess.file_exists("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini"):
-		port = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[0])
-		max_players = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[1])
-		max_objects = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[2])
-		game_mode = config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[3]
-	else:
+	if !FileAccess.file_exists("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini"):
 		config.save_ini("ServerConfig", config_values, config_defaults, "user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini")
-		port = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[0])
-		max_players = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[1])
-		max_objects = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[2])
-		game_mode = config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[3]
+	port = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[0])
+	max_players = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[1])
+	max_objects = int(config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[2])
+	game_mode = config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[3]
+	spawn_npcs = config.load_ini("user://serverconfig_" + Settings.DATA_COMPATIBILITY + ".ini", "ServerConfig", config_values)[4]

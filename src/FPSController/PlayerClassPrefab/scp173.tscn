@@ -5032,7 +5032,8 @@ properties/2/replication_mode = 2
 [node name="scp173" type="Node3D"]
 script = ExtResource("1_cu2ed")
 blink_countdown = 4.2
-how_many_deplete_after_interact = 150.0
+necksnap_sound = Array[String](["res://Sounds/Character/173/SCPCB/NeckSnap1.ogg", "res://Sounds/Character/173/SCPCB/NeckSnap2.ogg", "res://Sounds/Character/173/SCPCB/NeckSnap3.ogg", "res://Sounds/Character/173/SCPGodot/NeckSnap4.ogg"])
+how_many_deplete_after_interact = 300.0
 armature_name = "SCP173_Rig"
 
 [node name="SCP173_Rig" type="Node3D" parent="."]
@@ -5362,6 +5363,7 @@ alignment = 1
 
 [node name="Blind" type="TextureProgressBar" parent="AbilityUI/HBoxContainer"]
 layout_mode = 2
+step = 0.25
 fill_mode = 4
 texture_under = ExtResource("7_om757")
 texture_progress = ExtResource("8_xifye")

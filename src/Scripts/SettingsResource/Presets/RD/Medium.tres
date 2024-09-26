@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_lnoex")
 available_languages = Array[String](["en", "ru"])
-voxel_gi = false
+dynamic_gi = false
 ssao = true
 ssil = true
 ssr = false
@@ -21,3 +21,4 @@ ui_window_size = 0
 vsync = true
 reflection_probes = true
 enable_light_shadows = true
+camera_field_of_view = 75.0

@@ -91,6 +91,7 @@ func remove_item(prefab_path: String, spawn_item: bool):
 	items_array.erase(prefab)
 	prefab.queue_free()
 
+@rpc("any_peer", "call_local")
 func remove_item_by_index(index: int, spawn_item: bool):
 	var item: Item = item_res_path.items[index]
 	for node in get_children():

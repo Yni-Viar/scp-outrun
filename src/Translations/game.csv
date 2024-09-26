@@ -1,0 +1,14 @@
+keys,en,ru
+ROUNDSTART_INFO,The round is starting soon...,Раунд скоро начнется...
+ROUNDSTART_PLAYERS,players connected.,игроков подключилось.
+TARGETS,"Targets: ","Целей: "
+ADMIN_PANEL,Admin panel,Админ панель
+ABOUT_ADMIN,"Click ""Continue"", if you are a host.\nInvite system coming soon...","Нажмите ""Продолжить"", если Вы - хост.\nСистема приглашений будет скоро..."
+ENTER_ADMIN_PANEL,Enter admin's terminal,Войти в терминал админа
+SEND_INVITE,Send invite,Послать приглашение
+NOT_ADMIN,You are not granted to admin's terminal.,Вы недопущены до терминала админа.
+PLAYERS_LIST,Player list,Список игроков
+UNREAD_INVITES_INFORMATION,New invites are incoming!,Новые приглашения ожидают принятия решений!
+STALEMATE_ROUNDEND,Stalemate.\nThe danger still persist...,Ничья.\nНо опасность все еще присутствует...
+MTF_ROUNDEND,"MTF won!\nThe SCPs got recontained, or got locked up.","МОГ победили!\nБыли восстановлены условия содержания SCP, или были пойманы в ловушку."
+SCPS_ROUNDEND,SCPs won!\n The MTF division is lost.,SCP победили!\nКонтакт с дивизией МОГ потеряна.

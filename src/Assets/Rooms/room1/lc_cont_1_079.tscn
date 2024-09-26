@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cnk62n56reubw"]
+[gd_scene load_steps=44 format=4 uid="uid://cnk62n56reubw"]
 
 [ext_resource type="Texture2D" uid="uid://bfe2xmcc33y03" path="res://Assets/RoomAssets/LCZ3/beige_wall_001_rough_2k.png" id="1_ej8i0"]
 [ext_resource type="Texture2D" uid="uid://74youcg34ocb" path="res://Assets/RoomAssets/LCZ3/beige_wall_001_nor_gl_2k.png" id="2_icsl0"]
@@ -29,12 +29,12 @@ _surfaces = [{
 "aabb": AABB(-8.20999, -0.105767, -10.0574, 16.42, 7.20849, 0.270777),
 "format": 34896613377,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 252, 255, 0, 0, 0, 0, 255, 255, 252, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 252, 255, 0, 0, 255, 255, 255, 255, 252, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAPz/AAAAAP///P8AAAAAAAAAAAAAAAD//wAAAAD//wAA/P8AAP/////8/wAA//8AAAAAAAD/////AAAAAA==")
 }]
 blend_shape_mode = 0
 
@@ -42,16 +42,16 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Cube_001"
 _surfaces = [{
 "aabb": AABB(-8.20999, -0.105767, -10.0574, 16.42, 7.20849, 0.270777),
-"attribute_data": PackedByteArray(255, 255, 254, 255, 159, 251, 177, 14, 212, 128, 177, 14, 255, 255, 16, 150, 223, 242, 177, 14, 246, 242, 177, 14, 182, 251, 254, 255, 86, 247, 177, 14, 188, 128, 177, 14, 182, 251, 16, 150, 178, 14, 177, 14, 63, 247, 177, 14, 159, 251, 254, 255, 212, 128, 254, 255, 182, 251, 250, 149, 223, 242, 254, 255, 246, 242, 255, 255, 182, 251, 11, 44, 86, 247, 254, 255, 188, 128, 254, 255, 255, 255, 250, 149, 178, 14, 254, 255, 63, 247, 255, 255, 255, 255, 11, 44),
+"attribute_data": PackedByteArray("///+/5/7sQ7UgLEO//8Qlt/ysQ728rEOtvv+/1b3sQ68gLEOtvsQlrIOsQ4/97EOn/v+/9SA/v+2+/qV3/L+//by//+2+wssVvf+/7yA/v////qVsg7+/z/3/////wss"),
 "format": 34896613399,
 "index_count": 36,
-"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
 "material": SubResource("StandardMaterial3D_8q2n5"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(16.1817, 17.4205, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 252, 255, 255, 191, 0, 0, 0, 0, 252, 255, 84, 213, 0, 0, 0, 0, 252, 255, 255, 191, 0, 0, 255, 255, 252, 255, 255, 191, 0, 0, 255, 255, 252, 255, 255, 191, 0, 0, 255, 255, 252, 255, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 255, 255, 0, 0, 252, 255, 84, 213, 255, 255, 0, 0, 252, 255, 255, 191, 255, 255, 0, 0, 252, 255, 255, 191, 255, 255, 255, 255, 252, 255, 255, 191, 255, 255, 255, 255, 252, 255, 84, 213, 255, 255, 255, 255, 252, 255, 255, 191, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 170, 42, 84, 213, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 84, 213, 170, 42, 255, 127, 255, 255, 170, 42, 84, 213, 255, 63, 255, 191, 255, 127, 255, 255, 255, 63, 255, 191, 84, 213, 170, 42, 170, 42, 84, 213, 255, 255, 255, 255, 255, 127, 0, 0, 255, 255, 255, 255, 84, 213, 170, 42, 255, 127, 0, 0, 170, 42, 84, 213, 255, 63, 255, 191, 255, 127, 0, 0, 255, 63, 255, 191, 84, 213, 170, 42, 255, 127, 0, 0)
+"vertex_data": PackedByteArray("AAAAAPz//78AAAAA/P9U1QAAAAD8//+/AAD///z//78AAP///P//vwAA///8/1TVAAAAAAAA/78AAAAAAABU1QAAAAAAAP//AAD//wAA/78AAP//AAD//wAA//8AAFTV//8AAPz/VNX//wAA/P//v///AAD8//+///////z//7///////P9U1f/////8//+///8AAAAAVNX//wAAAAD/////AAAAAP+//////wAA////////AABU1f////8AAP+//3///6oqVNX//////3////////9U1aoq/3///6oqVNX/P/+//3////8//79U1aoqqipU1f//////fwAA/////1TVqir/fwAAqipU1f8//7//fwAA/z//v1TVqir/fwAA")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_iv5hu")
@@ -76,12 +76,12 @@ _surfaces = [{
 "aabb": AABB(-10, 6.99613, -10, 20, 1.00136e-05, 20),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAIAAAABAAMA"),
 "name": "Material.012",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAD//wAA/v8AAAAAAAAAAAAA//8AAAAAAAA=")
 }]
 blend_shape_mode = 0
 
@@ -89,16 +89,16 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Plane_005"
 _surfaces = [{
 "aabb": AABB(-10, 6.99613, -10, 20, 1.00136e-05, 20),
-"attribute_data": PackedByteArray(50, 51, 255, 255, 255, 255, 255, 255, 50, 51, 50, 51, 255, 255, 50, 51),
+"attribute_data": PackedByteArray("MjP///////8yMzIz//8yMw=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAIAAAABAAMA"),
 "material": SubResource("StandardMaterial3D_mwpmt"),
 "name": "Material.012",
 "primitive": 3,
 "uv_scale": Vector4(5, 5, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 63, 255, 255, 0, 0, 254, 255, 255, 63, 0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+"vertex_data": PackedByteArray("AAAAAP7//z///wAA/v//PwAAAAAAAP8///8AAAAA/z8AAP9/AAD/fwAA/38AAP9/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aiy27")
@@ -122,12 +122,12 @@ _surfaces = [{
 "aabb": AABB(-10, 3.75556e-07, -10.2383, 20, 1e-05, 20.4766),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
 "name": "Material.013",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAD//wAA/v8AAAAAAAAAAAAA//8AAAAAAAA=")
 }]
 blend_shape_mode = 0
 
@@ -135,16 +135,16 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Plane_008"
 _surfaces = [{
 "aabb": AABB(-10, 3.75556e-07, -10.2383, 20, 1e-05, 20.4766),
-"attribute_data": PackedByteArray(51, 51, 255, 255, 254, 255, 255, 255, 51, 51, 61, 50, 255, 255, 61, 50),
+"attribute_data": PackedByteArray("MzP///7///8zMz0y//89Mg=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
 "material": SubResource("StandardMaterial3D_x8url"),
 "name": "Material.013",
 "primitive": 3,
 "uv_scale": Vector4(5, 5.09532, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+"vertex_data": PackedByteArray("AAAAAP7//7///wAA/v//vwAAAAAAAP+///8AAAAA/7////9/////f////3////9/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gwdrr")
@@ -157,12 +157,12 @@ _surfaces = [{
 "aabb": AABB(-8, -0.00311089, 9.93548, 16, 7, 0.302814),
 "format": 34359742465,
 "index_count": 129,
-"index_data": PackedByteArray(4, 0, 2, 0, 0, 0, 3, 0, 5, 0, 1, 0, 3, 0, 8, 0, 5, 0, 10, 0, 2, 0, 4, 0, 6, 0, 7, 0, 9, 0, 7, 0, 2, 0, 10, 0, 3, 0, 6, 0, 8, 0, 6, 0, 2, 0, 7, 0, 2, 0, 6, 0, 3, 0, 7, 0, 9, 0, 9, 0, 7, 0, 7, 0, 9, 0, 2, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 4, 0, 10, 0, 10, 0, 4, 0, 4, 0, 10, 0, 5, 0, 1, 0, 1, 0, 5, 0, 5, 0, 1, 0, 1, 0, 3, 0, 3, 0, 1, 0, 1, 0, 3, 0, 8, 0, 5, 0, 5, 0, 8, 0, 8, 0, 5, 0, 3, 0, 2, 0, 2, 0, 3, 0, 3, 0, 2, 0, 9, 0, 6, 0, 6, 0, 9, 0, 9, 0, 6, 0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 0, 4, 0, 10, 0, 7, 0, 7, 0, 10, 0, 10, 0, 7, 0, 6, 0, 8, 0, 8, 0, 6, 0, 6, 0, 8, 0, 8, 0, 12, 0, 5, 0, 8, 0, 15, 0, 12, 0, 9, 0, 13, 0, 6, 0, 9, 0, 16, 0, 13, 0, 10, 0, 14, 0, 7, 0, 10, 0, 17, 0, 14, 0, 6, 0, 15, 0, 8, 0, 6, 0, 13, 0, 15, 0, 7, 0, 16, 0, 9, 0, 7, 0, 14, 0, 16, 0, 4, 0, 17, 0, 10, 0, 4, 0, 11, 0, 17, 0),
+"index_data": PackedByteArray("BAACAAAAAwAFAAEAAwAIAAUACgACAAQABgAHAAkABwACAAoAAwAGAAgABgACAAcAAgAGAAMABwAJAAkABwAHAAkAAgAAAAAAAgACAAAABAAKAAoABAAEAAoABQABAAEABQAFAAEAAQADAAMAAQABAAMACAAFAAUACAAIAAUAAwACAAIAAwADAAIACQAGAAYACQAJAAYAAAAEAAQAAAAAAAQACgAHAAcACgAKAAcABgAIAAgABgAGAAgACAAMAAUACAAPAAwACQANAAYACQAQAA0ACgAOAAcACgARAA4ABgAPAAgABgANAA8ABwAQAAkABwAOABAABAARAAoABAALABEA"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 18,
-"vertex_data": PackedByteArray(251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 251, 255, 255, 192, 132, 230, 223, 64, 191, 247, 30, 65, 3, 0, 0, 65, 132, 230, 223, 64, 189, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 190, 247, 30, 65, 123, 194, 117, 63, 0, 224, 75, 187, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 129, 194, 117, 63, 81, 102, 199, 63, 190, 247, 30, 65, 209, 239, 128, 187, 196, 204, 76, 64, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 16, 208, 35, 65, 123, 194, 117, 63, 0, 224, 75, 187, 16, 208, 35, 65, 135, 194, 117, 63, 201, 204, 76, 64, 16, 208, 35, 65, 142, 194, 117, 191, 200, 204, 76, 64, 16, 208, 35, 65, 129, 194, 117, 63, 81, 102, 199, 63, 16, 208, 35, 65, 95, 239, 128, 187, 196, 204, 76, 64, 16, 208, 35, 65, 162, 194, 117, 191, 83, 102, 199, 63, 16, 208, 35, 65)
+"vertex_data": PackedByteArray("+///wADgS7u/9x5BAwAAQQDgS7u99x5B+///wITm30C/9x5BAwAAQYTm30C99x5Bk8p1vwDgS7u+9x5Be8J1PwDgS7u+9x5Bh8J1P8nMTEC+9x5BjsJ1v8jMTEC+9x5BgcJ1P1Fmxz++9x5B0e+Au8TMTEC+9x5BosJ1v1Nmxz++9x5Bk8p1vwDgS7sQ0CNBe8J1PwDgS7sQ0CNBh8J1P8nMTEAQ0CNBjsJ1v8jMTEAQ0CNBgcJ1P1Fmxz8Q0CNBX++Au8TMTEAQ0CNBosJ1v1Nmxz8Q0CNB")
 }]
 blend_shape_mode = 0
 
@@ -170,16 +170,16 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Plane_010"
 _surfaces = [{
 "aabb": AABB(-8, -0.00311089, 9.93548, 16, 7, 0.302814),
-"attribute_data": PackedByteArray(0, 45, 254, 190, 209, 122, 155, 63, 0, 0, 0, 191, 0, 128, 156, 63, 0, 45, 254, 190, 209, 122, 155, 63, 6, 45, 254, 190, 162, 245, 68, 191, 6, 45, 254, 190, 162, 245, 68, 191, 0, 0, 192, 63, 0, 128, 156, 63, 216, 64, 190, 62, 208, 122, 155, 63, 0, 0, 0, 191, 0, 0, 71, 191, 212, 64, 190, 62, 162, 245, 68, 191, 0, 0, 192, 63, 0, 0, 71, 191, 2, 45, 254, 190, 84, 52, 175, 62, 2, 45, 254, 190, 84, 52, 175, 62, 4, 45, 254, 190, 48, 50, 212, 61, 4, 45, 254, 190, 48, 50, 212, 61, 51, 89, 203, 189, 248, 49, 212, 61, 51, 89, 203, 189, 248, 49, 212, 61, 40, 89, 203, 189, 84, 180, 174, 62, 40, 89, 203, 189, 84, 180, 174, 62, 188, 18, 155, 190, 16, 50, 212, 61, 188, 18, 155, 190, 16, 50, 212, 61, 41, 89, 203, 189, 252, 127, 100, 62, 41, 89, 203, 189, 252, 127, 100, 62, 181, 18, 155, 190, 86, 244, 174, 62, 181, 18, 155, 190, 86, 244, 174, 62, 0, 0, 0, 191, 0, 128, 156, 63, 0, 45, 254, 190, 209, 122, 155, 63, 6, 45, 254, 190, 162, 245, 68, 191, 0, 0, 192, 63, 0, 128, 156, 63, 0, 0, 0, 191, 0, 0, 71, 191, 0, 0, 192, 63, 0, 0, 71, 191, 2, 45, 254, 190, 84, 52, 175, 62, 81, 225, 138, 197, 137, 51, 132, 70, 80, 233, 138, 69, 128, 50, 132, 70, 4, 45, 254, 190, 48, 50, 212, 61, 81, 233, 138, 69, 80, 8, 139, 198, 95, 117, 143, 69, 101, 47, 132, 198, 51, 89, 203, 189, 248, 49, 212, 61, 226, 132, 140, 197, 99, 47, 132, 198, 40, 89, 203, 189, 84, 180, 174, 62, 204, 174, 137, 197, 80, 7, 139, 198, 80, 233, 138, 69, 0, 128, 70, 63, 188, 18, 155, 190, 16, 50, 212, 61, 0, 96, 153, 65, 100, 47, 132, 198, 41, 89, 203, 189, 252, 127, 100, 62, 181, 18, 155, 190, 86, 244, 174, 62, 241, 75, 138, 197, 134, 121, 165, 63, 242, 75, 138, 197, 169, 26, 162, 63, 82, 225, 138, 197, 137, 51, 132, 70, 80, 233, 138, 69, 128, 50, 132, 70, 81, 233, 138, 69, 80, 8, 139, 198, 93, 117, 143, 69, 100, 47, 132, 198, 225, 132, 140, 197, 99, 47, 132, 198, 204, 174, 137, 197, 80, 7, 139, 198, 80, 233, 138, 69, 0, 0, 71, 63, 0, 96, 153, 65, 100, 47, 132, 198, 241, 75, 138, 197, 49, 127, 165, 63, 242, 75, 138, 197, 168, 90, 162, 63),
+"attribute_data": PackedByteArray("AC3+vtF6mz8AAAC/AICcPwAt/r7Reps/Bi3+vqL1RL8GLf6+ovVEvwAAwD8AgJw/2EC+PtB6mz8AAAC/AABHv9RAvj6i9US/AADAPwAAR78CLf6+VDSvPgIt/r5UNK8+BC3+vjAy1D0ELf6+MDLUPTNZy734MdQ9M1nLvfgx1D0oWcu9VLSuPihZy71UtK4+vBKbvhAy1D28Epu+EDLUPSlZy738f2Q+KVnLvfx/ZD61Epu+VvSuPrUSm75W9K4+AAAAvwCAnD8ALf6+0XqbPwYt/r6i9US/AADAPwCAnD8AAAC/AABHvwAAwD8AAEe/Ai3+vlQ0rz5R4YrFiTOERlDpikWAMoRGBC3+vjAy1D1R6YpFUAiLxl91j0VlL4TGM1nLvfgx1D3ihIzFYy+ExihZy71UtK4+zK6JxVAHi8ZQ6YpFAIBGP7wSm74QMtQ9AGCZQWQvhMYpWcu9/H9kPrUSm75W9K4+8UuKxYZ5pT/yS4rFqRqiP1LhisWJM4RGUOmKRYAyhEZR6YpFUAiLxl11j0VkL4TG4YSMxWMvhMbMronFUAeLxlDpikUAAEc/AGCZQWQvhMbxS4rFMX+lP/JLisWoWqI/"),
 "format": 34359742487,
 "index_count": 129,
-"index_data": PackedByteArray(10, 0, 6, 0, 0, 0, 8, 0, 12, 0, 3, 0, 8, 0, 18, 0, 12, 0, 22, 0, 6, 0, 10, 0, 14, 0, 16, 0, 20, 0, 16, 0, 6, 0, 22, 0, 8, 0, 14, 0, 18, 0, 14, 0, 6, 0, 16, 0, 6, 0, 14, 0, 8, 0, 17, 0, 43, 0, 21, 0, 17, 0, 38, 0, 43, 0, 7, 0, 24, 0, 1, 0, 7, 0, 28, 0, 24, 0, 11, 0, 44, 0, 23, 0, 11, 0, 30, 0, 44, 0, 13, 0, 26, 0, 4, 0, 13, 0, 33, 0, 26, 0, 5, 0, 29, 0, 9, 0, 5, 0, 27, 0, 29, 0, 19, 0, 33, 0, 13, 0, 19, 0, 41, 0, 33, 0, 9, 0, 28, 0, 7, 0, 9, 0, 29, 0, 28, 0, 21, 0, 36, 0, 15, 0, 21, 0, 43, 0, 36, 0, 2, 0, 30, 0, 11, 0, 2, 0, 25, 0, 30, 0, 23, 0, 38, 0, 17, 0, 23, 0, 44, 0, 38, 0, 15, 0, 41, 0, 19, 0, 15, 0, 36, 0, 41, 0, 40, 0, 48, 0, 32, 0, 40, 0, 53, 0, 48, 0, 42, 0, 50, 0, 35, 0, 42, 0, 54, 0, 50, 0, 46, 0, 52, 0, 39, 0, 46, 0, 56, 0, 52, 0, 34, 0, 53, 0, 40, 0, 34, 0, 49, 0, 53, 0, 37, 0, 54, 0, 42, 0, 37, 0, 51, 0, 54, 0, 31, 0, 55, 0, 45, 0, 31, 0, 47, 0, 55, 0),
+"index_data": PackedByteArray("CgAGAAAACAAMAAMACAASAAwAFgAGAAoADgAQABQAEAAGABYACAAOABIADgAGABAABgAOAAgAEQArABUAEQAmACsABwAYAAEABwAcABgACwAsABcACwAeACwADQAaAAQADQAhABoABQAdAAkABQAbAB0AEwAhAA0AEwApACEACQAcAAcACQAdABwAFQAkAA8AFQArACQAAgAeAAsAAgAZAB4AFwAmABEAFwAsACYADwApABMADwAkACkAKAAwACAAKAA1ADAAKgAyACMAKgA2ADIALgA0ACcALgA4ADQAIgA1ACgAIgAxADUAJQA2ACoAJQAzADYAHwA3AC0AHwAvADcA"),
 "material": SubResource("StandardMaterial3D_8q2n5"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 57,
-"vertex_data": PackedByteArray(251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 251, 255, 255, 192, 132, 230, 223, 64, 191, 247, 30, 65, 251, 255, 255, 192, 132, 230, 223, 64, 191, 247, 30, 65, 3, 0, 0, 65, 132, 230, 223, 64, 189, 247, 30, 65, 3, 0, 0, 65, 132, 230, 223, 64, 189, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 190, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 190, 247, 30, 65, 123, 194, 117, 63, 0, 224, 75, 187, 190, 247, 30, 65, 123, 194, 117, 63, 0, 224, 75, 187, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 129, 194, 117, 63, 81, 102, 199, 63, 190, 247, 30, 65, 129, 194, 117, 63, 81, 102, 199, 63, 190, 247, 30, 65, 209, 239, 128, 187, 196, 204, 76, 64, 190, 247, 30, 65, 209, 239, 128, 187, 196, 204, 76, 64, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 251, 255, 255, 192, 0, 224, 75, 187, 191, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 3, 0, 0, 65, 0, 224, 75, 187, 189, 247, 30, 65, 251, 255, 255, 192, 132, 230, 223, 64, 191, 247, 30, 65, 3, 0, 0, 65, 132, 230, 223, 64, 189, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 190, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 190, 247, 30, 65, 123, 194, 117, 63, 0, 224, 75, 187, 190, 247, 30, 65, 123, 194, 117, 63, 0, 224, 75, 187, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 135, 194, 117, 63, 201, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 142, 194, 117, 191, 200, 204, 76, 64, 190, 247, 30, 65, 129, 194, 117, 63, 81, 102, 199, 63, 190, 247, 30, 65, 129, 194, 117, 63, 81, 102, 199, 63, 190, 247, 30, 65, 209, 239, 128, 187, 196, 204, 76, 64, 190, 247, 30, 65, 209, 239, 128, 187, 196, 204, 76, 64, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 162, 194, 117, 191, 83, 102, 199, 63, 190, 247, 30, 65, 147, 202, 117, 191, 0, 224, 75, 187, 16, 208, 35, 65, 123, 194, 117, 63, 0, 224, 75, 187, 16, 208, 35, 65, 135, 194, 117, 63, 201, 204, 76, 64, 16, 208, 35, 65, 135, 194, 117, 63, 201, 204, 76, 64, 16, 208, 35, 65, 142, 194, 117, 191, 200, 204, 76, 64, 16, 208, 35, 65, 142, 194, 117, 191, 200, 204, 76, 64, 16, 208, 35, 65, 129, 194, 117, 63, 81, 102, 199, 63, 16, 208, 35, 65, 95, 239, 128, 187, 196, 204, 76, 64, 16, 208, 35, 65, 162, 194, 117, 191, 83, 102, 199, 63, 16, 208, 35, 65, 162, 194, 117, 191, 83, 102, 199, 63, 16, 208, 35, 65, 255, 255, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 250, 127, 252, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 215, 127, 234, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 12, 128, 248, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 52, 128, 228, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 237, 255, 8, 64, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 255, 176, 127, 215, 255, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 251, 255, 252, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 0, 0, 102, 225, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 102, 225, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 251, 255, 252, 127, 255, 255, 255, 191, 255, 255, 255, 127, 255, 127, 255, 63, 251, 255, 252, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 0, 0, 102, 225, 255, 63, 255, 127, 0, 0, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 255, 63, 251, 255, 252, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 127, 255, 63)
+"vertex_data": PackedByteArray("+///wADgS7u/9x5B+///wADgS7u/9x5B+///wADgS7u/9x5BAwAAQQDgS7u99x5BAwAAQQDgS7u99x5BAwAAQQDgS7u99x5B+///wITm30C/9x5B+///wITm30C/9x5BAwAAQYTm30C99x5BAwAAQYTm30C99x5Bk8p1vwDgS7u+9x5Bk8p1vwDgS7u+9x5Be8J1PwDgS7u+9x5Be8J1PwDgS7u+9x5Bh8J1P8nMTEC+9x5Bh8J1P8nMTEC+9x5BjsJ1v8jMTEC+9x5BjsJ1v8jMTEC+9x5BgcJ1P1Fmxz++9x5BgcJ1P1Fmxz++9x5B0e+Au8TMTEC+9x5B0e+Au8TMTEC+9x5BosJ1v1Nmxz++9x5BosJ1v1Nmxz++9x5B+///wADgS7u/9x5B+///wADgS7u/9x5BAwAAQQDgS7u99x5BAwAAQQDgS7u99x5B+///wITm30C/9x5BAwAAQYTm30C99x5Bk8p1vwDgS7u+9x5Bk8p1vwDgS7u+9x5Be8J1PwDgS7u+9x5Be8J1PwDgS7u+9x5Bh8J1P8nMTEC+9x5Bh8J1P8nMTEC+9x5Bh8J1P8nMTEC+9x5BjsJ1v8jMTEC+9x5BjsJ1v8jMTEC+9x5BjsJ1v8jMTEC+9x5BgcJ1P1Fmxz++9x5BgcJ1P1Fmxz++9x5B0e+Au8TMTEC+9x5B0e+Au8TMTEC+9x5BosJ1v1Nmxz++9x5BosJ1v1Nmxz++9x5BosJ1v1Nmxz++9x5Bk8p1vwDgS7sQ0CNBe8J1PwDgS7sQ0CNBh8J1P8nMTEAQ0CNBh8J1P8nMTEAQ0CNBjsJ1v8jMTEAQ0CNBjsJ1v8jMTEAQ0CNBgcJ1P1Fmxz8Q0CNBX++Au8TMTEAQ0CNBosJ1v1Nmxz8Q0CNBosJ1v1Nmxz8Q0CNB//////9/////f///////v/9///////+///////9/////f///////v/9///////+///////p//P//f///////v///////f/7//3///////7//////13/q//9///////+///////9//v//f///////v/////8MgPj//3///////7//////NIDk//9///////+///////9//v//f///////v//////t/whA/3///////7//////sH/X//9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7/7//x//////wAA/3////+//3///////78AAP9//3//v/9/AABm4f8//3///////7//fwAA/3//P/9///////+/////f////78AAP9//3//v/9///////+//38AAGbh/z//f///////v/9///////+/+//8f////7////9//3//P/v//H//////AAD/f////78AAP9/////v/9/AABm4f8//38AAP9//z////9//3//PwAA/3//f/+//38AAP9//z/7//x//////////3//f/8/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oepdd")
@@ -221,72 +221,72 @@ _surfaces = [{
 "aabb": AABB(3.08613, -0.106414, -7.91347, 0.179673, 6.71661, 1.41749),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 96, 242, 0, 0, 254, 255, 255, 255, 96, 242, 0, 0, 255, 255, 255, 255, 54, 11, 0, 0, 255, 255, 0, 0, 54, 11, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAA//8AAAAAAAAAAAAAAAD+/wAAYPIAAP7///9g8gAA/////zYLAAD//wAANgsAAA==")
 }, {
 "aabb": AABB(3.2658, -0.106414, -7.85138, 1.00136e-05, 6.71661, 1.28001),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "name": "Foreground.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 24, 6, 255, 255, 0, 0, 0, 0, 24, 6, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AABgG//8AAAAAGAYAAAAAAAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, -10.0469, 1.0252e-05, 6.71661, 7.25982),
 "format": 34896613377,
 "index_count": 18,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUAAAAJAAgAAAABAAkA"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 154, 213, 0, 0, 0, 0, 255, 255, 154, 213, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 54, 125, 0, 0, 244, 5, 255, 255, 54, 125, 0, 0, 244, 5, 255, 255, 58, 75, 0, 0, 244, 5, 0, 0, 58, 75, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("9AUAAJrVAAAAAP//mtUAAPQFAAAAAAAA9AX//wAAAAD0BQAANn0AAPQF//82fQAA9AX//zpLAAD0BQAAOksAAAAAAAD//wAAAAD/////AAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, -2.78707, 1.0252e-05, 6.71661, 6.86576),
 "format": 34896613377,
 "index_count": 24,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUABAAGAAUABAAHAAYAAAAJAAgAAAABAAkA"),
 "name": "Background.005",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 220, 225, 0, 0, 0, 0, 255, 255, 220, 225, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 102, 132, 0, 0, 244, 5, 255, 255, 102, 132, 0, 0, 244, 5, 255, 255, 139, 79, 0, 0, 244, 5, 0, 0, 139, 79, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("9AUAANzhAAAAAP//3OEAAPQFAAAAAAAA9AX//wAAAAD0BQAAZoQAAPQF//9mhAAA9AX//4tPAAD0BQAAi08AAAAAAAD//wAAAAD/////AAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, 6.21211, 0.179673, 6.71661, 1.41749),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 96, 242, 0, 0, 254, 255, 255, 255, 96, 242, 0, 0, 255, 255, 255, 255, 54, 11, 0, 0, 255, 255, 0, 0, 54, 11, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAA//8AAAAAAAAAAAAAAAD+/wAAYPIAAP7///9g8gAA/////zYLAAD//wAANgsAAA==")
 }, {
 "aabb": AABB(3.2658, -0.106414, 6.27419, 1.00136e-05, 6.71661, 1.28001),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "name": "Foreground.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 24, 6, 255, 255, 0, 0, 0, 0, 24, 6, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AABgG//8AAAAAGAYAAAAAAAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, 4.07869, 1.0252e-05, 6.71661, 6.05759),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUA"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 15, 150, 0, 0, 244, 5, 255, 255, 15, 150, 0, 0, 244, 5, 255, 255, 40, 90, 0, 0, 244, 5, 0, 0, 40, 90, 0, 0)
+"vertex_data": PackedByteArray("9AUAAP7/AAAAAP///v8AAPQFAAAAAAAA9AX//wAAAAD0BQAAD5YAAPQF//8PlgAA9AX//yhaAAD0BQAAKFoAAA==")
 }]
 blend_shape_mode = 0
 
@@ -294,88 +294,88 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Plane_001"
 _surfaces = [{
 "aabb": AABB(3.08613, -0.106414, -7.91347, 0.179673, 6.71661, 1.41749),
-"attribute_data": PackedByteArray(255, 127, 255, 255, 255, 255, 254, 255, 254, 255, 116, 156, 255, 127, 116, 156, 255, 127, 8, 248, 254, 255, 8, 248, 254, 255, 123, 163, 255, 127, 123, 163),
+"attribute_data": PackedByteArray("/3///////v/+/3Sc/390nP9/CPj+/wj4/v97o/9/e6M="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_1yxri"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.64807, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 150, 244, 0, 0, 255, 255, 254, 255, 150, 244, 0, 0, 255, 255, 0, 0, 29, 193, 0, 0, 0, 0, 0, 0, 29, 193, 254, 255, 0, 0, 96, 242, 150, 244, 254, 255, 255, 255, 96, 242, 150, 244, 255, 255, 255, 255, 54, 11, 29, 193, 255, 255, 0, 0, 54, 11, 29, 193, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239)
+"vertex_data": PackedByteArray("AAAAAP7/lvQAAP///v+W9AAA//8AAB3BAAAAAAAAHcH+/wAAYPKW9P7///9g8pb0/////zYLHcH//wAANgsdwdnF2cXZxdnF6O/o7+jv6O/ZxdnF2cXZxejv6O/o7+jv")
 }, {
 "aabb": AABB(3.2658, -0.106414, -7.85138, 1.00136e-05, 6.71661, 1.28001),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 255, 255, 255, 255, 255, 255, 249, 156, 255, 127, 249, 156),
+"attribute_data": PackedByteArray("/3/+//////////mc/3/5nA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "material": SubResource("StandardMaterial3D_iisoo"),
 "name": "Foreground.006",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.62206, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 24, 6, 255, 255, 0, 0, 84, 213, 24, 6, 0, 0, 0, 0, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP///v9U1RgG//8AAFTVGAYAAAAAVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, -10.0469, 1.0252e-05, 6.71661, 7.25982),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137, 255, 127, 179, 72, 255, 255, 179, 72),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYn/f7NI//+zSA=="),
 "format": 34896613399,
 "index_count": 18,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUAAAAJAAgAAAABAAkA"),
 "material": SubResource("StandardMaterial3D_8q2n5"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 154, 213, 170, 42, 0, 0, 255, 255, 154, 213, 170, 42, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 54, 125, 84, 213, 244, 5, 255, 255, 54, 125, 84, 213, 244, 5, 255, 255, 58, 75, 84, 213, 244, 5, 0, 0, 58, 75, 84, 213, 0, 0, 0, 0, 255, 255, 170, 42, 0, 0, 255, 255, 255, 255, 170, 42, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAAJrVqioAAP//mtWqKvQFAAAAAFTV9AX//wAAVNX0BQAANn1U1fQF//82fVTV9AX//zpLVNX0BQAAOktU1QAAAAD//6oqAAD/////qipU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, -2.78707, 1.0252e-05, 6.71661, 6.86576),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137, 255, 127, 179, 72, 255, 255, 179, 72),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYn/f7NI//+zSA=="),
 "format": 34896613399,
 "index_count": 24,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUABAAGAAUABAAHAAYAAAAJAAgAAAABAAkA"),
 "material": SubResource("StandardMaterial3D_8usb5"),
 "name": "Background.005",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 220, 225, 170, 42, 0, 0, 255, 255, 220, 225, 170, 42, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 102, 132, 84, 213, 244, 5, 255, 255, 102, 132, 84, 213, 244, 5, 255, 255, 139, 79, 84, 213, 244, 5, 0, 0, 139, 79, 84, 213, 0, 0, 0, 0, 255, 255, 170, 42, 0, 0, 255, 255, 255, 255, 170, 42, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAANzhqioAAP//3OGqKvQFAAAAAFTV9AX//wAAVNX0BQAAZoRU1fQF//9mhFTV9AX//4tPVNX0BQAAi09U1QAAAAD//6oqAAD/////qipU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, 6.21211, 0.179673, 6.71661, 1.41749),
-"attribute_data": PackedByteArray(255, 127, 255, 255, 255, 255, 254, 255, 254, 255, 116, 156, 255, 127, 116, 156, 255, 127, 8, 248, 254, 255, 8, 248, 254, 255, 123, 163, 255, 127, 123, 163),
+"attribute_data": PackedByteArray("/3///////v/+/3Sc/390nP9/CPj+/wj4/v97o/9/e6M="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_1yxri"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.64807, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 150, 244, 0, 0, 255, 255, 254, 255, 150, 244, 0, 0, 255, 255, 0, 0, 29, 193, 0, 0, 0, 0, 0, 0, 29, 193, 254, 255, 0, 0, 96, 242, 150, 244, 254, 255, 255, 255, 96, 242, 150, 244, 255, 255, 255, 255, 54, 11, 29, 193, 255, 255, 0, 0, 54, 11, 29, 193, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239)
+"vertex_data": PackedByteArray("AAAAAP7/lvQAAP///v+W9AAA//8AAB3BAAAAAAAAHcH+/wAAYPKW9P7///9g8pb0/////zYLHcH//wAANgsdwdnF2cXZxdnF6O/o7+jv6O/ZxdnF2cXZxejv6O/o7+jv")
 }, {
 "aabb": AABB(3.2658, -0.106414, 6.27419, 1.00136e-05, 6.71661, 1.28001),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 255, 255, 255, 255, 255, 255, 249, 156, 255, 127, 249, 156),
+"attribute_data": PackedByteArray("/3/+//////////mc/3/5nA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "material": SubResource("StandardMaterial3D_iisoo"),
 "name": "Foreground.006",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.62206, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 24, 6, 255, 255, 0, 0, 84, 213, 24, 6, 0, 0, 0, 0, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP///v9U1RgG//8AAFTVGAYAAAAAVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, 4.07869, 1.0252e-05, 6.71661, 6.05759),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYk="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_8q2n5"),
 "name": "Background.006",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 15, 150, 84, 213, 244, 5, 255, 255, 15, 150, 84, 213, 244, 5, 255, 255, 40, 90, 84, 213, 244, 5, 0, 0, 40, 90, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAAP7/VNUAAP///v9U1fQFAAAAAFTV9AX//wAAVNX0BQAAD5ZU1fQF//8PllTV9AX//yhaVNX0BQAAKFpU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q53h4")
@@ -422,72 +422,72 @@ _surfaces = [{
 "aabb": AABB(3.08613, -0.106414, -7.91347, 0.179673, 6.71661, 1.41749),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 96, 242, 0, 0, 254, 255, 255, 255, 96, 242, 0, 0, 255, 255, 255, 255, 54, 11, 0, 0, 255, 255, 0, 0, 54, 11, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAA//8AAAAAAAAAAAAAAAD+/wAAYPIAAP7///9g8gAA/////zYLAAD//wAANgsAAA==")
 }, {
 "aabb": AABB(3.2658, -0.106414, -7.85138, 1.00136e-05, 6.71661, 1.28001),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "name": "Foreground.004",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 24, 6, 255, 255, 0, 0, 0, 0, 24, 6, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AABgG//8AAAAAGAYAAAAAAAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, -10.0469, 1.0252e-05, 6.71661, 7.25982),
 "format": 34896613377,
 "index_count": 18,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUAAAAJAAgAAAABAAkA"),
 "name": "Background.004",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 154, 213, 0, 0, 0, 0, 255, 255, 154, 213, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 54, 125, 0, 0, 244, 5, 255, 255, 54, 125, 0, 0, 244, 5, 255, 255, 58, 75, 0, 0, 244, 5, 0, 0, 58, 75, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("9AUAAJrVAAAAAP//mtUAAPQFAAAAAAAA9AX//wAAAAD0BQAANn0AAPQF//82fQAA9AX//zpLAAD0BQAAOksAAAAAAAD//wAAAAD/////AAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, -2.78707, 1.0252e-05, 6.71661, 6.86576),
 "format": 34896613377,
 "index_count": 24,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUABAAGAAUABAAHAAYAAAAJAAgAAAABAAkA"),
 "name": "Background.007",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 220, 225, 0, 0, 0, 0, 255, 255, 220, 225, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 102, 132, 0, 0, 244, 5, 255, 255, 102, 132, 0, 0, 244, 5, 255, 255, 139, 79, 0, 0, 244, 5, 0, 0, 139, 79, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
+"vertex_data": PackedByteArray("9AUAANzhAAAAAP//3OEAAPQFAAAAAAAA9AX//wAAAAD0BQAAZoQAAPQF//9mhAAA9AX//4tPAAD0BQAAi08AAAAAAAD//wAAAAD/////AAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, 6.21211, 0.179673, 6.71661, 1.41749),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 96, 242, 0, 0, 254, 255, 255, 255, 96, 242, 0, 0, 255, 255, 255, 255, 54, 11, 0, 0, 255, 255, 0, 0, 54, 11, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAA//8AAAAAAAAAAAAAAAD+/wAAYPIAAP7///9g8gAA/////zYLAAD//wAANgsAAA==")
 }, {
 "aabb": AABB(3.2658, -0.106414, 6.27419, 1.00136e-05, 6.71661, 1.28001),
 "format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "name": "Foreground.004",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 24, 6, 255, 255, 0, 0, 0, 0, 24, 6, 0, 0, 0, 0, 0, 0)
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AABgG//8AAAAAGAYAAAAAAAA=")
 }, {
 "aabb": AABB(3.08613, -0.106414, 4.07869, 1.0252e-05, 6.71661, 6.05759),
 "format": 34896613377,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUA"),
 "name": "Background.004",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 244, 5, 0, 0, 0, 0, 0, 0, 244, 5, 255, 255, 0, 0, 0, 0, 244, 5, 0, 0, 15, 150, 0, 0, 244, 5, 255, 255, 15, 150, 0, 0, 244, 5, 255, 255, 40, 90, 0, 0, 244, 5, 0, 0, 40, 90, 0, 0)
+"vertex_data": PackedByteArray("9AUAAP7/AAAAAP///v8AAPQFAAAAAAAA9AX//wAAAAD0BQAAD5YAAPQF//8PlgAA9AX//yhaAAD0BQAAKFoAAA==")
 }]
 blend_shape_mode = 0
 
@@ -495,88 +495,88 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Plane_002"
 _surfaces = [{
 "aabb": AABB(3.08613, -0.106414, -7.91347, 0.179673, 6.71661, 1.41749),
-"attribute_data": PackedByteArray(255, 127, 255, 255, 255, 255, 254, 255, 254, 255, 116, 156, 255, 127, 116, 156, 255, 127, 8, 248, 254, 255, 8, 248, 254, 255, 123, 163, 255, 127, 123, 163),
+"attribute_data": PackedByteArray("/3///////v/+/3Sc/390nP9/CPj+/wj4/v97o/9/e6M="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_1yxri"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.64807, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 150, 244, 0, 0, 255, 255, 254, 255, 150, 244, 0, 0, 255, 255, 0, 0, 29, 193, 0, 0, 0, 0, 0, 0, 29, 193, 254, 255, 0, 0, 96, 242, 150, 244, 254, 255, 255, 255, 96, 242, 150, 244, 255, 255, 255, 255, 54, 11, 29, 193, 255, 255, 0, 0, 54, 11, 29, 193, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239)
+"vertex_data": PackedByteArray("AAAAAP7/lvQAAP///v+W9AAA//8AAB3BAAAAAAAAHcH+/wAAYPKW9P7///9g8pb0/////zYLHcH//wAANgsdwdnF2cXZxdnF6O/o7+jv6O/ZxdnF2cXZxejv6O/o7+jv")
 }, {
 "aabb": AABB(3.2658, -0.106414, -7.85138, 1.00136e-05, 6.71661, 1.28001),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 255, 255, 255, 255, 255, 255, 249, 156, 255, 127, 249, 156),
+"attribute_data": PackedByteArray("/3/+//////////mc/3/5nA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "material": SubResource("StandardMaterial3D_4mesj"),
 "name": "Foreground.004",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.62206, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 24, 6, 255, 255, 0, 0, 84, 213, 24, 6, 0, 0, 0, 0, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP///v9U1RgG//8AAFTVGAYAAAAAVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, -10.0469, 1.0252e-05, 6.71661, 7.25982),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137, 255, 127, 179, 72, 255, 255, 179, 72),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYn/f7NI//+zSA=="),
 "format": 34896613399,
 "index_count": 18,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUAAAAJAAgAAAABAAkA"),
 "material": SubResource("StandardMaterial3D_1ywie"),
 "name": "Background.004",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 154, 213, 170, 42, 0, 0, 255, 255, 154, 213, 170, 42, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 54, 125, 84, 213, 244, 5, 255, 255, 54, 125, 84, 213, 244, 5, 255, 255, 58, 75, 84, 213, 244, 5, 0, 0, 58, 75, 84, 213, 0, 0, 0, 0, 255, 255, 170, 42, 0, 0, 255, 255, 255, 255, 170, 42, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAAJrVqioAAP//mtWqKvQFAAAAAFTV9AX//wAAVNX0BQAANn1U1fQF//82fVTV9AX//zpLVNX0BQAAOktU1QAAAAD//6oqAAD/////qipU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, -2.78707, 1.0252e-05, 6.71661, 6.86576),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137, 255, 127, 179, 72, 255, 255, 179, 72),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYn/f7NI//+zSA=="),
 "format": 34896613399,
 "index_count": 24,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 0, 0, 9, 0, 8, 0, 0, 0, 1, 0, 9, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUABAAGAAUABAAHAAYAAAAJAAgAAAABAAkA"),
 "material": SubResource("StandardMaterial3D_ox6e8"),
 "name": "Background.007",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 10,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 220, 225, 170, 42, 0, 0, 255, 255, 220, 225, 170, 42, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 102, 132, 84, 213, 244, 5, 255, 255, 102, 132, 84, 213, 244, 5, 255, 255, 139, 79, 84, 213, 244, 5, 0, 0, 139, 79, 84, 213, 0, 0, 0, 0, 255, 255, 170, 42, 0, 0, 255, 255, 255, 255, 170, 42, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAANzhqioAAP//3OGqKvQFAAAAAFTV9AX//wAAVNX0BQAAZoRU1fQF//9mhFTV9AX//4tPVNX0BQAAi09U1QAAAAD//6oqAAD/////qipU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, 6.21211, 0.179673, 6.71661, 1.41749),
-"attribute_data": PackedByteArray(255, 127, 255, 255, 255, 255, 254, 255, 254, 255, 116, 156, 255, 127, 116, 156, 255, 127, 8, 248, 254, 255, 8, 248, 254, 255, 123, 163, 255, 127, 123, 163),
+"attribute_data": PackedByteArray("/3///////v/+/3Sc/390nP9/CPj+/wj4/v97o/9/e6M="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 2, 0, 6, 0, 7, 0, 3, 0, 2, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwACAAYABwADAAIAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_1yxri"),
 "name": "Glow.001",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.64807, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 150, 244, 0, 0, 255, 255, 254, 255, 150, 244, 0, 0, 255, 255, 0, 0, 29, 193, 0, 0, 0, 0, 0, 0, 29, 193, 254, 255, 0, 0, 96, 242, 150, 244, 254, 255, 255, 255, 96, 242, 150, 244, 255, 255, 255, 255, 54, 11, 29, 193, 255, 255, 0, 0, 54, 11, 29, 193, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239, 217, 197, 217, 197, 217, 197, 217, 197, 232, 239, 232, 239, 232, 239, 232, 239)
+"vertex_data": PackedByteArray("AAAAAP7/lvQAAP///v+W9AAA//8AAB3BAAAAAAAAHcH+/wAAYPKW9P7///9g8pb0/////zYLHcH//wAANgsdwdnF2cXZxdnF6O/o7+jv6O/ZxdnF2cXZxejv6O/o7+jv")
 }, {
 "aabb": AABB(3.2658, -0.106414, 6.27419, 1.00136e-05, 6.71661, 1.28001),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 255, 255, 255, 255, 255, 255, 249, 156, 255, 127, 249, 156),
+"attribute_data": PackedByteArray("/3/+//////////mc/3/5nA=="),
 "format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
 "material": SubResource("StandardMaterial3D_4mesj"),
 "name": "Foreground.004",
 "primitive": 3,
 "uv_scale": Vector4(6.71661, 1.62206, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 24, 6, 255, 255, 0, 0, 84, 213, 24, 6, 0, 0, 0, 0, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP///v9U1RgG//8AAFTVGAYAAAAAVNVU1VTVVNVU1VTVVNVU1VTV")
 }, {
 "aabb": AABB(3.08613, -0.106414, 4.07869, 1.0252e-05, 6.71661, 6.05759),
-"attribute_data": PackedByteArray(255, 127, 254, 255, 254, 255, 255, 255, 255, 127, 179, 72, 255, 255, 179, 72, 255, 127, 37, 180, 254, 255, 37, 180, 254, 255, 65, 137, 255, 127, 65, 137),
+"attribute_data": PackedByteArray("/3/+//7/////f7NI//+zSP9/JbT+/yW0/v9Bif9/QYk="),
 "format": 34896613399,
 "index_count": 12,
-"index_data": PackedByteArray(7, 0, 3, 0, 6, 0, 7, 0, 2, 0, 3, 0, 0, 0, 5, 0, 1, 0, 0, 0, 4, 0, 5, 0),
+"index_data": PackedByteArray("BwADAAYABwACAAMAAAAFAAEAAAAEAAUA"),
 "material": SubResource("StandardMaterial3D_1ywie"),
 "name": "Background.004",
 "primitive": 3,
 "uv_scale": Vector4(6.71662, 4.23014, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(244, 5, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 84, 213, 244, 5, 0, 0, 0, 0, 84, 213, 244, 5, 255, 255, 0, 0, 84, 213, 244, 5, 0, 0, 15, 150, 84, 213, 244, 5, 255, 255, 15, 150, 84, 213, 244, 5, 255, 255, 40, 90, 84, 213, 244, 5, 0, 0, 40, 90, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213, 84, 213)
+"vertex_data": PackedByteArray("9AUAAP7/VNUAAP///v9U1fQFAAAAAFTV9AX//wAAVNX0BQAAD5ZU1fQF//8PllTV9AX//yhaVNX0BQAAKFpU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wgcdv")
@@ -600,12 +600,12 @@ _surfaces = [{
 "aabb": AABB(-9.38119, -1.00025, -9.8722, 15.9639, 6.70579, 10.2964),
 "format": 34896613377,
 "index_count": 312,
-"index_data": PackedByteArray(35, 0, 30, 0, 34, 0, 35, 0, 32, 0, 30, 0, 27, 0, 7, 0, 12, 0, 27, 0, 22, 0, 7, 0, 22, 0, 5, 0, 7, 0, 22, 0, 23, 0, 5, 0, 24, 0, 1, 0, 11, 0, 24, 0, 20, 0, 1, 0, 14, 0, 4, 0, 6, 0, 14, 0, 13, 0, 4, 0, 9, 0, 1, 0, 3, 0, 9, 0, 11, 0, 1, 0, 12, 0, 11, 0, 9, 0, 12, 0, 15, 0, 11, 0, 2, 0, 10, 0, 8, 0, 2, 0, 0, 0, 10, 0, 26, 0, 11, 0, 15, 0, 26, 0, 24, 0, 11, 0, 21, 0, 9, 0, 3, 0, 21, 0, 25, 0, 9, 0, 23, 0, 15, 0, 5, 0, 23, 0, 26, 0, 15, 0, 7, 0, 15, 0, 12, 0, 7, 0, 5, 0, 15, 0, 8, 0, 13, 0, 14, 0, 8, 0, 10, 0, 13, 0, 25, 0, 17, 0, 9, 0, 25, 0, 28, 0, 17, 0, 45, 0, 53, 0, 47, 0, 45, 0, 51, 0, 53, 0, 9, 0, 18, 0, 12, 0, 9, 0, 17, 0, 18, 0, 27, 0, 19, 0, 14, 0, 27, 0, 29, 0, 19, 0, 14, 0, 16, 0, 8, 0, 14, 0, 19, 0, 16, 0, 12, 0, 29, 0, 27, 0, 12, 0, 18, 0, 29, 0, 16, 0, 29, 0, 28, 0, 16, 0, 19, 0, 29, 0, 8, 0, 28, 0, 25, 0, 8, 0, 16, 0, 28, 0, 4, 0, 26, 0, 23, 0, 4, 0, 13, 0, 26, 0, 2, 0, 25, 0, 21, 0, 2, 0, 8, 0, 25, 0, 13, 0, 24, 0, 26, 0, 13, 0, 10, 0, 24, 0, 10, 0, 20, 0, 24, 0, 10, 0, 0, 0, 20, 0, 6, 0, 23, 0, 22, 0, 6, 0, 4, 0, 23, 0, 14, 0, 22, 0, 27, 0, 14, 0, 6, 0, 22, 0, 0, 0, 21, 0, 20, 0, 0, 0, 2, 0, 21, 0, 32, 0, 31, 0, 30, 0, 32, 0, 33, 0, 31, 0, 37, 0, 33, 0, 36, 0, 37, 0, 31, 0, 33, 0, 34, 0, 31, 0, 37, 0, 34, 0, 30, 0, 31, 0, 32, 0, 39, 0, 33, 0, 32, 0, 38, 0, 39, 0, 21, 0, 35, 0, 20, 0, 21, 0, 36, 0, 35, 0, 1, 0, 37, 0, 3, 0, 1, 0, 34, 0, 37, 0, 3, 0, 36, 0, 21, 0, 3, 0, 37, 0, 36, 0, 20, 0, 34, 0, 1, 0, 20, 0, 35, 0, 34, 0, 41, 0, 38, 0, 40, 0, 41, 0, 39, 0, 38, 0, 36, 0, 40, 0, 35, 0, 36, 0, 41, 0, 40, 0, 33, 0, 41, 0, 36, 0, 33, 0, 39, 0, 41, 0, 35, 0, 38, 0, 32, 0, 35, 0, 40, 0, 38, 0, 44, 0, 43, 0, 42, 0, 44, 0, 45, 0, 43, 0, 48, 0, 45, 0, 47, 0, 48, 0, 43, 0, 45, 0, 49, 0, 43, 0, 48, 0, 49, 0, 42, 0, 43, 0, 46, 0, 42, 0, 49, 0, 46, 0, 44, 0, 42, 0, 28, 0, 49, 0, 17, 0, 28, 0, 46, 0, 49, 0, 17, 0, 48, 0, 18, 0, 17, 0, 49, 0, 48, 0, 18, 0, 47, 0, 29, 0, 18, 0, 48, 0, 47, 0, 29, 0, 46, 0, 28, 0, 29, 0, 47, 0, 46, 0, 53, 0, 50, 0, 52, 0, 53, 0, 51, 0, 50, 0, 44, 0, 51, 0, 45, 0, 44, 0, 50, 0, 51, 0, 46, 0, 50, 0, 44, 0, 46, 0, 52, 0, 50, 0, 47, 0, 52, 0, 46, 0, 47, 0, 53, 0, 52, 0),
+"index_data": PackedByteArray("IwAeACIAIwAgAB4AGwAHAAwAGwAWAAcAFgAFAAcAFgAXAAUAGAABAAsAGAAUAAEADgAEAAYADgANAAQACQABAAMACQALAAEADAALAAkADAAPAAsAAgAKAAgAAgAAAAoAGgALAA8AGgAYAAsAFQAJAAMAFQAZAAkAFwAPAAUAFwAaAA8ABwAPAAwABwAFAA8ACAANAA4ACAAKAA0AGQARAAkAGQAcABEALQA1AC8ALQAzADUACQASAAwACQARABIAGwATAA4AGwAdABMADgAQAAgADgATABAADAAdABsADAASAB0AEAAdABwAEAATAB0ACAAcABkACAAQABwABAAaABcABAANABoAAgAZABUAAgAIABkADQAYABoADQAKABgACgAUABgACgAAABQABgAXABYABgAEABcADgAWABsADgAGABYAAAAVABQAAAACABUAIAAfAB4AIAAhAB8AJQAhACQAJQAfACEAIgAfACUAIgAeAB8AIAAnACEAIAAmACcAFQAjABQAFQAkACMAAQAlAAMAAQAiACUAAwAkABUAAwAlACQAFAAiAAEAFAAjACIAKQAmACgAKQAnACYAJAAoACMAJAApACgAIQApACQAIQAnACkAIwAmACAAIwAoACYALAArACoALAAtACsAMAAtAC8AMAArAC0AMQArADAAMQAqACsALgAqADEALgAsACoAHAAxABEAHAAuADEAEQAwABIAEQAxADAAEgAvAB0AEgAwAC8AHQAuABwAHQAvAC4ANQAyADQANQAzADIALAAzAC0ALAAyADMALgAyACwALgA0ADIALwA0AC4ALwA1ADQA"),
 "name": "Background.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 54,
-"vertex_data": PackedByteArray(102, 134, 2, 0, 254, 255, 0, 0, 102, 134, 255, 255, 254, 255, 0, 0, 102, 134, 2, 0, 150, 235, 0, 0, 102, 134, 255, 255, 150, 235, 0, 0, 255, 255, 2, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 2, 0, 150, 235, 0, 0, 255, 255, 255, 255, 150, 235, 0, 0, 219, 155, 2, 0, 150, 235, 0, 0, 219, 155, 255, 255, 150, 235, 0, 0, 219, 155, 2, 0, 254, 255, 0, 0, 219, 155, 255, 255, 254, 255, 0, 0, 145, 169, 255, 255, 150, 235, 0, 0, 145, 169, 2, 0, 254, 255, 0, 0, 145, 169, 2, 0, 150, 235, 0, 0, 145, 169, 255, 255, 254, 255, 0, 0, 219, 155, 2, 0, 187, 208, 0, 0, 219, 155, 255, 255, 187, 208, 0, 0, 145, 169, 255, 255, 187, 208, 0, 0, 145, 169, 2, 0, 187, 208, 0, 0, 102, 134, 141, 154, 254, 255, 0, 0, 102, 134, 141, 154, 150, 235, 0, 0, 255, 255, 141, 154, 150, 235, 0, 0, 255, 255, 141, 154, 254, 255, 0, 0, 219, 155, 141, 154, 254, 255, 0, 0, 219, 155, 141, 154, 150, 235, 0, 0, 145, 169, 141, 154, 254, 255, 0, 0, 145, 169, 141, 154, 150, 235, 0, 0, 219, 155, 141, 154, 187, 208, 0, 0, 145, 169, 141, 154, 187, 208, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 150, 235, 0, 0, 0, 0, 141, 154, 254, 255, 0, 0, 0, 0, 141, 154, 150, 235, 0, 0, 208, 12, 255, 255, 254, 255, 0, 0, 208, 12, 141, 154, 254, 255, 0, 0, 208, 12, 141, 154, 150, 235, 0, 0, 208, 12, 255, 255, 150, 235, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 150, 235, 0, 0, 208, 12, 0, 0, 254, 255, 0, 0, 208, 12, 0, 0, 150, 235, 0, 0, 219, 155, 255, 255, 0, 0, 0, 0, 145, 169, 255, 255, 0, 0, 0, 0, 219, 155, 141, 154, 0, 0, 0, 0, 145, 169, 141, 154, 0, 0, 0, 0, 219, 155, 141, 154, 108, 16, 0, 0, 145, 169, 141, 154, 108, 16, 0, 0, 145, 169, 255, 255, 108, 16, 0, 0, 219, 155, 255, 255, 108, 16, 0, 0, 219, 155, 0, 0, 0, 0, 0, 0, 145, 169, 0, 0, 0, 0, 0, 0, 219, 155, 0, 0, 108, 16, 0, 0, 145, 169, 0, 0, 108, 16, 0, 0)
+"vertex_data": PackedByteArray("ZoYCAP7/AABmhv///v8AAGaGAgCW6wAAZob//5brAAD//wIA/v8AAP/////+/wAA//8CAJbrAAD/////lusAANubAgCW6wAA25v//5brAADbmwIA/v8AANub///+/wAAkan//5brAACRqQIA/v8AAJGpAgCW6wAAkan///7/AADbmwIAu9AAANub//+70AAAkan//7vQAACRqQIAu9AAAGaGjZr+/wAAZoaNmpbrAAD//42alusAAP//jZr+/wAA25uNmv7/AADbm42alusAAJGpjZr+/wAAkamNmpbrAADbm42au9AAAJGpjZq70AAAAAD///7/AAAAAP//lusAAAAAjZr+/wAAAACNmpbrAADQDP///v8AANAMjZr+/wAA0AyNmpbrAADQDP//lusAAAAAAAD+/wAAAAAAAJbrAADQDAAA/v8AANAMAACW6wAA25v//wAAAACRqf//AAAAANubjZoAAAAAkamNmgAAAADbm42abBAAAJGpjZpsEAAAkan//2wQAADbm///bBAAANubAAAAAAAAkakAAAAAAADbmwAAbBAAAJGpAABsEAAA")
 }]
 blend_shape_mode = 0
 
@@ -613,16 +613,16 @@ blend_shape_mode = 0
 resource_name = "LC_cont1_079_Cube"
 _surfaces = [{
 "aabb": AABB(-9.38119, -1.00025, -9.8722, 15.9639, 6.70579, 10.2964),
-"attribute_data": PackedByteArray(176, 209, 207, 131, 42, 234, 153, 141, 237, 243, 153, 141, 148, 142, 60, 160, 163, 198, 172, 200, 3, 224, 255, 255, 0, 230, 232, 206, 173, 215, 207, 131, 39, 240, 153, 141, 42, 234, 34, 171, 148, 142, 60, 160, 64, 179, 255, 255, 0, 230, 255, 255, 253, 235, 232, 206, 45, 228, 89, 161, 137, 157, 60, 160, 176, 209, 207, 131, 201, 208, 89, 161, 0, 230, 255, 255, 55, 248, 117, 226, 42, 234, 89, 161, 201, 208, 172, 200, 179, 203, 207, 131, 137, 157, 143, 199, 253, 235, 255, 255, 58, 242, 117, 226, 223, 243, 117, 226, 14, 139, 216, 140, 39, 240, 213, 131, 248, 247, 17, 207, 237, 243, 34, 171, 88, 152, 60, 160, 88, 152, 60, 160, 253, 235, 171, 216, 251, 241, 213, 200, 237, 243, 152, 141, 42, 234, 213, 131, 251, 241, 17, 207, 185, 191, 207, 131, 42, 234, 153, 141, 209, 132, 60, 160, 58, 242, 117, 226, 0, 230, 171, 216, 253, 235, 213, 200, 137, 157, 60, 160, 253, 235, 171, 216, 251, 241, 17, 207, 42, 250, 152, 141, 27, 168, 60, 160, 45, 228, 172, 200, 251, 241, 213, 200, 137, 157, 143, 199, 124, 185, 207, 131, 209, 132, 216, 140, 42, 234, 172, 200, 248, 247, 213, 200, 201, 208, 89, 161, 223, 243, 117, 226, 201, 208, 172, 200, 253, 235, 117, 226, 0, 230, 171, 216, 253, 235, 17, 207, 193, 251, 117, 226, 14, 139, 247, 132, 64, 179, 207, 131, 255, 127, 143, 199, 57, 160, 60, 160, 198, 166, 255, 255, 237, 243, 182, 133, 3, 173, 255, 255, 42, 250, 182, 133, 98, 147, 255, 255, 57, 160, 60, 160, 209, 132, 247, 132, 124, 185, 207, 131, 253, 235, 117, 226, 176, 209, 89, 161, 6, 218, 172, 200, 148, 142, 216, 140, 6, 218, 172, 200, 237, 243, 34, 171, 173, 215, 89, 161, 3, 224, 172, 200, 148, 142, 216, 140, 163, 198, 255, 255, 42, 234, 172, 200, 236, 176, 143, 199, 64, 179, 172, 200, 179, 203, 89, 161, 58, 242, 17, 207, 255, 127, 60, 160, 45, 228, 89, 161, 176, 209, 89, 161, 55, 248, 17, 207, 209, 132, 216, 140, 185, 191, 89, 161, 42, 234, 34, 171, 58, 242, 17, 207, 88, 152, 216, 140, 223, 243, 255, 255, 88, 152, 216, 140, 237, 243, 172, 200, 255, 127, 143, 199, 124, 185, 89, 161, 45, 228, 172, 200, 253, 235, 17, 207, 236, 176, 60, 160, 64, 179, 89, 161, 27, 168, 216, 140, 223, 243, 255, 255, 98, 147, 143, 199, 57, 160, 216, 140, 193, 251, 255, 255, 64, 179, 255, 255, 64, 179, 89, 161, 3, 173, 255, 255, 124, 185, 89, 161, 57, 160, 216, 140, 198, 166, 255, 255, 253, 235, 255, 255, 55, 248, 117, 226, 254, 255, 172, 200, 0, 230, 232, 206, 52, 254, 117, 226, 42, 250, 73, 181, 0, 230, 235, 200, 185, 191, 89, 161, 55, 248, 17, 207, 87, 227, 89, 161, 254, 255, 73, 181, 182, 197, 89, 161, 52, 254, 17, 207, 173, 215, 89, 161, 42, 250, 229, 161, 163, 198, 255, 255, 42, 250, 172, 200, 3, 224, 172, 200, 213, 235, 232, 206, 6, 218, 255, 255, 6, 218, 255, 255, 130, 221, 89, 161, 42, 250, 73, 181, 179, 203, 89, 161, 3, 224, 255, 255, 163, 198, 172, 200, 130, 221, 89, 161, 255, 255, 229, 161, 182, 197, 89, 161, 64, 179, 172, 200, 255, 255, 73, 181, 0, 230, 172, 200, 213, 235, 235, 200, 185, 191, 207, 131, 134, 154, 216, 140, 87, 227, 207, 131, 182, 197, 207, 131, 134, 154, 219, 134, 173, 215, 207, 131, 177, 148, 216, 140, 130, 221, 207, 131, 179, 203, 207, 131, 177, 148, 219, 134, 130, 221, 207, 131, 182, 197, 207, 131, 252, 254, 229, 161, 27, 168, 60, 160, 224, 143, 155, 134, 88, 174, 60, 160, 224, 143, 216, 140, 88, 174, 60, 160, 209, 132, 60, 160, 252, 254, 130, 142, 27, 168, 216, 140, 237, 243, 172, 200, 88, 174, 216, 140, 42, 250, 172, 200, 88, 174, 216, 140, 45, 228, 89, 161, 255, 127, 60, 160, 98, 147, 255, 255, 42, 250, 130, 142, 64, 179, 143, 199, 42, 250, 34, 171, 3, 173, 143, 199, 237, 243, 34, 171, 198, 166, 143, 199, 42, 179, 216, 140, 254, 232, 89, 161, 14, 139, 216, 140, 3, 173, 143, 199, 98, 147, 143, 199, 42, 179, 60, 160, 255, 127, 255, 255, 42, 250, 229, 161, 14, 139, 155, 134, 198, 166, 143, 199, 209, 132, 177, 130, 177, 148, 216, 140, 237, 243, 34, 171, 177, 148, 155, 134, 42, 250, 34, 171, 45, 228, 207, 131, 255, 127, 177, 130, 224, 143, 216, 140, 42, 250, 152, 141, 224, 143, 155, 134, 237, 243, 152, 141, 254, 232, 207, 131),
+"attribute_data": PackedByteArray("sNHPgyrqmY3t85mNlI48oKPGrMgD4P//AObozq3Xz4Mn8JmNKuoiq5SOPKBAs///AOb///3r6M4t5FmhiZ08oLDRz4PJ0FmhAOb//zf4deIq6lmhydCsyLPLz4OJnY/H/ev//zrydeLf83XiDovYjCfw1YP49xHP7fMiq1iYPKBYmDyg/eur2Pvx1cjt85iNKurVg/vxEc+5v8+DKuqZjdGEPKA68nXiAOar2P3r1ciJnTyg/eur2PvxEc8q+piNG6g8oC3krMj78dXIiZ2Px3y5z4PRhNiMKuqsyPj31cjJ0Fmh3/N14snQrMj963XiAOar2P3rEc/B+3XiDov3hECzz4P/f4/HOaA8oMam///t87aFA63//yr6toVik///OaA8oNGE94R8uc+D/et14rDRWaEG2qzIlI7YjAbarMjt8yKrrddZoQPgrMiUjtiMo8b//yrqrMjssI/HQLOsyLPLWaE68hHP/388oC3kWaGw0VmhN/gRz9GE2Iy5v1mhKuoiqzryEc9YmNiM3/P//1iY2Izt86zI/3+Px3y5WaEt5KzI/esRz+ywPKBAs1mhG6jYjN/z//9ik4/HOaDYjMH7//9As///QLNZoQOt//98uVmhOaDYjMam///96///N/h14v7/rMgA5ujONP514ir6SbUA5uvIub9ZoTf4Ec9X41mh/v9JtbbFWaE0/hHPrddZoSr65aGjxv//KvqsyAPgrMjV6+jOBtr//wba//+C3VmhKvpJtbPLWaED4P//o8asyILdWaH//+WhtsVZoUCzrMj//0m1AOasyNXr68i5v8+DhprYjFfjz4O2xc+Dhprbhq3Xz4OxlNiMgt3Pg7PLz4OxlNuGgt3Pg7bFz4P8/uWhG6g8oOCPm4ZYrjyg4I/YjFiuPKDRhDyg/P6Cjhuo2Izt86zIWK7YjCr6rMhYrtiMLeRZof9/PKBik///KvqCjkCzj8cq+iKrA62Px+3zIqvGpo/HKrPYjP7oWaEOi9iMA62Px2KTj8cqszyg/3///yr65aEOi5uGxqaPx9GEsYKxlNiM7fMiq7GUm4Yq+iKrLeTPg/9/sYLgj9iMKvqYjeCPm4bt85iN/ujPgw=="),
 "format": 34896613399,
 "index_count": 312,
-"index_data": PackedByteArray(141, 0, 121, 0, 135, 0, 141, 0, 129, 0, 121, 0, 106, 0, 23, 0, 44, 0, 106, 0, 86, 0, 23, 0, 89, 0, 19, 0, 25, 0, 89, 0, 93, 0, 19, 0, 94, 0, 3, 0, 40, 0, 94, 0, 78, 0, 3, 0, 54, 0, 14, 0, 20, 0, 54, 0, 49, 0, 14, 0, 33, 0, 6, 0, 13, 0, 33, 0, 42, 0, 6, 0, 46, 0, 43, 0, 34, 0, 46, 0, 61, 0, 43, 0, 8, 0, 36, 0, 28, 0, 8, 0, 1, 0, 36, 0, 105, 0, 41, 0, 59, 0, 105, 0, 97, 0, 41, 0, 83, 0, 32, 0, 10, 0, 83, 0, 100, 0, 32, 0, 91, 0, 58, 0, 17, 0, 91, 0, 104, 0, 58, 0, 24, 0, 60, 0, 45, 0, 24, 0, 18, 0, 60, 0, 29, 0, 50, 0, 55, 0, 29, 0, 37, 0, 50, 0, 98, 0, 66, 0, 31, 0, 98, 0, 111, 0, 66, 0, 177, 0, 207, 0, 187, 0, 177, 0, 201, 0, 207, 0, 35, 0, 70, 0, 47, 0, 35, 0, 68, 0, 70, 0, 109, 0, 75, 0, 57, 0, 109, 0, 119, 0, 75, 0, 53, 0, 63, 0, 27, 0, 53, 0, 73, 0, 63, 0, 48, 0, 117, 0, 108, 0, 48, 0, 72, 0, 117, 0, 64, 0, 116, 0, 114, 0, 64, 0, 74, 0, 116, 0, 26, 0, 112, 0, 99, 0, 26, 0, 62, 0, 112, 0, 15, 0, 102, 0, 90, 0, 15, 0, 51, 0, 102, 0, 9, 0, 101, 0, 85, 0, 9, 0, 30, 0, 101, 0, 52, 0, 95, 0, 103, 0, 52, 0, 38, 0, 95, 0, 39, 0, 80, 0, 96, 0, 39, 0, 2, 0, 80, 0, 22, 0, 92, 0, 88, 0, 22, 0, 16, 0, 92, 0, 56, 0, 87, 0, 107, 0, 56, 0, 21, 0, 87, 0, 0, 0, 81, 0, 76, 0, 0, 0, 7, 0, 81, 0, 127, 0, 123, 0, 120, 0, 127, 0, 131, 0, 123, 0, 149, 0, 133, 0, 146, 0, 149, 0, 124, 0, 133, 0, 137, 0, 125, 0, 151, 0, 137, 0, 122, 0, 125, 0, 126, 0, 155, 0, 130, 0, 126, 0, 152, 0, 155, 0, 82, 0, 138, 0, 77, 0, 82, 0, 143, 0, 138, 0, 5, 0, 150, 0, 12, 0, 5, 0, 136, 0, 150, 0, 11, 0, 144, 0, 84, 0, 11, 0, 148, 0, 144, 0, 79, 0, 134, 0, 4, 0, 79, 0, 139, 0, 134, 0, 161, 0, 153, 0, 158, 0, 161, 0, 156, 0, 153, 0, 147, 0, 160, 0, 142, 0, 147, 0, 163, 0, 160, 0, 132, 0, 162, 0, 145, 0, 132, 0, 157, 0, 162, 0, 140, 0, 154, 0, 128, 0, 140, 0, 159, 0, 154, 0, 172, 0, 167, 0, 165, 0, 172, 0, 174, 0, 167, 0, 191, 0, 176, 0, 186, 0, 191, 0, 169, 0, 176, 0, 194, 0, 168, 0, 188, 0, 194, 0, 166, 0, 168, 0, 180, 0, 164, 0, 193, 0, 180, 0, 171, 0, 164, 0, 110, 0, 192, 0, 65, 0, 110, 0, 179, 0, 192, 0, 67, 0, 189, 0, 69, 0, 67, 0, 195, 0, 189, 0, 71, 0, 185, 0, 118, 0, 71, 0, 190, 0, 185, 0, 115, 0, 181, 0, 113, 0, 115, 0, 183, 0, 181, 0, 205, 0, 197, 0, 203, 0, 205, 0, 199, 0, 197, 0, 173, 0, 200, 0, 175, 0, 173, 0, 198, 0, 200, 0, 178, 0, 196, 0, 170, 0, 178, 0, 202, 0, 196, 0, 184, 0, 204, 0, 182, 0, 184, 0, 206, 0, 204, 0),
+"index_data": PackedByteArray("jQB5AIcAjQCBAHkAagAXACwAagBWABcAWQATABkAWQBdABMAXgADACgAXgBOAAMANgAOABQANgAxAA4AIQAGAA0AIQAqAAYALgArACIALgA9ACsACAAkABwACAABACQAaQApADsAaQBhACkAUwAgAAoAUwBkACAAWwA6ABEAWwBoADoAGAA8AC0AGAASADwAHQAyADcAHQAlADIAYgBCAB8AYgBvAEIAsQDPALsAsQDJAM8AIwBGAC8AIwBEAEYAbQBLADkAbQB3AEsANQA/ABsANQBJAD8AMAB1AGwAMABIAHUAQAB0AHIAQABKAHQAGgBwAGMAGgA+AHAADwBmAFoADwAzAGYACQBlAFUACQAeAGUANABfAGcANAAmAF8AJwBQAGAAJwACAFAAFgBcAFgAFgAQAFwAOABXAGsAOAAVAFcAAABRAEwAAAAHAFEAfwB7AHgAfwCDAHsAlQCFAJIAlQB8AIUAiQB9AJcAiQB6AH0AfgCbAIIAfgCYAJsAUgCKAE0AUgCPAIoABQCWAAwABQCIAJYACwCQAFQACwCUAJAATwCGAAQATwCLAIYAoQCZAJ4AoQCcAJkAkwCgAI4AkwCjAKAAhACiAJEAhACdAKIAjACaAIAAjACfAJoArACnAKUArACuAKcAvwCwALoAvwCpALAAwgCoALwAwgCmAKgAtACkAMEAtACrAKQAbgDAAEEAbgCzAMAAQwC9AEUAQwDDAL0ARwC5AHYARwC+ALkAcwC1AHEAcwC3ALUAzQDFAMsAzQDHAMUArQDIAK8ArQDGAMgAsgDEAKoAsgDKAMQAuADMALYAuADOAMwA"),
 "material": SubResource("StandardMaterial3D_4g87r"),
 "name": "Background.001",
 "primitive": 3,
 "uv_scale": Vector4(2, 2, 0, 0),
 "vertex_count": 208,
-"vertex_data": PackedByteArray(102, 134, 2, 0, 254, 255, 255, 255, 102, 134, 2, 0, 254, 255, 84, 213, 102, 134, 2, 0, 254, 255, 255, 255, 102, 134, 255, 255, 254, 255, 255, 255, 102, 134, 255, 255, 254, 255, 255, 191, 102, 134, 255, 255, 254, 255, 84, 213, 102, 134, 255, 255, 254, 255, 84, 213, 102, 134, 2, 0, 150, 235, 255, 255, 102, 134, 2, 0, 150, 235, 84, 213, 102, 134, 2, 0, 150, 235, 255, 255, 102, 134, 255, 255, 150, 235, 255, 255, 102, 134, 255, 255, 150, 235, 255, 255, 102, 134, 255, 255, 150, 235, 84, 213, 102, 134, 255, 255, 150, 235, 84, 213, 255, 255, 2, 0, 254, 255, 84, 213, 255, 255, 2, 0, 254, 255, 255, 191, 255, 255, 2, 0, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 2, 0, 150, 235, 84, 213, 255, 255, 2, 0, 150, 235, 255, 255, 255, 255, 2, 0, 150, 235, 255, 255, 255, 255, 255, 255, 150, 235, 255, 255, 255, 255, 255, 255, 150, 235, 84, 213, 255, 255, 255, 255, 150, 235, 255, 255, 219, 155, 2, 0, 150, 235, 255, 255, 219, 155, 2, 0, 150, 235, 255, 255, 219, 155, 2, 0, 150, 235, 84, 213, 219, 155, 2, 0, 150, 235, 84, 213, 219, 155, 2, 0, 150, 235, 255, 255, 219, 155, 255, 255, 150, 235, 255, 255, 219, 155, 255, 255, 150, 235, 255, 255, 219, 155, 255, 255, 150, 235, 84, 213, 219, 155, 255, 255, 150, 235, 84, 213, 219, 155, 255, 255, 150, 235, 255, 191, 219, 155, 2, 0, 254, 255, 84, 213, 219, 155, 2, 0, 254, 255, 84, 213, 219, 155, 2, 0, 254, 255, 255, 255, 219, 155, 2, 0, 254, 255, 255, 255, 219, 155, 255, 255, 254, 255, 255, 255, 219, 155, 255, 255, 254, 255, 255, 255, 219, 155, 255, 255, 254, 255, 84, 213, 219, 155, 255, 255, 254, 255, 84, 213, 145, 169, 255, 255, 150, 235, 255, 255, 145, 169, 255, 255, 150, 235, 84, 213, 145, 169, 255, 255, 150, 235, 84, 213, 145, 169, 255, 255, 150, 235, 255, 191, 145, 169, 255, 255, 150, 235, 255, 255, 145, 169, 2, 0, 254, 255, 84, 213, 145, 169, 2, 0, 254, 255, 84, 213, 145, 169, 2, 0, 254, 255, 255, 191, 145, 169, 2, 0, 254, 255, 255, 255, 145, 169, 2, 0, 150, 235, 255, 255, 145, 169, 2, 0, 150, 235, 84, 213, 145, 169, 2, 0, 150, 235, 84, 213, 145, 169, 2, 0, 150, 235, 255, 255, 145, 169, 2, 0, 150, 235, 255, 255, 145, 169, 255, 255, 254, 255, 255, 191, 145, 169, 255, 255, 254, 255, 255, 255, 145, 169, 255, 255, 254, 255, 84, 213, 145, 169, 255, 255, 254, 255, 84, 213, 219, 155, 2, 0, 187, 208, 255, 255, 219, 155, 2, 0, 187, 208, 255, 255, 219, 155, 2, 0, 187, 208, 255, 255, 219, 155, 255, 255, 187, 208, 84, 213, 219, 155, 255, 255, 187, 208, 255, 255, 219, 155, 255, 255, 187, 208, 255, 191, 219, 155, 255, 255, 187, 208, 255, 191, 145, 169, 255, 255, 187, 208, 255, 191, 145, 169, 255, 255, 187, 208, 255, 191, 145, 169, 255, 255, 187, 208, 84, 213, 145, 169, 255, 255, 187, 208, 255, 255, 145, 169, 2, 0, 187, 208, 255, 255, 145, 169, 2, 0, 187, 208, 255, 255, 145, 169, 2, 0, 187, 208, 255, 255, 102, 134, 141, 154, 254, 255, 255, 255, 102, 134, 141, 154, 254, 255, 84, 213, 102, 134, 141, 154, 254, 255, 255, 255, 102, 134, 141, 154, 254, 255, 255, 191, 102, 134, 141, 154, 254, 255, 255, 255, 102, 134, 141, 154, 150, 235, 255, 255, 102, 134, 141, 154, 150, 235, 84, 213, 102, 134, 141, 154, 150, 235, 255, 255, 102, 134, 141, 154, 150, 235, 255, 255, 102, 134, 141, 154, 150, 235, 255, 255, 255, 255, 141, 154, 150, 235, 255, 255, 255, 255, 141, 154, 150, 235, 255, 255, 255, 255, 141, 154, 150, 235, 255, 255, 255, 255, 141, 154, 150, 235, 255, 255, 255, 255, 141, 154, 254, 255, 255, 191, 255, 255, 141, 154, 254, 255, 255, 191, 255, 255, 141, 154, 254, 255, 255, 255, 255, 255, 141, 154, 254, 255, 255, 255, 219, 155, 141, 154, 254, 255, 255, 255, 219, 155, 141, 154, 254, 255, 255, 255, 219, 155, 141, 154, 254, 255, 255, 255, 219, 155, 141, 154, 254, 255, 255, 255, 219, 155, 141, 154, 150, 235, 255, 255, 219, 155, 141, 154, 150, 235, 255, 255, 219, 155, 141, 154, 150, 235, 255, 255, 219, 155, 141, 154, 150, 235, 255, 255, 145, 169, 141, 154, 254, 255, 255, 191, 145, 169, 141, 154, 254, 255, 255, 255, 145, 169, 141, 154, 254, 255, 255, 191, 145, 169, 141, 154, 254, 255, 255, 255, 145, 169, 141, 154, 150, 235, 255, 255, 145, 169, 141, 154, 150, 235, 255, 255, 145, 169, 141, 154, 150, 235, 255, 255, 145, 169, 141, 154, 150, 235, 255, 255, 219, 155, 141, 154, 187, 208, 84, 213, 219, 155, 141, 154, 187, 208, 255, 255, 219, 155, 141, 154, 187, 208, 255, 255, 219, 155, 141, 154, 187, 208, 255, 255, 219, 155, 141, 154, 187, 208, 255, 255, 145, 169, 141, 154, 187, 208, 255, 255, 145, 169, 141, 154, 187, 208, 255, 255, 145, 169, 141, 154, 187, 208, 255, 255, 145, 169, 141, 154, 187, 208, 84, 213, 145, 169, 141, 154, 187, 208, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 150, 235, 255, 255, 0, 0, 255, 255, 150, 235, 255, 255, 0, 0, 255, 255, 150, 235, 255, 191, 0, 0, 141, 154, 254, 255, 255, 255, 0, 0, 141, 154, 254, 255, 255, 255, 0, 0, 141, 154, 254, 255, 255, 255, 0, 0, 141, 154, 254, 255, 255, 255, 0, 0, 141, 154, 150, 235, 255, 255, 0, 0, 141, 154, 150, 235, 255, 255, 0, 0, 141, 154, 150, 235, 255, 255, 0, 0, 141, 154, 150, 235, 255, 255, 208, 12, 255, 255, 254, 255, 255, 191, 208, 12, 255, 255, 254, 255, 255, 255, 208, 12, 255, 255, 254, 255, 84, 213, 208, 12, 255, 255, 254, 255, 255, 191, 208, 12, 141, 154, 254, 255, 84, 213, 208, 12, 141, 154, 254, 255, 255, 191, 208, 12, 141, 154, 254, 255, 255, 255, 208, 12, 141, 154, 254, 255, 255, 255, 208, 12, 141, 154, 254, 255, 255, 255, 208, 12, 141, 154, 150, 235, 84, 213, 208, 12, 141, 154, 150, 235, 255, 255, 208, 12, 141, 154, 150, 235, 255, 255, 208, 12, 141, 154, 150, 235, 255, 255, 208, 12, 141, 154, 150, 235, 255, 255, 208, 12, 255, 255, 150, 235, 255, 255, 208, 12, 255, 255, 150, 235, 255, 255, 208, 12, 255, 255, 150, 235, 84, 213, 208, 12, 255, 255, 150, 235, 255, 191, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 150, 235, 255, 255, 0, 0, 0, 0, 150, 235, 255, 255, 0, 0, 0, 0, 150, 235, 255, 255, 208, 12, 0, 0, 254, 255, 255, 255, 208, 12, 0, 0, 254, 255, 255, 255, 208, 12, 0, 0, 254, 255, 255, 255, 208, 12, 0, 0, 150, 235, 255, 255, 208, 12, 0, 0, 150, 235, 255, 255, 208, 12, 0, 0, 150, 235, 255, 255, 219, 155, 255, 255, 0, 0, 255, 255, 219, 155, 255, 255, 0, 0, 255, 255, 219, 155, 255, 255, 0, 0, 84, 213, 145, 169, 255, 255, 0, 0, 255, 255, 145, 169, 255, 255, 0, 0, 84, 213, 145, 169, 255, 255, 0, 0, 255, 255, 219, 155, 141, 154, 0, 0, 255, 255, 219, 155, 141, 154, 0, 0, 255, 255, 219, 155, 141, 154, 0, 0, 255, 255, 219, 155, 141, 154, 0, 0, 255, 255, 145, 169, 141, 154, 0, 0, 255, 255, 145, 169, 141, 154, 0, 0, 255, 255, 145, 169, 141, 154, 0, 0, 255, 255, 145, 169, 141, 154, 0, 0, 255, 255, 219, 155, 141, 154, 108, 16, 255, 255, 219, 155, 141, 154, 108, 16, 84, 213, 219, 155, 141, 154, 108, 16, 255, 255, 219, 155, 141, 154, 108, 16, 255, 255, 219, 155, 141, 154, 108, 16, 255, 255, 145, 169, 141, 154, 108, 16, 255, 255, 145, 169, 141, 154, 108, 16, 255, 255, 145, 169, 141, 154, 108, 16, 84, 213, 145, 169, 141, 154, 108, 16, 255, 255, 145, 169, 141, 154, 108, 16, 255, 255, 145, 169, 255, 255, 108, 16, 84, 213, 145, 169, 255, 255, 108, 16, 255, 191, 145, 169, 255, 255, 108, 16, 84, 213, 145, 169, 255, 255, 108, 16, 255, 255, 219, 155, 255, 255, 108, 16, 84, 213, 219, 155, 255, 255, 108, 16, 255, 255, 219, 155, 255, 255, 108, 16, 84, 213, 219, 155, 255, 255, 108, 16, 255, 191, 219, 155, 0, 0, 0, 0, 255, 255, 219, 155, 0, 0, 0, 0, 84, 213, 219, 155, 0, 0, 0, 0, 255, 255, 145, 169, 0, 0, 0, 0, 84, 213, 145, 169, 0, 0, 0, 0, 255, 255, 145, 169, 0, 0, 0, 0, 255, 255, 219, 155, 0, 0, 108, 16, 255, 255, 219, 155, 0, 0, 108, 16, 84, 213, 219, 155, 0, 0, 108, 16, 255, 255, 145, 169, 0, 0, 108, 16, 84, 213, 145, 169, 0, 0, 108, 16, 255, 255, 145, 169, 0, 0, 108, 16, 255, 255, 255, 63, 255, 127, 84, 85, 84, 85, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 84, 213, 170, 42, 255, 63, 255, 127, 84, 85, 84, 85, 255, 255, 255, 127, 255, 255, 255, 127, 255, 63, 255, 191, 84, 213, 170, 42, 84, 213, 170, 42, 84, 85, 84, 85, 255, 127, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 255, 191, 255, 127, 84, 85, 84, 85, 255, 63, 255, 191, 255, 191, 255, 127, 255, 63, 255, 191, 84, 213, 170, 42, 255, 191, 255, 127, 255, 63, 255, 127, 255, 127, 255, 63, 84, 85, 84, 85, 84, 85, 85, 85, 255, 255, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 84, 213, 170, 42, 84, 213, 170, 42, 255, 255, 255, 127, 84, 85, 84, 85, 84, 85, 84, 85, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 84, 213, 170, 42, 255, 63, 255, 191, 84, 213, 170, 42, 84, 213, 170, 42, 255, 255, 255, 127, 255, 191, 255, 127, 84, 85, 84, 85, 84, 85, 85, 85, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 84, 85, 84, 85, 84, 85, 85, 85, 255, 63, 255, 191, 255, 191, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 84, 213, 170, 42, 255, 63, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 84, 85, 170, 170, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 170, 170, 84, 85, 255, 191, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 84, 85, 84, 85, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 255, 127, 84, 85, 84, 85, 255, 255, 255, 127, 255, 63, 255, 191, 255, 255, 255, 127, 255, 63, 255, 191, 255, 63, 255, 191, 255, 191, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 255, 191, 255, 63, 255, 191, 255, 191, 255, 127, 255, 191, 255, 127, 84, 85, 170, 170, 255, 63, 255, 127, 255, 63, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 191, 255, 127, 170, 170, 84, 85, 255, 191, 255, 127, 255, 63, 255, 127, 255, 127, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 255, 255, 255, 127, 84, 85, 84, 85, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 127, 255, 191, 255, 127, 84, 85, 84, 85, 255, 63, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 63, 255, 191, 255, 255, 255, 127, 84, 213, 170, 42, 255, 255, 255, 127, 255, 63, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 255, 191, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 84, 213, 170, 42, 255, 255, 255, 127, 84, 213, 170, 42, 255, 191, 255, 127, 255, 63, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 84, 85, 170, 170, 255, 63, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 170, 170, 84, 85, 255, 191, 255, 127, 255, 191, 255, 127, 84, 213, 170, 42, 255, 255, 255, 127, 170, 170, 84, 85, 255, 191, 255, 127, 84, 85, 170, 170, 255, 63, 255, 127, 84, 213, 170, 42, 255, 255, 255, 127, 255, 63, 255, 127, 84, 85, 84, 85, 255, 255, 255, 127, 84, 85, 84, 85, 255, 255, 255, 127, 255, 191, 255, 127, 255, 63, 255, 127, 84, 85, 84, 85, 255, 127, 255, 127, 84, 85, 84, 85, 255, 127, 255, 127, 255, 191, 255, 127)
+"vertex_data": PackedByteArray("ZoYCAP7///9mhgIA/v9U1WaGAgD+////Zob///7///9mhv///v//v2aG///+/1TVZob///7/VNVmhgIAluv//2aGAgCW61TVZoYCAJbr//9mhv//luv//2aG//+W6///Zob//5brVNVmhv//lutU1f//AgD+/1TV//8CAP7//7///wIA/v/////////+//+///////7/VNX//////v//////AgCW61TV//8CAJbr/////wIAluv///////+W6////////5brVNX/////luv//9ubAgCW6///25sCAJbr///bmwIAlutU1dubAgCW61TV25sCAJbr///bm///luv//9ub//+W6///25v//5brVNXbm///lutU1dub//+W6/+/25sCAP7/VNXbmwIA/v9U1dubAgD+////25sCAP7////bm////v///9ub///+////25v///7/VNXbm////v9U1ZGp//+W6///kan//5brVNWRqf//lutU1ZGp//+W6/+/kan//5br//+RqQIA/v9U1ZGpAgD+/1TVkakCAP7//7+RqQIA/v///5GpAgCW6///kakCAJbrVNWRqQIAlutU1ZGpAgCW6///kakCAJbr//+Rqf///v//v5Gp///+////kan///7/VNWRqf///v9U1dubAgC70P//25sCALvQ///bmwIAu9D//9ub//+70FTV25v//7vQ///bm///u9D/v9ub//+70P+/kan//7vQ/7+Rqf//u9D/v5Gp//+70FTVkan//7vQ//+RqQIAu9D//5GpAgC70P//kakCALvQ//9mho2a/v///2aGjZr+/1TVZoaNmv7///9mho2a/v//v2aGjZr+////ZoaNmpbr//9mho2alutU1WaGjZqW6///ZoaNmpbr//9mho2aluv/////jZqW6/////+Nmpbr/////42aluv/////jZqW6/////+Nmv7//7///42a/v//v///jZr+//////+Nmv7////bm42a/v///9ubjZr+////25uNmv7////bm42a/v///9ubjZqW6///25uNmpbr///bm42aluv//9ubjZqW6///kamNmv7//7+RqY2a/v///5GpjZr+//+/kamNmv7///+RqY2aluv//5GpjZqW6///kamNmpbr//+RqY2aluv//9ubjZq70FTV25uNmrvQ///bm42au9D//9ubjZq70P//25uNmrvQ//+RqY2au9D//5GpjZq70P//kamNmrvQ//+RqY2au9BU1ZGpjZq70P//AAD///7///8AAP///v///wAA///+//+/AAD//5br//8AAP//luv//wAA//+W6/+/AACNmv7///8AAI2a/v///wAAjZr+////AACNmv7///8AAI2aluv//wAAjZqW6///AACNmpbr//8AAI2aluv//9AM///+//+/0Az///7////QDP///v9U1dAM///+//+/0AyNmv7/VNXQDI2a/v//v9AMjZr+////0AyNmv7////QDI2a/v///9AMjZqW61TV0AyNmpbr///QDI2aluv//9AMjZqW6///0AyNmpbr///QDP//luv//9AM//+W6///0Az//5brVNXQDP//luv/vwAAAAD+////AAAAAP7///8AAAAA/v///wAAAACW6///AAAAAJbr//8AAAAAluv//9AMAAD+////0AwAAP7////QDAAA/v///9AMAACW6///0AwAAJbr///QDAAAluv//9ub//8AAP//25v//wAA///bm///AABU1ZGp//8AAP//kan//wAAVNWRqf//AAD//9ubjZoAAP//25uNmgAA///bm42aAAD//9ubjZoAAP//kamNmgAA//+RqY2aAAD//5GpjZoAAP//kamNmgAA///bm42abBD//9ubjZpsEFTV25uNmmwQ///bm42abBD//9ubjZpsEP//kamNmmwQ//+RqY2abBD//5GpjZpsEFTVkamNmmwQ//+RqY2abBD//5Gp//9sEFTVkan//2wQ/7+Rqf//bBBU1ZGp//9sEP//25v//2wQVNXbm///bBD//9ub//9sEFTV25v//2wQ/7/bmwAAAAD//9ubAAAAAFTV25sAAAAA//+RqQAAAABU1ZGpAAAAAP//kakAAAAA///bmwAAbBD//9ubAABsEFTV25sAAGwQ//+RqQAAbBBU1ZGpAABsEP//kakAAGwQ////P/9/VFVUVf9//3//f/9//3//f1TVqipU1aoq/z//f1RVVFX///9/////f/8//79U1aoqVNWqKlRVVFX/f/9//7//f/9//39U1aoq/7//f1RVVFX/P/+//7//f/8//79U1aoq/7//f/8//3//f/8/VFVUVVRVVVX///9//z//f////39U1aoqVNWqKv///39UVVRVVFVUVf9//3//f/9//3//f/9//39U1aoqVNWqKv8//79U1aoqVNWqKv///3//v/9/VFVUVVRVVVX/f/9//3//f/9//z9UVVRVVFVVVf8//7//v/9//3//f/9//39U1aoqVNWqKv8//3//f/8/////f1RVqqr/P/9/////f////3////9/////f6qqVFX/v/9//3//P////3//v/9//z//f1RVVFX/f/9//3//f/9//3//P/9/VFVUVf///3//P/+/////f/8//7//P/+//7//f/+//3//f/9//3//f/+//3//v/9//3//f/9//3//f/9//3//f/8//3//P/9/////f////3//f/9//3//f/9//3//f/9//z//v/8//7//v/9//7//f1RVqqr/P/9//z//f/9//z////9//3//P////3//v/9/qqpUVf+//3//P/9//3//f////3//P/9/////f////3//P/9//z//f/9//3//f/9//z//f/8//3////9/////f/9//3//f/9/VNWqKv///39UVVRV/3//f/9//3//f/9//7//f1RVVFX/P/+/////f////3//v/9//z//v////39U1aoq////f/8//3//f/8//3//f/8//3//f/8/////f/9//z//f/9//7//f/9//z////9//7//f/8//3////9/VNWqKv///39U1aoq/7//f/8//3//P/9/////f////3////9/////f/+//3//v/9//z//f1RVqqr/P/9//3//P/9//3//f/8//3//f6qqVFX/v/9//7//f1TVqir///9/qqpUVf+//39UVaqq/z//f1TVqir///9//z//f1RVVFX///9/VFVUVf///3//v/9//z//f1RVVFX/f/9/VFVUVf9//3//v/9/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1ghgt")

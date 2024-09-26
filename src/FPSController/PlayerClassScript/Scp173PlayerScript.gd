@@ -7,8 +7,12 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 @export var stare_counter: int = 0
 @export var invincibility: bool = false
 @export var blink_countdown: float  = 4.7
-@export var blind_countdown: float = 30.0
+@export var blind_countdown: float = 800.0
+@export var necksnap_sound: Array[String] = []
+var blind_available: bool = false
 var blink_timer = blink_countdown
+var blind_timer = 0.0
+
 var poses = [ "173_Pose1", "173_Pose2", "173_Pose3", "173_Pose4", "173_Pose5", "173_Pose6", "173_Pose7", "173_TPose" ]
 var ray: RayCast3D
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +22,7 @@ func _ready() -> void:
 		$AbilityUI.show()
 		get_parent().get_parent().can_move = true
 	ray = get_parent().get_parent().get_node("PlayerHead/PlayerRecoil/RayCast3D")
+	$AbilityUI/HBoxContainer/Blind.max_value = blind_countdown
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,12 +32,18 @@ func _physics_process(delta: float) -> void:
 			var collided_with = ray.get_collider()
 			if collided_with is PlayerScript:
 				if collided_with.unique_type_id == -1:
-					$InteractSound.stream = load("res://Sounds/Character/173/NeckSnap"+str(rng.randi_range(1, 3))+".ogg")
-					rpc_id(collided_with.name.to_int(), "health_manage", -32767, 0, "Crunched by SCP-173")
+					$InteractSound.stream = load(necksnap_sound[rng.randi_range(0, 3)])
+					$InteractSound.play()
+					collided_with.rpc_id(collided_with.name.to_int(), "health_manage", -32767, 0, "Crunched by SCP-173")
 					rpc("set_state", poses[rng.randi_range(0, poses.size() - 1)])
-		#if Input.is_action_pressed("scp173_blind"):
-			#ability_blind()
+		if Input.is_action_pressed("scp173_blind") && blind_available:
+			ability_blind()
 		scp_173_stare(delta)
+		if blind_timer < blind_countdown:
+			blind_timer += delta
+		else:
+			blind_available = true
+		$AbilityUI/HBoxContainer/Blind.value = blind_timer
 	
 ## SCP-173 main mechanic (ported from SCP: SO)
 func scp_173_stare(delta: float):
@@ -50,8 +61,9 @@ func scp_173_stare(delta: float):
 func ability_blind():
 	invincibility = true
 	await get_tree().create_timer(7.5).timeout
+	blind_available = false
 	invincibility = false
-	await get_tree().create_timer(30.0).timeout
+	blind_timer = 0.0
 
 ## Animation state
 @rpc("any_peer", "call_local")

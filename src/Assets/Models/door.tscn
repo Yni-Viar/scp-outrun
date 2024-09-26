@@ -192,6 +192,7 @@ _data = {
 script = ExtResource("1_r11nq")
 
 [node name="Cube_003" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
 visibility_range_end = 256.0
 mesh = SubResource("ArrayMesh_0ucr4")
 skeleton = NodePath("")
@@ -203,6 +204,7 @@ shape = SubResource("ConcavePolygonShape3D_8sbjv")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00306701, 0, 0)
+ignore_occlusion_culling = true
 visibility_range_end = 256.0
 mesh = SubResource("ArrayMesh_5csk6")
 skeleton = NodePath("")
@@ -215,6 +217,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.482748, 1.60924, -0.0183105
 shape = SubResource("BoxShape3D_ka37l")
 
 [node name="Cube_002" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
 visibility_range_end = 256.0
 mesh = SubResource("ArrayMesh_1p7uw")
 skeleton = NodePath("")

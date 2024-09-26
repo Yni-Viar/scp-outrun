@@ -36,6 +36,8 @@ class_name SettingsResource
 @export var reflection_probes: bool
 ## Enable or disable light shadows (Only LightSystemOmni and LightSystemSpot)
 @export var enable_light_shadows: bool
+## Field of view
+@export_range(70.0, 80.0) var camera_field_of_view: float
 
 func _init(p_dynamicgi: bool = false, p_ssao: bool = false, p_ssil: bool = false,
 	p_ssr: bool = false, p_fog: bool = false, p_music: float = 1.0, p_sound: float = 1.0,
@@ -44,7 +46,7 @@ func _init(p_dynamicgi: bool = false, p_ssao: bool = false, p_ssil: bool = false
 	Vector2i(1280, 720), Vector2i(1024, 768), Vector2i(800, 600)],
 	p_ui_language: int = 0, p_glow: bool = true,
 	p_game_optimizator: int = 1, p_ui_window_size: int = 0, p_vsync: bool = true,
-	p_reflection_probes: bool = true, p_enable_light_shadows: bool = false):
+	p_reflection_probes: bool = true, p_enable_light_shadows: bool = false, p_fov: float = 75.0):
 	
 	dynamic_gi = p_dynamicgi
 	ssao = p_ssao

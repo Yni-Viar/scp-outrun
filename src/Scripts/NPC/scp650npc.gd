@@ -4,7 +4,7 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 @export var wait_seconds: float = 5
 # Check if human is watching
-@export var is_not_watching: bool = false
+@export var is_not_watching: bool = true
 @export var target: int
 var timer = 0
 
@@ -15,23 +15,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	#If is not watching
-	if is_not_watching:
-		#Wait
-		timer += delta
-		if timer >= wait_seconds:
-			if multiplayer.is_server():
-				target = get_tree().root.get_node("Main/Game").players_list[rng.randi_range(0, get_tree().root.get_node("Main/Game").players_list)]
-			#Action. We move SCP-650 to player's global position - offset (which is transform.basis.z) * how far SCP-650 will be from player
-			global_position = get_tree().root.get_node("Game/" + str(target)).global_position - get_tree().root.get_node("Game/" + str(target)).global_transform.basis.z * 2
-			set_state("Pose " + str(rng.randi_range(4, 10)))
-			# Look at player
-			look_at(get_tree().root.get_node("Game/" + str(target)).global_position)
+	if multiplayer.is_server():
+		#If is not watching
+		if is_not_watching:
+			#Wait
+			timer += delta
+			if timer >= wait_seconds:
+				rpc("teleport")
+				# reset timer
+				timer = 0
+		else:
 			# reset timer
 			timer = 0
-	else:
-		# reset timer
-		timer = 0
 
 
 
@@ -48,3 +43,12 @@ func set_state(s):
 	if $AnimationPlayer.current_animation == s:
 		return
 	$AnimationPlayer.play(s, 0.3)
+
+@rpc("any_peer", "call_local")
+func teleport():
+	target = get_tree().root.get_node("Main/Game").players_list[rng.randi_range(0, get_tree().root.get_node("Main/Game").players_list.size() - 1)]
+	#Action. We move SCP-650 to player's global position - offset (which is transform.basis.z) * how far SCP-650 will be from player
+	global_position = get_tree().root.get_node("Main/Game/" + str(target)).global_position - get_tree().root.get_node("Main/Game/" + str(target)).global_transform.basis.z * 2
+	set_state("Pose " + str(rng.randi_range(4, 10)))
+	# Look at player
+	look_at(get_tree().root.get_node("Main/Game/" + str(target)).global_position)

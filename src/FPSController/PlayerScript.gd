@@ -70,6 +70,7 @@ func _ready():
 			rng.randomize()
 			player_name = "Unknown player " + str(rng.randi())
 		$PlayerHead/PlayerRecoil/PlayerCamera.current = true
+		#$PlayerHead/PlayerRecoil/PlayerCamera.fov = Settings.setting_res.camera_field_of_view
 		floor_max_angle = 1.308996
 		if Settings.touchscreen:
 			$TouchUI.show()
@@ -125,10 +126,22 @@ func _physics_process(delta):
 			gravity_vector = Vector3.UP * jump
 		var direction = transform.basis * Vector3($PlayerSync.direction.x, 0, $PlayerSync.direction.y)
 		if can_move:
-			if Input.is_action_pressed("move_sprint"):
+			if Input.is_action_pressed("move_sprint") && sprint_enabled:
 				vel = vel.lerp(direction * speed * 2, acceleration * delta)
+				if direction != Vector3.ZERO:
+					is_sprinting = true
+					is_walking = false
+				else:
+					is_walking = false
+					is_sprinting = false
 			else:
 				vel = vel.lerp(direction * speed, acceleration * delta)
+				if direction != Vector3.ZERO:
+					is_walking = true
+					is_sprinting = false
+				else:
+					is_walking = false
+					is_sprinting = false
 			movement.z = vel.z + gravity_vector.z
 			movement.x = vel.x + gravity_vector.x
 			movement.y = gravity_vector.y
@@ -142,6 +155,8 @@ func _physics_process(delta):
 					collided_with.call("interact", self)
 				elif collided_with is InteractableRigidBody:
 					collided_with.call("interact", self)
+				elif collided_with is InteractableStaticBody:
+					collided_with.call("interact", self)
 				elif collided_with is PlayerScript:
 					if collided_with.unique_type_id >= 0:
 						collided_with.call("interact")
@@ -152,6 +167,7 @@ func _physics_process(delta):
 				elif collided_with is InteractableRigidBody:
 					collided_with.call("interact_alt", self)
 		get_parent().get_node("PlayerUI/HealthBar").value = current_health[0]
+		footstep_animate()
 	set_up_direction(Vector3.UP)
 	move_and_slide()
 
@@ -163,17 +179,18 @@ func hold_item(item_id: int):
 		if check == null:
 			return
 		var path = str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand"
-		if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null && !is_multiplayer_authority():
+		if get_node_or_null(path) != null:
 			$PlayerHead/PlayerRecoil/PlayerHand.hide()
-			var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
+			var path_to_item_hold: Marker3D = get_node(path)
 			for node in path_to_item_hold.get_children():
 				node.queue_free()
-			var pickable: ItemPickable = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].pickable).instantiate()
+			var pickable: ItemPickable = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].pickable_path).instantiate()
 			pickable.freeze = true
 			path_to_item_hold.add_child(pickable)
-		else:
+			if is_multiplayer_authority():
+				pickable.hide()
+		if is_multiplayer_authority():
 			$PlayerHead/PlayerRecoil/PlayerHand.show()
-		if $PlayerHead/PlayerRecoil/PlayerHand.visible:
 			for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
 				node.queue_free()
 			var item_use: ItemUse = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].first_person_prefab_path).instantiate()
@@ -185,8 +202,8 @@ func hold_item(item_id: int):
 		var check = get_node("PlayerModel").get_child(0)
 		if check == null:
 			return
-		if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null:
-			var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
+		if get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null:
+			var path_to_item_hold: Marker3D = get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
 			for node in path_to_item_hold.get_children():
 				node.queue_free()
 		for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
@@ -195,7 +212,7 @@ func hold_item(item_id: int):
 
 ## Animation-based footstep system.
 func footstep_animate():
-	if move_sounds_enabled:
+	if move_sounds_enabled && !walk_sounds.playing:
 		if is_walking:
 			rpc("play_footstep_sound", false)
 		if is_sprinting:

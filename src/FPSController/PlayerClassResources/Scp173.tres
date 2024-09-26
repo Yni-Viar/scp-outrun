@@ -4,17 +4,16 @@
 
 [resource]
 script = ExtResource("1_1xcyw")
-player_class_name = "SCP - 173"
-player_class_description = "Open exits before MTF do.
-Aaand you can crunch their necks..,."
+player_class_name = "SCP173_INFO"
+player_class_description = "SCP173_DESCR"
 spawn_points = Array[String](["Main/Game/FacilityGenerator/LC_cont1_testroom/entityspawn/"])
 player_model_source = "res://FPSController/PlayerClassPrefab/scp173.tscn"
-player_ragdoll_source = ""
+player_ragdoll_source = "res://FPSController/PlayerClassPrefabGameover/scp_cage_closed.tscn"
 speed = 12.0
 jump = 3.0
 sprint_enabled = false
 move_sounds_enabled = true
-footstep_sounds = Array[String](["res://Sounds/Character/173/Rattle1.ogg", "res://Sounds/Character/173/Rattle2.ogg", "res://Sounds/Character/173/Rattle3.ogg"])
+footstep_sounds = Array[String](["res://Sounds/Character/173/SCPCB/Rattle1.ogg", "res://Sounds/Character/173/SCPCB/Rattle2.ogg", "res://Sounds/Character/173/SCPCB/Rattle3.ogg"])
 sprint_sounds = Array[String]([])
 unique_type_id = 173
 health = Array[float]([5000.0])
@@ -23,4 +22,5 @@ custom_camera = false
 custom_shader = "Old939"
 class_color = Color(1, 0, 0, 1)
 enable_inventory = false
-can_move = false
+can_move = true
+team_id = 1

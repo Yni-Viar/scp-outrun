@@ -19,6 +19,7 @@ var env: WorldEnvironment
 @export var is_round_started: bool
 ## List of the players
 @export var players_list: Array[int] = []
+
 var admin_list: AdminList
 ## Ambient file path, used by Music Changer function
 var current_ambient: String
@@ -96,22 +97,23 @@ func wait_for_beginning():
 	await get_tree().create_timer(15.0).timeout
 	if !is_round_started:
 		begin_game()
-	#if get_parent().spawn_npcs:
-		#if rng.randi_range(0, 3) <= 2 && players_list.size() > 1:
-			#var key: int = rng.randi_range(0, game_data.npcs.size() - 1):
-				#get_node()
+	if get_parent().spawn_npcs:
+		if rng.randi_range(0, 3) <= 2: # && players_list.size() > 1:
+			var key: int = rng.randi_range(0, game_data.npcs.size() - 1)
+			$NPCs.rpc_id(1, "call_add_or_remove_item", true, key, get_path())
 
 ## Implementation of round start.
 func begin_game():
 	var players: Array[Node] = get_tree().get_nodes_in_group("Players")
 	var i: int = 1
-	is_round_started = true
 	for player in players:
 		if player is PlayerScript:
 			randomize_class(i, player)
 			i += 1
-	await get_tree().create_timer(720.0).timeout
-	end_game(0)
+	is_round_started = true
+	if get_node_or_null("RoundStats") != null:
+		await get_tree().create_timer(720.0).timeout
+		get_node("RoundStats").end_game_server()
 
 ## Adds player to server.
 func add_player(id: int):
@@ -138,18 +140,24 @@ func remove_player(id: int):
 @rpc("any_peer", "call_local")
 func set_player_class(player_name: String, name_of_class: int, reason: String, post_start: bool):
 	$PlayerUI/PreRoundStartPanel.hide()
+	var old_player_class: int = get_node(player_name).player_class_key
 	if name_of_class < 0 || name_of_class >= game_data.classes.size():
 		print("For security reasons, you cannot change to class, that is unsupported by this server")
 	var class_data: BaseClass = game_data.classes[name_of_class]
 	if !post_start:
-		rpc("set_player_class_public", player_name, name_of_class)
+		rpc("set_player_class_public", player_name, name_of_class, old_player_class)
+	if name_of_class >= 0:
+		$PlayerUI/Targets.show()
+	else:
+		$PlayerUI/Targets.hide()
 	get_node(player_name).player_class_key = name_of_class
 	get_node(player_name).player_class_description = class_data.player_class_description
 	get_node(player_name).sprint_enabled = class_data.sprint_enabled
 	get_node(player_name).speed = class_data.speed
 	get_node(player_name).jump = class_data.jump
 	get_node(player_name).can_move = class_data.can_move
-	# get_node(player_name).enable_inventory = class_data.enable_inventory
+	$PlayerUI/Goals.text = game_data.goals[class_data.team_id]
+	get_node(player_name).enable_inventory = class_data.enable_inventory
 	get_node(player_name).call("camera_manager", !class_data.custom_camera)
 	get_node(player_name).call("update_class_ui", class_data.class_color.to_rgba32())
 	get_node(player_name).call("apply_shader", class_data.custom_shader)
@@ -161,7 +169,7 @@ func set_player_class(player_name: String, name_of_class: int, reason: String, p
 
 ## Sets player class through the RPC.
 @rpc("any_peer", "call_local")
-func set_player_class_public(player_name: String, name_of_class: int):
+func set_player_class_public(player_name: String, name_of_class: int, previous_player_class: int):
 	var class_data: BaseClass = game_data.classes[name_of_class]
 	get_node(player_name).player_class_name = class_data.player_class_name
 	get_node(player_name).move_sounds_enabled = class_data.move_sounds_enabled
@@ -172,6 +180,9 @@ func set_player_class_public(player_name: String, name_of_class: int):
 	get_node(player_name).current_health = class_data.health.duplicate()
 	get_node(player_name).ragdoll_source = class_data.player_ragdoll_source
 	load_models(player_name, name_of_class)
+	if multiplayer.is_server():
+		if get_node_or_null("RoundStats") != null:
+			get_node("RoundStats").check_round_stats(previous_player_class, name_of_class)
 
 ## Recall player classes for player, which got connected to ongoing round.
 func post_round_start(players, target):
@@ -186,7 +197,7 @@ func randomize_class(counter: int, player: PlayerScript):
 		var random_scp: int = all_scps[rng.randi_range(0, all_scps.size() - 1)]
 		rpc_id(player.name.to_int(), "set_player_class", str(player.name), random_scp, "Round start", false)
 	else:
-		rpc_id(player.name.to_int(), "set_player_class", str(player.name), 1, "Round start", false)
+		rpc_id(player.name.to_int(), "set_player_class", str(player.name), 2, "Round start", false)
 
 ## Loads the models of a player.
 func load_models(player_name: String, class_id: int):
@@ -256,12 +267,3 @@ func check_if_banned(id: int):
 	var txt: TxtParser = TxtParser.new()
 	if txt.open("user://bans.txt").contains(get_parent().get_peer(id)):
 		get_parent().rpc_id(id, "kick")
-
-@rpc("any_peer", "call_local")
-func end_game(reason: int):
-	match reason:
-		_:
-			$PlayerUI/GameEnd.text = tr("STALEMATE_ROUNDEND")
-			$PlayerUI/AnimationPlayer.play("roundend")
-	await get_tree().create_timer(12.0).timeout
-	get_parent().round_restart()

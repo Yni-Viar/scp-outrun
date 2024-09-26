@@ -575,4 +575,5 @@ transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53633, 0)
 occluder = SubResource("BoxOccluder3D_qmp8d")
-bake_mask = 4294967293
+bake_mask = 4294967277
+bake_simplification_distance = 0.05

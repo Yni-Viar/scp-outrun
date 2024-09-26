@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_uo4ie")
-player_class_name = "Human"
-player_class_description = "Test class"
-spawn_points = Array[String](["Main/Game/Office/entityspawn"])
+player_class_name = "HUMAN_INFO"
+player_class_description = "HUMAN_DESCR"
+spawn_points = Array[String](["Main/Game/PD_basement/entityspawn"])
 player_model_source = "res://FPSController/PlayerClassPrefab/human.tscn"
 player_ragdoll_source = "res://FPSController/PlayerClassPrefabGameover/human_ragdoll.tscn"
 speed = 4.5
@@ -20,6 +20,7 @@ health = Array[float]([100.0])
 custom_spawn = false
 custom_camera = false
 custom_shader = ""
-class_color = Color(0.552941, 0.8, 1, 0.752941)
+class_color = Color(0.552941, 0.8, 1, 1)
 enable_inventory = false
 can_move = true
+team_id = 0

@@ -30,7 +30,8 @@ func _input(event):
 	if Input.is_action_just_pressed("console"):
 		input_values("console")
 	if Input.is_action_just_pressed("human_inventory"):
-		input_values("inventory")
+		if get_tree().root.get_node("Main/Game/" + str(multiplayer.get_unique_id())).enable_inventory:
+			input_values("inventory")
 ## Switch-case function, makes nodes visible or not by calling it's internal names.
 func input_values(state: String):
 	match state:

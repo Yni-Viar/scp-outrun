@@ -4,12 +4,11 @@
 
 [resource]
 script = ExtResource("1_ghhmp")
-player_class_name = "MTF Epsilon 11 \"Nine Tailed Fox\""
-player_class_description = "Open exits before SCPs do.
-You can recontain SCPs, by clicking Interact button"
+player_class_name = "MTF_INFO"
+player_class_description = "MTF_DESCR"
 spawn_points = Array[String](["Main/Game/FacilityGenerator/LC_exit1/entityspawn"])
 player_model_source = "res://FPSController/PlayerClassPrefab/mtf.tscn"
-player_ragdoll_source = ""
+player_ragdoll_source = "res://FPSController/PlayerClassPrefabGameover/mtf_gameover.tscn"
 speed = 4.5
 jump = 4.0
 sprint_enabled = true
@@ -22,5 +21,6 @@ custom_spawn = false
 custom_camera = false
 custom_shader = ""
 class_color = Color(0, 0.498039, 1, 1)
-enable_inventory = false
+enable_inventory = true
 can_move = true
+team_id = 0

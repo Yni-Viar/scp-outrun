@@ -31,6 +31,8 @@ func _ready():
 	
 	TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
 	Settings.first_start = false
+	
+	$AudioStreamPlayer.playing = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,3 +63,8 @@ func _on_mods_pressed():
 
 func _on_lore_pressed() -> void:
 	get_parent().get_node("Lore").show()
+
+
+func _on_visibility_changed() -> void:
+	#If visible - play audio
+	$AudioStreamPlayer.playing = visible

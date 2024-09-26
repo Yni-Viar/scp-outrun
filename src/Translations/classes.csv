@@ -1,0 +1,11 @@
+keys,en,ru
+MTF_GOAL,The task is:\n- to find SCP-2306 in SCP item storage\n- put SCP-2306 into the server\n- Protect the server from threats\n- Leave the zone before SCP will do it by going back to starting room,Задача:\n- найти SCP-2306 в хранилище для предметов SCP\n- засунуть SCP-2306 в сервер\n- защитить сервер от угроз\n- Покинуть зону раньше чем SCP это сделают (нужно вернуться в стартовую комнату)
+SCP_GOAL,"The task is:\n- to engage power boxes (there should be 3 of them)\n- Escape earlier, than MTF does, or you will be in a trap.","Задача:\n- увеличить мощность электрощитков (их должно быть 3)\n- Успеть убежать раньше, чем это сделают MTF, или Вы окажетесь в ловушке."
+HUMAN_INFO,Human,Человек
+HUMAN_DESCR,Test class,Тестовый класс
+SPECTATOR_INFO,Spectator,Наблюдатель
+SPECTATOR_DESCR,Just wander around the zone. Wait to the next round.,Просто броди по зоне. Жди следующего раунда.
+MTF_INFO,"MTF Epsilon 11 ""Nine Tailed Fox""","МОГ Эпсилон 11 ""Девятихвостая лиса"""
+MTF_DESCR,"Open exits before SCPs do.\nYou can recontain SCPs, by clicking Interact button","Открой выходы прежде чем это сделают SCP.\nВы можете восстановить условия содержания SCP, по нажатию кнопки."
+SCP173_INFO,"SCP-173 ""Sculpture""","SCP-173 ""Скульптура"""
+SCP173_DESCR,"Open exits before MTF do.\nAaand you can crunch their necks...",Открой выходы прежде чем это сделают МОГ.\nИ... вы можете сворачивать их шеи...

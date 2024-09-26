@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SCP-Outrun"
 config/description="Be the first to get out of the facility."
-config/version="0.0.2"
+config/version="0.1.0"
 config/tags=PackedStringArray("game", "multiplayer", "scp_foundation", "team")
 run/main_scene="res://Scenes/Main.tscn"
 config/use_custom_user_dir=true
@@ -21,10 +21,11 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Assets/intro.png"
 config/icon="res://icon.png"
-config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
+ModLoaderStore="*res://addons/mod_loader/mod_loader_store.gd"
+ModLoader="*res://addons/mod_loader/mod_loader.gd"
 GDsh="*res://GDsh/GDsh.gd"
 Settings="*res://Scripts/Settings.gd"
 
@@ -38,6 +39,10 @@ window/size/window_height_override=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
@@ -45,7 +50,7 @@ folder_colors={
 "res://FPSController/": "red",
 "res://GDsh/": "blue",
 "res://InventorySystem/": "yellow",
-"res://MapGen/": "teal",
+"res://MapGen/": "green",
 "res://Scenes/": "orange",
 "res://Scripts/": "green",
 "res://Scripts/AdminSystem/": "red",
@@ -56,6 +61,7 @@ folder_colors={
 "res://Translations/": "gray",
 "res://UI/": "orange",
 "res://addons/": "pink",
+"res://mods-unpacked/": "teal",
 "res://mods-unpacked/TGPY-Bossfight/Assets/": "orange",
 "res://mods-unpacked/TGPY-Bossfight/Items/": "yellow",
 "res://mods-unpacked/TGPY-Bossfight/Player/": "red",
@@ -64,7 +70,8 @@ folder_colors={
 "res://mods-unpacked/TGPY-Bossfight/extensions/": "green",
 "res://mods-unpacked/TGPY-Bossfight/extensions/Multiplayer/": "red",
 "res://mods-unpacked/TGPY-Bossfight/extensions/PlayerClassScript/": "red",
-"res://mods-unpacked/TGPY-Bossfight/translations/": "gray"
+"res://mods-unpacked/TGPY-Bossfight/translations/": "gray",
+"res://mods/": "teal"
 }
 
 [filesystem]
@@ -257,7 +264,7 @@ pointing/emulate_mouse_from_touch=false
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation")
+locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/classes.en.translation", "res://Translations/classes.ru.translation")
 
 [layer_names]
 
@@ -265,6 +272,7 @@ locale/translations=PackedStringArray("res://Translations/mainmenu.en.translatio
 3d_render/layer_2="players"
 3d_render/layer_3="doors"
 3d_render/layer_4="items"
+3d_render/layer_5="lights"
 3d_render/layer_20="invisible mechanics, such as light detector"
 3d_physics/layer_1="World"
 3d_physics/layer_2="Players"

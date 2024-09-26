@@ -39,7 +39,7 @@ func door_open():
 ## Closes the door
 func door_close():
 	var rng = RandomNumberGenerator.new()
-	$AnimationPlayer.play("door_open", -1, -1, true)
+	$AnimationPlayer.play_backwards("door_open")
 	if !close_door_sounds.is_empty():
 		$DoorSound.stream = load(close_door_sounds[rng.randi_range(0, close_door_sounds.size() - 1)])
 		$DoorSound.play()

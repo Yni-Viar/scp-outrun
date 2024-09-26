@@ -1,6 +1,7 @@
 extends Node3D
 class_name FacilityGenerator
 
+signal generated
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 enum RoomTypes {EMPTY, ROOM1, ROOM2, ROOM2C, ROOM3, ROOM4}
@@ -20,6 +21,7 @@ enum RoomTypes {EMPTY, ROOM1, ROOM2, ROOM2C, ROOM3, ROOM4}
 @export var zones_amount: int = 0
 #@export var large_room_support: bool = false
 @export_range(0.25, 2) var room_amount: float = 1
+@export var enable_door_generation: bool = true
 
 var mapgen: Array[Array] = []
 
@@ -456,6 +458,29 @@ func spawn_rooms():
 					room.rotation_degrees = Vector3(0, mapgen[n][o].angle, 0)
 					add_child(room, true)
 		zone_counter = 0
+	if enable_door_generation:
+		create_doors()
+	generated.emit()
+
+## Spawns doors
+
+func create_doors():
+	var startup_node: Node = Node.new()
+	startup_node.name = "Doors"
+	add_child(startup_node)
+	for i in range(size):
+		for j in range(size_y):
+			if mapgen[i][j].east:
+				var door: Node3D = load("res://Assets/Models/door.tscn").instantiate()
+				door.position = global_position + Vector3(i * grid_size + grid_size / 2, 0, j * grid_size)
+				door.rotation_degrees = Vector3(0, 90, 0)
+				startup_node.add_child(door, true)
+			if mapgen[i][j].north:
+				var door: Node3D = load("res://Assets/Models/door.tscn").instantiate()
+				door.position = global_position + Vector3(i * grid_size, 0, j * grid_size + grid_size / 2)
+				door.rotation_degrees = Vector3(0, 0, 0)
+				startup_node.add_child(door, true)
+
 ## Clears the map generation
 func clear():
 	mapgen = []

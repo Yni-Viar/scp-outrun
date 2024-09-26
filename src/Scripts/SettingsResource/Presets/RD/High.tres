@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_8kqvh")
 available_languages = Array[String](["en", "ru"])
-voxel_gi = true
+dynamic_gi = false
 ssao = true
 ssil = true
 ssr = true
@@ -17,8 +17,8 @@ mouse_sensitivity = 0.05
 window_size = Array[Vector2i]([])
 ui_language = 0
 glow = true
-game_optimizator = 2
 ui_window_size = 0
 vsync = true
 reflection_probes = true
 enable_light_shadows = true
+camera_field_of_view = 75.0

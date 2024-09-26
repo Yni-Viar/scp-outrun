@@ -151,6 +151,7 @@ skeleton = NodePath("")
 
 [node name="LightSystemOmni" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458164, 0)
+layers = 16
 light_size = 0.1
 distance_fade_enabled = true
 omni_range = 15.0

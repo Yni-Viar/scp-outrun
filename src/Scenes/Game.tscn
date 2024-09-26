@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://mu7j26by23js"]
+[gd_scene load_steps=37 format=3 uid="uid://mu7j26by23js"]
 
 [ext_resource type="Script" path="res://Scripts/Multiplayer/FacilityManager.gd" id="1_crbgh"]
 [ext_resource type="Resource" uid="uid://dexygxjm8ki08" path="res://Scripts/GameData/GameData.tres" id="2_m6y5b"]
@@ -12,14 +12,21 @@
 [ext_resource type="FontFile" uid="uid://d2jfq3itdwpdu" path="res://Assets/Fonts/Tektur/Tektur-Bold.ttf" id="11_1xteb"]
 [ext_resource type="Script" path="res://Scripts/FPSCounter.gd" id="11_vy51m"]
 [ext_resource type="FontFile" uid="uid://cimfjaj14234d" path="res://Assets/Fonts/Tektur/Tektur-Medium.ttf" id="12_118v5"]
+[ext_resource type="Script" path="res://Scripts/TargetsCounter.gd" id="12_abhsj"]
 [ext_resource type="Script" path="res://Scripts/AdminSystem/AdminConsole.gd" id="13_jxcf4"]
 [ext_resource type="Script" path="res://MapGen/MapGen.gd" id="14_2e1xu"]
+[ext_resource type="Texture2D" uid="uid://6h26sle4bliy" path="res://Assets/HUD/RoundProgressBar.png" id="14_qvnuh"]
 [ext_resource type="Script" path="res://Scripts/AdminSystem/AdminCommands.gd" id="15_0xt4j"]
 [ext_resource type="Texture2D" uid="uid://dj66rmlusn18r" path="res://Assets/HUD/healthbar.png" id="15_5ah0v"]
 [ext_resource type="Script" path="res://MapGen/MapGenRoomResource.gd" id="15_daey2"]
 [ext_resource type="Theme" uid="uid://4k2un7nm7xc6" path="res://UITheme.tres" id="15_g2wd3"]
+[ext_resource type="Script" path="res://Scripts/MapObjectManager.gd" id="15_gr07b"]
+[ext_resource type="Texture2D" uid="uid://d05j1wwst8bkf" path="res://Assets/HUD/RoundProgressBarFill.png" id="15_jxsrf"]
 [ext_resource type="Resource" uid="uid://7prvjngodfs1" path="res://MapGen/lcz.tres" id="16_r0s7q"]
+[ext_resource type="Script" path="res://Scripts/LongActionProgressBar.gd" id="16_y4cn1"]
+[ext_resource type="Script" path="res://Scripts/Multiplayer/RoundStats.gd" id="17_mb1vw"]
 [ext_resource type="Script" path="res://Scripts/GameoverPit.gd" id="19_4u3wc"]
+[ext_resource type="PackedScene" uid="uid://d071rcpik15br" path="res://Assets/Rooms/static/pd_basement.tscn" id="27_4yagn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4g4w"]
 bg_color = Color(0, 0, 0, 1)
@@ -118,6 +125,21 @@ properties/1/replication_mode = 1
 properties/2/path = NodePath("FacilityGenerator:rng_seed")
 properties/2/spawn = true
 properties/2/replication_mode = 2
+properties/3/path = NodePath("RoundStats:tasks")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+properties/4/path = NodePath("RoundStats:generators")
+properties/4/spawn = true
+properties/4/replication_mode = 2
+properties/5/path = NodePath("RoundStats:scp_targets")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath("RoundStats:scp_amount")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("RoundStats:generator_spawns")
+properties/7/spawn = true
+properties/7/replication_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7svji"]
 size = Vector3(2508.41, 33.7658, 1977.69)
@@ -185,7 +207,7 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
-text = "The round is starting soon..."
+text = "ROUNDSTART_INFO"
 horizontal_alignment = 1
 
 [node name="Amount" type="Label" parent="PlayerUI/PreRoundStartPanel/PreRoundStart"]
@@ -198,7 +220,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 24
-text = "players connected."
+text = "ROUNDSTART_PLAYERS"
 horizontal_alignment = 1
 
 [node name="ClassInfo" type="Label" parent="PlayerUI"]
@@ -286,6 +308,19 @@ offset_bottom = 26.0
 text = "FPS"
 script = ExtResource("11_vy51m")
 
+[node name="Targets" type="Label" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+script = ExtResource("12_abhsj")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerUI"]
 libraries = {
 "": SubResource("AnimationLibrary_icbbs")
@@ -320,7 +355,7 @@ offset_bottom = 56.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
-text = "Admin panel"
+text = "ADMIN_PANEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -431,7 +466,7 @@ offset_bottom = 56.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("6_y6gcv")
 theme_override_font_sizes/font_size = 32
-text = "Player list"
+text = "PLAYERS_LIST"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -483,12 +518,50 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "UNREAD_INVITES_INFORMATION"
 
+[node name="Goals" type="Label" parent="PlayerUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.237
+anchor_bottom = 0.237
+offset_top = -191.96
+offset_right = 448.0
+offset_bottom = 192.04
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_y6gcv")
+theme_override_font_sizes/font_size = 32
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.063
+fill_mode = 4
+texture_under = ExtResource("14_qvnuh")
+texture_progress = ExtResource("15_jxsrf")
+script = ExtResource("16_y4cn1")
+
+[node name="RoundStats" type="Node" parent="."]
+script = ExtResource("17_mb1vw")
+
 [node name="AdminCommands" type="Node" parent="."]
 script = ExtResource("15_0xt4j")
 
 [node name="Items" type="Node" parent="."]
+script = ExtResource("15_gr07b")
+object_type = 2
 
 [node name="MapObjects" type="Node" parent="."]
+script = ExtResource("15_gr07b")
 
 [node name="FacilityGenerator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 129.962, 0)
@@ -500,6 +573,8 @@ room_amount = 0.5
 [node name="Ragdolls" type="Node3D" parent="."]
 
 [node name="NPCs" type="Node" parent="."]
+script = ExtResource("15_gr07b")
+object_type = 1
 
 [node name="Decals" type="Node3D" parent="."]
 
@@ -507,6 +582,7 @@ room_amount = 0.5
 environment = ExtResource("5_u1dtw")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+volume_db = -3.2
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -524,17 +600,24 @@ replication_config = SubResource("SceneReplicationConfig_pw38j")
 [node name="StartRoom" parent="." instance=ExtResource("8_1kvjl")]
 
 [node name="Gameover" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1024, 0)
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("19_4u3wc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Gameover"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1222.36, 0)
 shape = SubResource("BoxShape3D_7svji")
 
 [node name="Label3D" type="Label3D" parent="."]
 
+[node name="PD_basement" parent="." instance=ExtResource("27_4yagn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -256, 0)
+
+[connection signal="visibility_changed" from="PlayerUI/Targets" to="PlayerUI/Targets" method="_on_visibility_changed"]
 [connection signal="pressed" from="PlayerUI/AdminConsole/ContinueBtn" to="PlayerUI/AdminConsole" method="_on_continue_btn_pressed"]
 [connection signal="pressed" from="PlayerUI/AdminConsole/SendInviteBtn" to="PlayerUI/AdminConsole" method="_on_send_invite_btn_pressed"]
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_pressed"]
+[connection signal="value_changed" from="PlayerUI/TextureProgressBar" to="PlayerUI/TextureProgressBar" method="_on_value_changed"]
+[connection signal="visibility_changed" from="PlayerUI/TextureProgressBar" to="PlayerUI/TextureProgressBar" method="_on_visibility_changed"]
+[connection signal="generated" from="FacilityGenerator" to="RoundStats" method="_on_facility_generator_generated"]
 [connection signal="body_entered" from="Gameover" to="Gameover" method="_on_body_entered"]
