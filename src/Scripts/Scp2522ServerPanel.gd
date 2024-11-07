@@ -48,9 +48,9 @@ func eject(completed: bool):
 		$Info.text = "1 threat removed."
 	else:
 		ongoing = false
-	get_tree().root.get_node("Main/Game/Items").rpc_id(1, "call_add_or_remove_item", true, 1, "/root/Main/Game/FacilityGenerator/LC_room2_servers/itemspawn")
+	get_tree().root.get_node("Main/Game/Items").rpc_id(1, "call_add_or_remove_item", true, 0, "/root/Main/Game/FacilityGenerator/LC_room2_servers/itemspawn")
 
 @rpc("any_peer", "call_local")
 func activate(path):
-	get_node(path).rpc("remove_item_by_index", 1, false)
+	get_node(path).rpc("remove_item_by_index", 0, false)
 	ongoing = true

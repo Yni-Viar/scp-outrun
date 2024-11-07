@@ -26,6 +26,7 @@ config/icon="res://icon.png"
 
 ModLoaderStore="*res://addons/mod_loader/mod_loader_store.gd"
 ModLoader="*res://addons/mod_loader/mod_loader.gd"
+ResourceStorage="*res://Scripts/ResourceStorage.gd"
 GDsh="*res://GDsh/GDsh.gd"
 Settings="*res://Scripts/Settings.gd"
 

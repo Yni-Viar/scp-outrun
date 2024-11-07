@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://dqfw02tqafmdr"]
+[gd_scene load_steps=50 format=4 uid="uid://dqfw02tqafmdr"]
 
 [ext_resource type="Texture2D" uid="uid://dlwwff452dl1b" path="res://Assets/RoomAssets/LCZ3/OfficeCeiling001_2K_Color.png" id="1_vy1q7"]
 [ext_resource type="Texture2D" uid="uid://bf1pq5w0py0r" path="res://Assets/RoomAssets/LCZ3/OfficeCeiling001_2K_Metalness-OfficeCeiling001_2K_Roughness.png" id="2_tysp7"]
@@ -15,10 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://bvmbksyl1hdmd" path="res://Assets/Models/lamp_2_small.tscn" id="13_dy2o2"]
 [ext_resource type="PackedScene" uid="uid://2828a7yd1ya4" path="res://Assets/Models/armchair.tscn" id="14_8e3cw"]
 [ext_resource type="PackedScene" uid="uid://dk6afsf7jh72a" path="res://Assets/Models/office_desk_with_drawers.tscn" id="15_5anu3"]
-[ext_resource type="PackedScene" uid="uid://bsv4bn1kgu5pm" path="res://Assets/Models/laptop.tscn" id="16_73r1d"]
 [ext_resource type="PackedScene" uid="uid://dyg67wsc7o465" path="res://Assets/Models/steel_frame_shelves_01_2k.tscn" id="17_4etqk"]
 [ext_resource type="PackedScene" uid="uid://dpxo7rltb4wmc" path="res://Assets/Models/door.tscn" id="18_ofruc"]
+[ext_resource type="PackedScene" uid="uid://dtiewo3uj60g0" path="res://Assets/Models/computer_2.tscn" id="19_8cfs4"]
 [ext_resource type="PackedScene" uid="uid://oyx0uuwud7hs" path="res://InventorySystem/Items/Pickup/scp_2306.tscn" id="19_ud2cs"]
+[ext_resource type="PackedScene" uid="uid://btm3yh85og7mm" path="res://Assets/Models/monitor.tscn" id="20_770ff"]
+[ext_resource type="PackedScene" uid="uid://dllklb0hh5g7y" path="res://Assets/Models/keyboard.tscn" id="21_gt66g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3vpg"]
 resource_name = "Material.004"
@@ -673,9 +675,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.08558, 0, 5.4785)
 [node name="office-desk-with-drawers" parent="." instance=ExtResource("15_5anu3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.50717, 0.23293, 7.07603)
 
-[node name="laptop" parent="." instance=ExtResource("16_73r1d")]
-transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, -7.55645, 1.50483, 7.06069)
-
 [node name="office-desk-with-drawers2" parent="." instance=ExtResource("15_5anu3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.84121, 0.204877, -0.224372)
 
@@ -705,3 +704,12 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.931
 
 [node name="scp2306" parent="." instance=ExtResource("19_ud2cs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1055, 1.59645, -7.43866)
+
+[node name="Computer2" parent="." instance=ExtResource("19_8cfs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.76459, 1.50483, 7.01522)
+
+[node name="27-inch-monitor-with-movable-mount" parent="." instance=ExtResource("20_770ff")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.43946, 1.50483, 7.8344)
+
+[node name="ddskeyboard" parent="." instance=ExtResource("21_gt66g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36255, 1.50483, 6.56283)

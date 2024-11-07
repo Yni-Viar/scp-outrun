@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bdvt2qgttxjgk" path="res://Assets/RoomAssets/Basement/OfficeCeiling001_2K_Metalness-OfficeCeiling001_2K_Roughness.png" id="9_e87kb"]
 [ext_resource type="Texture2D" uid="uid://cmkunyr2jjkk" path="res://Assets/RoomAssets/Basement/OfficeCeiling001_2K_NormalGL.png" id="10_b0tmn"]
 [ext_resource type="PackedScene" uid="uid://dk6afsf7jh72a" path="res://Assets/Models/office_desk_with_drawers.tscn" id="11_lc4a0"]
-[ext_resource type="PackedScene" uid="uid://dj4aufs8x4nlp" path="res://Assets/ActionItems/godotplush.tscn" id="12_u2vg3"]
+[ext_resource type="PackedScene" uid="uid://d2wdvlp8vwlmg" path="res://Assets/ActionItems/omnidotplush.tscn" id="13_psq51"]
 [ext_resource type="Script" path="res://Scripts/LightSystemSpot.gd" id="13_udblv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57r6a"]
@@ -182,9 +182,6 @@ Good luck.
 [node name="office-desk-with-drawers" parent="." instance=ExtResource("11_lc4a0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81353, 0.233372, -24.1827)
 
-[node name="godotplush" parent="." instance=ExtResource("12_u2vg3")]
-transform = Transform3D(0.93747, 0, -0.348065, 0, 1, 0, 0.348065, 0, 0.93747, 3.22121, 1.51182, -24.7121)
-
 [node name="LightSystemSpot" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4.31989, -0.577839)
 distance_fade_enabled = true
@@ -249,3 +246,6 @@ text = "I think, you chose the wrong class...
 Playable class begins with \"2\", not \"1\". Spectator is \"0\"...
 Anyway, you are now in my basement...
 - Yni"
+
+[node name="omnidotplush" parent="." instance=ExtResource("13_psq51")]
+transform = Transform3D(0.384698, 0, 0.923042, 0, 1, 0, -0.923042, 0, 0.384698, 3.32057, 1.50983, -24.7424)

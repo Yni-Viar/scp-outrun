@@ -122,22 +122,22 @@ properties/0/replication_mode = 2
 properties/1/path = NodePath(".:is_round_started")
 properties/1/spawn = true
 properties/1/replication_mode = 1
-properties/2/path = NodePath("FacilityGenerator:rng_seed")
+properties/2/path = NodePath("RoundStats:tasks")
 properties/2/spawn = true
 properties/2/replication_mode = 2
-properties/3/path = NodePath("RoundStats:tasks")
+properties/3/path = NodePath("RoundStats:generators")
 properties/3/spawn = true
 properties/3/replication_mode = 2
-properties/4/path = NodePath("RoundStats:generators")
+properties/4/path = NodePath("RoundStats:scp_targets")
 properties/4/spawn = true
-properties/4/replication_mode = 2
-properties/5/path = NodePath("RoundStats:scp_targets")
+properties/4/replication_mode = 1
+properties/5/path = NodePath("RoundStats:scp_amount")
 properties/5/spawn = true
 properties/5/replication_mode = 1
-properties/6/path = NodePath("RoundStats:scp_amount")
+properties/6/path = NodePath("RoundStats:generator_spawns")
 properties/6/spawn = true
-properties/6/replication_mode = 1
-properties/7/path = NodePath("RoundStats:generator_spawns")
+properties/6/replication_mode = 2
+properties/7/path = NodePath("FacilityGenerator:rng_seed")
 properties/7/spawn = true
 properties/7/replication_mode = 2
 
@@ -568,7 +568,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 129.962, 0)
 script = ExtResource("14_2e1xu")
 rooms = Array[ExtResource("15_daey2")]([ExtResource("16_r0s7q")])
 size = 12
-room_amount = 0.5
 
 [node name="Ragdolls" type="Node3D" parent="."]
 
@@ -582,7 +581,6 @@ object_type = 1
 environment = ExtResource("5_u1dtw")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-volume_db = -3.2
 bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

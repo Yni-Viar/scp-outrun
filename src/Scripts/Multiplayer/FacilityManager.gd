@@ -35,10 +35,10 @@ func _enter_tree() -> void:
 	if multiplayer.get_unique_id() != 1:
 		rpc_id(1, "check_if_banned", multiplayer.get_unique_id())
 	else:
-		if !FileAccess.file_exists("user://granted.tres"):
+		if !FileAccess.file_exists("user://granted.bin"):
 			var admin_list: AdminList = AdminList.new()
-			ResourceSaver.save(admin_list, "user://granted.tres")
-		admin_list = load("user://granted.tres")
+			ResourceStorage.save_resource("user://granted.bin", admin_list)
+		admin_list = ResourceStorage.load_resource("user://granted.bin", "AdminList")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

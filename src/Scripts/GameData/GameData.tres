@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=11 format=3 uid="uid://dexygxjm8ki08"]
+[gd_resource type="Resource" script_class="GameData" load_steps=10 format=3 uid="uid://dexygxjm8ki08"]
 
 [ext_resource type="Script" path="res://Scripts/GameData/GameData.gd" id="1_3oe34"]
 [ext_resource type="Script" path="res://FPSController/PlayerClassResources/BaseClass.gd" id="1_5gv65"]
 [ext_resource type="Resource" uid="uid://cohe4hksaldgl" path="res://FPSController/PlayerClassResources/Spectator.tres" id="1_q7cy1"]
-[ext_resource type="Resource" uid="uid://djlq02i4dkpaw" path="res://InventorySystem/Items/Pda.tres" id="3_6lumy"]
 [ext_resource type="Resource" uid="uid://f2kqasrj2c78" path="res://FPSController/PlayerClassResources/Human.tres" id="3_aea2a"]
 [ext_resource type="Resource" uid="uid://d0gp7w12cxx41" path="res://FPSController/PlayerClassResources/Mtf.tres" id="3_v0438"]
 [ext_resource type="Resource" uid="uid://l4pwoilou61m" path="res://FPSController/PlayerClassResources/Scp173.tres" id="4_yw0b2"]
@@ -14,7 +13,7 @@
 [resource]
 script = ExtResource("1_3oe34")
 classes = Array[ExtResource("1_5gv65")]([ExtResource("1_q7cy1"), ExtResource("3_aea2a"), ExtResource("3_v0438"), ExtResource("4_yw0b2")])
-items = Array[ExtResource("5_lvb36")]([ExtResource("3_6lumy"), ExtResource("7_ijw1p")])
+items = Array[ExtResource("5_lvb36")]([ExtResource("7_ijw1p")])
 map_objects = Array[PackedScene]([])
 npcs = Array[PackedScene]([ExtResource("9_23yuh")])
 goals = Array[String](["MTF_GOAL", "SCP_GOAL"])
